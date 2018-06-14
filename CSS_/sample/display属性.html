@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+
+<title>菜鸟教程(runoob.com)</title> 
+<style>
+div {
+	/*隐藏并且不占空间*/
+	/*display: none;*/
+	
+	/*隐藏 但是空间依然被占据*/
+	visibility: hidden;
+}
+
+p {
+	display: inline;  /*内联元素*/
+}
+
+span {
+	display: block;  /*块元素*/
+}
+
+li {
+	display: inline;
+}
+</style>
+</head>
+
+<body>
+	<p>下面有一个隐藏的div</p>
+	<div>div是独占一行   这是隐藏的</div>
+	<p>上面有一个隐藏的div</p>
+	
+	<!-- 块元素 独占一行  div p hx hr li -->
+	<p>将p修改成内联元素</p>
+	<p>跟着上面的p</p>
+	
+	<br />
+	<!-- 内联元素 不独占一行 -->
+	<span>把span变成块元素</span>
+	<span>把span变成块元素</span>
+	
+	<hr />
+	
+	<ul>
+		<li>登陆</li>
+		<li>注册</li>
+		<li>退出</li>
+	</ul>
+</body>
+</html>

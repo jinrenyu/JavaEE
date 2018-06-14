@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>延迟调用函数</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        	// setTimeout(), 它是属于window对象的全局函数
+        	// 参数1: 表示要执行的方法对象变量
+        	// 参数2: 延迟的毫秒数
+        	// 创建完毕会返回延迟调用器的id值
+        	var sid = setTimeout(function() {
+        		alert("延迟5秒执行");
+        	}, 5000);
+        	// 清除延迟调用器
+        	// 参数: 需要进行清除的延迟调用器的id
+        	clearTimeout(sid);
+        </script>
+    </body>
+</html>

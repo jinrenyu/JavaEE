@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>级联下拉列表</title>
+        <!-- 把公共组件放入到单个的js文件, 方便界面之间复用 -->
+        <script type="text/javascript" src="js/pcData.js"></script>
+    </head>
+    <!-- onload事件会在页面加载完毕的时候触发 -->
+    <body onload="initProvince('province');">
+    	<!-- 当输入框的值发生改变的时候就会触发onchange事件 -->
+        test:<select onchange="outInfo(this);">
+        	<option value="">-请选择-</option>
+        	<option value="1">1</option>
+        	<option value="2">2</option>
+        </select><br/>
+        province:
+        <!-- 此处的onchange事件需要根据当前被选择的option去设置
+        id为city的select列表的值 -->
+        <select id="province" onchange="addCity(this);">
+        	<option value="">-请选择-</option>
+        </select>
+        city:
+        <select id="city">
+        	<option value="">-请选择-</option>
+        </select>
+        <script type="text/javascript">
+            function outInfo(obj) {
+            	alert(obj.value);
+            }
+            function addCity(obj) {
+            	addCities("city", obj.value);
+            }
+        </script>
+    </body>
+</html>

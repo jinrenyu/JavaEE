@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>String内置对象的常用方法</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        	var text = "abcdefegh";
+        	var text02 = new String("fdaf");
+        	// 1. charAt(), 接受一个参数, 返回指定下标(0开始)的字符 
+        	// charCodeAt(), 返回指定下标的字符ASSIC码
+        	document.write(text.charAt(1) + "<br/>");
+        	document.write(text.charCodeAt(1) + "<br/>");
+        	// 2. concat(了解)和数组的连接字符串比较相似
+        	alert(text.concat("!"));
+        	// 等价于
+        	// alert(text + "!");
+        	// 3. slice/substring/substr
+        	// 当3个方法接受一个正数参数的时候3个方法等价
+        	// string中所有的方法都不会对原字符串产生影响
+        	document.write(text.slice(3) + ", " 
+        			+ text.substring(3) + ", " 
+        			+ text.substr(3) + "<br/>");
+        	// 2个正数参数的时候, slice和substring等价
+        	// substr(开始截取的位置, 截取的个数)
+        	document.write(text.slice(3, 5) + ", " 
+        			+ text.substring(3, 5) + ", " 
+        			+ text.substr(3, 2) + "<br/>");
+        	// 当传入的两个参数是负数的时候
+        	// slice会把负数和当前字符串的长度相加计算, 得到正数用于截取
+        	// substring把所有的负数都置换成0
+        	// substr第一个参数计算方式和slice()相同, 第二个负数换成0
+        	document.write(text.slice(-3) + ", " 
+        			+ text.substring(-3, -5) + ", " 
+        			+ text.substr(-3, 2) + "<br/>");
+        	// indexOf()和lastIndexOf()
+        	// 查找指定字符串在原字符串中的下标
+        	document.write(text.indexOf("e") + ", " 
+        			+ text.lastIndexOf("e") + "<br/>");
+        	// 第二个参数表示开始查找的位置
+        	document.write(text.indexOf("e", 5) + ", " 
+        			+ text.lastIndexOf("e", 5) + "<br/>");
+        	// small()/big()....<small>XX</small>
+        	document.write(text.small()+"<br/>");
+        	// String.fromCharCode()
+        	// 把ASSCII吗转换回字符
+        	document.write(String.fromCharCode(65)+"<br/>");
+        	// trim() 去除字符串左右两端的空格, trimLeft()/trimRight()
+        	// toUpperCase/toLowerCase():大小写转换
+        	// toLocaleUpperCase/toLocaleLowerCase: 
+        	// 下面两个方法大部分情况都和toUpperCase等价, 对于一些特殊语言
+        	// 才会返回不同(土耳其语)
+        	
+        	// match()/search()/replace()/split(), 参数可以为正则表达式
+        	// 或者正则表达式对象
+        	
+        	// match()方法当不使用g模式的时候和正则表达式的exec方法本质上的等价
+        	var r = text.match(/bc/);
+        	// alert(r[0] + "," + r.input + "," + r.index);
+        	var rs = text.match(/\w{2}/g);
+        	// alert(rs);
+        	
+        	// search()查找指定字符在原字符串中的位置, 它可以支持传入正则表达式
+        	// replace()方法, 第一个参数 要替换的字符, 第二个参数 替换字符
+        	var test01 = "yefjdkfjye";
+        	// alert(test01.replace("ye", "HHHHHHH"));
+        	// 如果需要全部进行替换, 第一个参数只能使用正则表达式加全局模式
+        	// alert(test01.replace(/ye/g, "HHHHHHH"));
+        	// split()方法用于指定特定的分隔符对字符串做分割返回分割后的数组对象
+        	var text002 = "How are youyyyyyy";
+        	// 两个参数: 第一个参数分割符(字符串或者正则表达式对象) 
+        	// 第二个参数: 分割的数组的大小
+        	// ['How', 'are', 'youyyyyyyy']
+        	// ['How', 'are']
+        	var arrtext = text002.split(" ", 2);
+        	alert(arrtext[1]);
+        	alert(arrtext[2]);
+        	
+        	var pattern = new RegExp("\w{3}\s");
+        	var atttext02 = text002.split(pattern);
+        	// ["", "", "youyyyyyy"]
+        	alert(atttext02);
+        	
+        	// localeCompare()
+        	// 比较两个字符串, 如果调用这个方法的字符串'大于'
+        	// 被比较的字符串则返回1; 相同返回0; 小于, 返回-1;
+        	// 大多数情况下和sort(function())配合使用用于
+        	// 针对字母大小进行排序
+        	alert("zadee".localeCompare("zed"));
+        	
+        	// 练习:过滤出该串字符串中所有的英文并打印到页面上
+        	var testStr = "中文字符zhongEngli英文hhh";
+        	// 1. 使用charAt()方法, 获取到单个字符之后判断
+        	// 是否在a~z或者A~Z之间, 如果是则拼接到一个结果字符串中返回
+        	// 2. match()正则表达式
+        	var arr = testStr.match(/[a-zA-Z]/g);
+        	// alert(arr);
+        	for(var i in arr) {
+        		document.write(arr[i]);
+        	}
+        	document.write("<br/>");
+        	
+        	// 练习:找出所有"e"的下标
+        	var testStr02 = "sabfefef er fekrj e fek fere";
+        	// 1. 使用indexOf()方法, 记录下次开始查找的起始位置
+        	// 查找e字母第一次出现的下标位置
+        	var pos = testStr02.indexOf("e");
+        	// 存放所有e字母的下标
+        	var indexArr = [];
+        	while (pos != -1) {
+        		// indexArr[indexArr.length] = pos;
+        		// 等价于 pop()/shift()/unshift()
+        		indexArr.push(pos);
+        		pos = testStr02.indexOf("e", pos + 1);
+        	}
+        	alert(indexArr);
+        </script>
+    </body>
+</html>

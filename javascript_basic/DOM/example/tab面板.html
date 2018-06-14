@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>tab面板</title>
+        <style type="text/css">
+        	#outer {
+        		margin-left: 40%;
+        	}
+        	div, nav {
+        		width: 300px;
+        	}
+        	nav {
+        		/* border: 1px solid; */
+        		height: 40px;
+        		text-align: center;
+        		background-color: #999;
+        	}
+        	nav h3 {
+        		margin-top: 0px;
+        		border-right: 1px solid #FFF;
+        		line-height: 40px;
+        		width: 80px;
+        		float: left;
+        		color: white;
+        	}
+        	#content {
+        		/* border: 1px solid; */
+        		height: 200px;
+        		background-color: #ddd;
+        	}
+        	.tit {
+        		background-color: #ddd;
+        		color: #000;
+        	}
+        	#tab2, #tab3 {
+        		display: none;
+        	}
+        </style>
+    </head>
+    <body>
+        <div id="outer">
+        	<nav>
+        		<h3 class="tit" onclick="show(0);">面板一</h3>
+        		<h3 onclick="show(1);">面板二</h3>
+        		<h3 onclick="show(2);">面板三</h3>
+        	</nav>
+        	<div id="content">
+	        	<div id="tab1">
+	        		1111111111111111111<br/>
+	        		1111111111111111111<br/>
+	        		1111111111111111111<br/>
+	        		1111111111111111111<br/>
+	        		1111111111111111111<br/>
+	        		1111111111111111111<br/>
+	        		1111111111111111111<br/>
+	        		1111111111111111111<br/>
+	        	</div>
+	        	<div id="tab2">
+	        		22222222222222222222<br/>
+	        		22222222222222222222<br/>
+	        		22222222222222222222<br/>
+	        		22222222222222222222<br/>
+	        		22222222222222222222<br/>
+	        		22222222222222222222<br/>
+	        		22222222222222222222<br/>
+	        		22222222222222222222<br/>
+	        	</div>
+	        	<div id="tab3">
+	        		3333333333333333333<br/>
+	        		3333333333333333333<br/>
+	        		3333333333333333333<br/>
+	        		3333333333333333333<br/>
+	        		3333333333333333333<br/>
+	        		3333333333333333333<br/>
+	        		3333333333333333333<br/>
+	        		3333333333333333333<br/>
+	        	</div>
+        	</div>
+        </div>
+        <script type="text/javascript">
+        	function show(value) {
+        		// 明确需要操作的节点对象:
+        		// 三个h3和三个id从tab1到tab3的div
+        		var h3Tag = document.getElementsByTagName("h3");
+        		var divTag = document.querySelectorAll("#content div");
+        		for(var i = 0; i < h3Tag.length; i++) {
+        			// 代表要对被点击的面板做CSS属性的改变
+        			if (value == i) {
+        				h3Tag[i].className = "tit";
+        				divTag[i].style.display = "block";
+        			} else {
+        				h3Tag[i].className = "";
+        				divTag[i].style.display = "none";
+        			}
+        		}
+        	}
+        </script>
+    </body>
+</html>

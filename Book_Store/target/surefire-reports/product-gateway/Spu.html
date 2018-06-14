@@ -1,0 +1,367 @@
+<html>
+<head>
+<title>TestNG:  Spu</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Spu</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>16/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Mar 17 19:18:05 CST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>3 seconds (3382 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.tz.online.service.test.UserServiceImplTest.testDelAddress()'><b>testDelAddress</b><br>Test class: com.tz.online.service.test.UserServiceImplTest</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.tz.online.dao.impl.AddressDaoImpl$3.execute(AddressDaoImpl.java:59)
+	at com.tz.online.util.HibernateTemplates.execute(HibernateTemplates.java:23)
+	at com.tz.online.dao.impl.AddressDaoImpl.delete(AddressDaoImpl.java:54)
+	at com.tz.online.service.impl.UserServiceImpl.delAddress(UserServiceImpl.java:68)
+	at com.tz.online.service.test.UserServiceImplTest.testDelAddress(UserServiceImplTest.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:293)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1455177644", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1455177644'><pre>java.lang.NullPointerException
+	at com.tz.online.dao.impl.AddressDaoImpl$3.execute(AddressDaoImpl.java:59)
+	at com.tz.online.util.HibernateTemplates.execute(HibernateTemplates.java:23)
+	at com.tz.online.dao.impl.AddressDaoImpl.delete(AddressDaoImpl.java:54)
+	at com.tz.online.service.impl.UserServiceImpl.delAddress(UserServiceImpl.java:68)
+	at com.tz.online.service.test.UserServiceImplTest.testDelAddress(UserServiceImplTest.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:293)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div></td>
+<td>0</td>
+<td>com.tz.online.service.test.UserServiceImplTest@2ff4f00f</td></tr>
+<tr>
+<td title='com.tz.online.service.test.UserServiceImplTest.testUpdAddress()'><b>testUpdAddress</b><br>Test class: com.tz.online.service.test.UserServiceImplTest</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.tz.online.service.test.UserServiceImplTest.testUpdAddress(UserServiceImplTest.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:293)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div><a href='#' onClick='toggleBox("stack-trace141015648", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace141015648'><pre>java.lang.NullPointerException
+	at com.tz.online.service.test.UserServiceImplTest.testUpdAddress(UserServiceImplTest.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:293)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div></td>
+<td>0</td>
+<td>com.tz.online.service.test.UserServiceImplTest@2ff4f00f</td></tr>
+<tr>
+<td title='com.tz.online.dao.test.UserDaoImplTest.testUpdate()'><b>testUpdate</b><br>Test class: com.tz.online.dao.test.UserDaoImplTest</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.tz.online.dao.test.UserDaoImplTest.testUpdate(UserDaoImplTest.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:293)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div><a href='#' onClick='toggleBox("stack-trace814111376", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace814111376'><pre>java.lang.NullPointerException
+	at com.tz.online.dao.test.UserDaoImplTest.testUpdate(UserDaoImplTest.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:293)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div></td>
+<td>0</td>
+<td>com.tz.online.dao.test.UserDaoImplTest@6debcae2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.tz.online.service.test.UserServiceImplTest.testAddAddress()'><b>testAddAddress</b><br>Test class: com.tz.online.service.test.UserServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.tz.online.service.test.UserServiceImplTest@2ff4f00f</td></tr>
+<tr>
+<td title='com.tz.online.ddl.TestDDL.testDDL()'><b>testDDL</b><br>Test class: com.tz.online.ddl.TestDDL</td>
+<td></td>
+<td>1</td>
+<td>com.tz.online.ddl.TestDDL@4cdbe50f</td></tr>
+<tr>
+<td title='com.tz.online.service.test.BookServiceImplTest.testFindByCategory()'><b>testFindByCategory</b><br>Test class: com.tz.online.service.test.BookServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.tz.online.service.test.BookServiceImplTest@5ba23b66</td></tr>
+<tr>
+<td title='com.tz.online.dao.test.BookDaoImplTest.testFindByCondition()'><b>testFindByCondition</b><br>Test class: com.tz.online.dao.test.BookDaoImplTest</td>
+<td></td>
+<td>1</td>
+<td>com.tz.online.dao.test.BookDaoImplTest@7e0babb1</td></tr>
+<tr>
+<td title='com.tz.online.dao.test.BookDaoImplTest.testFindById()'><b>testFindById</b><br>Test class: com.tz.online.dao.test.BookDaoImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.tz.online.dao.test.BookDaoImplTest@7e0babb1</td></tr>
+<tr>
+<td title='com.tz.online.service.test.BookServiceImplTest.testFindById()'><b>testFindById</b><br>Test class: com.tz.online.service.test.BookServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.tz.online.service.test.BookServiceImplTest@5ba23b66</td></tr>
+<tr>
+<td title='com.tz.online.dao.test.UserDaoImplTest.testFindByName()'><b>testFindByName</b><br>Test class: com.tz.online.dao.test.UserDaoImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.tz.online.dao.test.UserDaoImplTest@6debcae2</td></tr>
+<tr>
+<td title='com.tz.online.service.test.BookServiceImplTest.testFindByPage()'><b>testFindByPage</b><br>Test class: com.tz.online.service.test.BookServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.tz.online.service.test.BookServiceImplTest@5ba23b66</td></tr>
+<tr>
+<td title='com.tz.online.dao.test.BookDaoImplTest.testFingByCategory()'><b>testFingByCategory</b><br>Test class: com.tz.online.dao.test.BookDaoImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.tz.online.dao.test.BookDaoImplTest@7e0babb1</td></tr>
+<tr>
+<td title='com.tz.online.service.test.UserServiceImplTest.testGetAddressById()'><b>testGetAddressById</b><br>Test class: com.tz.online.service.test.UserServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.tz.online.service.test.UserServiceImplTest@2ff4f00f</td></tr>
+<tr>
+<td title='com.tz.online.service.test.UserServiceImplTest.testGetAddressByUserId()'><b>testGetAddressByUserId</b><br>Test class: com.tz.online.service.test.UserServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.tz.online.service.test.UserServiceImplTest@2ff4f00f</td></tr>
+<tr>
+<td title='com.tz.online.dao.test.BookDaoImplTest.testGetRows()'><b>testGetRows</b><br>Test class: com.tz.online.dao.test.BookDaoImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.tz.online.dao.test.BookDaoImplTest@7e0babb1</td></tr>
+<tr>
+<td title='com.tz.online.service.test.UserServiceImplTest.testLogin()'><b>testLogin</b><br>Test class: com.tz.online.service.test.UserServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.tz.online.service.test.UserServiceImplTest@2ff4f00f</td></tr>
+<tr>
+<td title='com.tz.online.service.test.UserServiceImplTest.testRegister()'><b>testRegister</b><br>Test class: com.tz.online.service.test.UserServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.tz.online.service.test.UserServiceImplTest@2ff4f00f</td></tr>
+<tr>
+<td title='com.tz.online.dao.test.UserDaoImplTest.testSave()'><b>testSave</b><br>Test class: com.tz.online.dao.test.UserDaoImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.tz.online.dao.test.UserDaoImplTest@6debcae2</td></tr>
+<tr>
+<td title='com.tz.online.service.test.UserServiceImplTest.testValidate()'><b>testValidate</b><br>Test class: com.tz.online.service.test.UserServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.tz.online.service.test.UserServiceImplTest@2ff4f00f</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>js中的变量声明</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        	// 变量命名规则:
+        	// 1. 变量的第一个字符, 只能使用英文的大小写或者下划线(_)或者$符号
+        	// 2. 除了第一个字符之外, 其他的可以使用上述三种字符和数字
+        	// 3. 不能使用js的保留字和关键字
+        	// 4. 变量名不能超过255个字符
+        	// 所有的变量都可以通过var来进行指定, 它是一种"弱引用"类型的语言
+        	// 变量类型的判定由js引擎进行管理
+			var a = 1;
+        	a = "zifu";
+        	// undefined(Undefined类型, 该类型就只有一个值undefined), 未定义
+        	// 当我们未对变量进行初始化或者显示声明其为undefined的时候变量类型就为该值
+        	var b;
+        	var c = 1, d ="323", e = false;
+        	alert(b);  
+        </script>
+    </body>
+</html>

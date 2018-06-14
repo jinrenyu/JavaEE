@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>简单语义的表格</title>
+    </head>
+    <body>
+        <table border="1px" width="500px" cellpadding="0px" cellspacing="0px" align="center">
+        	<!-- 表格的标题 -->
+        	<caption>学生信息表</caption>
+        	<!-- 表格的表头 -->
+        	<thead>
+        		<!-- tr, table row, 表示表格中的一行 -->
+	        	<tr>
+	        		<!-- table header, 被该标签包括的文字会有加粗的效果 -->
+	        		<th>姓名</th>
+	        		<th>年龄</th>
+	        		<th>班级</th>
+	        	</tr>
+        	</thead>
+        	<!-- 表示表格的主体数据部分 -->
+        	<tbody>
+	        	<tr align="center">
+	        		<!-- table data cell, 被该标签包括的文字会有加粗的效果 -->
+	        		<td>Jack</td>
+	        		<td>50</td>
+	        		<td rowspan="2">001</td>
+	        	</tr>
+	        	<tr>
+	        		<!-- table data cell, 被该标签包括的文字会有加粗的效果 -->
+	        		<td>Tom</td>
+	        		<td>14</td>
+	        	</tr>
+	        	<tr>
+	        		<!-- table data cell, 被该标签包括的文字会有加粗的效果 -->
+	        		<td>Lilei</td>
+	        		<td>32</td>
+	        		<td>003</td>
+	        	</tr>
+        	</tbody>
+        	<tfoot>
+        		<tr>
+        			<td colspan="3">统计信息:	XXXX</td>
+        		</tr>
+        	</tfoot>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+1. 什么是EL表达式
+EL的英文全称Expression Language, 
+它相当于JSP表达式的升级版, 它又是学习JSTL标签的基础
+其主要有以下4个作用:
+    1、获取数据(主要用途)
+    EL表达式主要用于替换JSP页面中的脚本表达式(JSP表达式),以从各种类型的"web域中"检索java对象、获取数据。
+    (某个web域中的对象,访问javabean的属性、访问list集合、访问map集合、访问数组)
+    2、执行运算
+    EL表达式可以在JSP页面中执行一些基本的关系运算、逻辑运算和算术运算,以在JSP页面中完成一些简单的逻辑运算。${user==null}
+    3、获取web开发常用对象
+    EL 表达式定义了一些隐式对象,利用这些隐式对象,web开发人员可以很轻松获得对web常用对象的引用,从而获得这些对象中的数据。
+    4、调用Java方法
+    EL表达式允许用户开发自定义EL函数,以在JSP页面中通过EL表达式调用Java类的方法。
+
+2. 基本说明
+    1、语法结构
+    ${expression}, 相当于<%=expression%>, 相当于out.write(expression);
+    2、[ ]与.运算符(借鉴了js中对象对于其成员的访问方式)
+    EL 提供"."和"[ ]"两种运算符来存取数据。
+   .当要存取的属性名称中包含一些特殊字符,如.或-等并非字母或数字的符号,就一定要使用"[ ]"。例如：
+    ${user.My-Name}应当改为${user["My-Name"]}
+   .如果要动态取值时,就可以用"[ ]"来做,而"."无法做到动态取值。例如：
+    ${sessionScope.user[data]}中data是一个变量
+    3、empty运算符: 检查对象是否为null(空)
+    4、二元表达式：${user!=null?user.name :""}
+    
+3. 
+|序号|隐含对象名称|          描述
+1   pageContext         对应于JSP页面中的pageContext对象(注意：取的是pageContext对象, 差别在于这个pageContext只能用于获取request/response/session等对象, 不能用于取出页面范围的数据)
+2   pageScope           代表page域中用于保存属性的Map对象
+3   requestScope        代表request域中用于保存属性的Map对象
+4   sessionScope        代表session域中用于保存属性的Map对象
+5   applicationScope    代表application域中用于保存属性的Map对象
+6   param               ServletRequest.getParameter(String name) 
+7   paramValues         ServletRequest.getParameterValues(String name),它对于某个请求参数,返回的是一个string[]
+8   header              ServletRequest.getHeader(String name)获得.注意：如果头里面有"-" ,例Accept-Encoding,则要header["Accept-Encoding"]
+9   headerValues        ServletRequest.getHeaders(String),它对于某个请求参数,返回的是一个string[]数组。注意：如果头里面有"-" ,例Accept-Encoding,则要headerValues["Accept-Encoding"]
+10  cookie              表示一个保存了所有cookie的Map对象
+11  initParam           通过调用 ServletContext.getInitparameter(String name) 

@@ -1,0 +1,280 @@
+递归(recursion)
+在方法体中,自已调用自己的过程，就是递归的过程
+
+递归的思路可以帮助我们解决一些特殊的问题，如：
+阶乘、菲波娜齐数列、汉诺塔问题、快速排序
+
+优点:
+递归只需少量的代码就可以描述解题过程中所需的反复多次的有规律
+的计算,大大减小程序的代码量
+
+缺点:
+运行效率极低,非常消耗内存,每次都会计算并且保存中间值,
+而这些中间值都是临时的.
+
+
+注意:
+1)一定要有退出条件,称为递归出口.否则会出现堆栈溢出错误:
+  java.lang.StackOverflowError
+
+2)效率较低，每一次调用都要分配空间保存中间状态.
+
+
+如： 采用递归来求指定数的阶乘
+public long factor(int n) {
+  //指定退出条件
+  if(n == 1) {
+     return 1L;
+  }
+  return n * factor(n - 1);
+}
+
+再如，求菲波娜齐数列 1,1,2,3,5,8,13,21,34...
+public long fibonacci(int n) {
+    //指定退出条件
+    if(n == 1 || n == 2) {
+		return 1;
+    }
+    return fibonacci(n-1) + fibonacci(n - 2);
+}
+----------------------------------------------------------
+Java时间处理
+
+java.util.Date		日期类
+
+注意:它里面有很多已近过时的方法,不建议使用,因为有新的更好的方法
+     提供了.
+     过时的方法之所以不去除,是因为早期开发的项目都是用的是过时
+     方法,如果取消,编译就不通过了.
+
+1.创建当前时间的对象
+  Date d = new Date();
+
+  根据系统时间毫秒数来创建对象
+  Date d = new Date(l);
+
+  创建指定时间的对象
+  Date d = new Date(int year - 1900,int month - 1,int day);
+
+2.通过getXXX();获取日期信息
+
+3.通过setXXX(int xxx);修改日期信息
+-----------------------------------------------------------------
+
+java.util.Calendar	日历类
+
+1.创建日历对象
+Calendar cal = Calendar.getInstance();
+
+
+2.
+//获取值
+cal.get(Calendar.字段);
+
+//修改值
+set(Calendar.字段,值);
+set(int year,int month - 1,int date)
+
+//得到时间
+cal.getTime();
+-------------------------------------------------------------------
+
+java.text.SimpleDateFormat类,简单日期格式化
+
+//创建对象
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+//简单日期格式化
+String s = sdf.format(d);//把Date类型转换成相应的字符串表示
+
+注意:如果传入非法模板,则抛出异常:
+java.lang.IllegalArgumentException,非法参数异常
+
+//把字符串解析成Date类型
+Date d = sdf.parse(String str);
+
+注意:
+此方法会强制要求处理异常
+如果传入的字符串与解析模板不匹配,则抛出解析异常:
+java.text.ParseException
+-------------------------------------------------------------------
+
+Date,Calendar,String,long相互转换:
+Calendar -> Date	cal.getTime()
+Date -> Calendar	cal.setTime(Date d)
+Date -> String		sdf.format(d)
+String -> Date		sdf.parse(String s)
+now -> long			System.currentTimeMillis()
+-------------------------------------------------------------------
+
+数组(Array)
+定义:由一组相同数据类型并且共享变量名的元素所组成,是一块连续的空间
+
+作用:它是一种容器,可以用来存放一组相同类型的字面量或变量
+          所以它可以存储和维护一组相同类型的数据
+
+1.数组的定义
+     类型[] 数组名 = new 类型[length];
+或者
+     类型 数组名[] = new 类型[length];
+
+如:定义长度为10的整型数组
+   int[] arr = new int[10];
+
+   定义一个长度为5的自定义元素类型的数组
+   Computer[] cp = new Computer[5];
+
+也可以先定义数组,在使用之前再创建
+int[] arr;
+arr = new int[10];
+
+注意点:
+a.数组是对象类型,但是它里面的元素可以是任意类型
+  int[] arr = new int[3];
+  这个数组的类型是对象类型,里面的元素是基本类型
+  arr的类型是int[]
+
+b.数组的长度必须要有,且一旦确定,是不可以改变的
+  获取数组元素个数:数组名.length
+
+c.数组元素的类型,决定了存放在其中的变量/字面量的类型
+
+注意:创建数组的两大必不可少的条件:元素类型,数组长度
+
+d.数组元素共享变量名,所以,可以通过下标来访问数组元素,
+  下标是从0开始的,到length - 1结束.
+
+  通过下标访问数组元素时,如果超过下标范围,则会出现
+  java.lang.ArrayIndexOutOfBoundsException
+  数组下标越界异常.
+
+  如:
+  int[] arr = new int[10];
+  System.out.println(arr[0]);
+  //访问下标是0的元素,也就是第一个元素
+  ...
+  System.out.println(arr[10]);//出现下标越界异常
+
+e.创建数组的时候如果没有赋值,那么系统会给元素赋值默认值
+  整数类型	0
+  小数类型	0.0
+  布尔类型	false
+  对象类型	null
+
+
+2.数组赋值的方式
+a.定义数组的时候直接赋值
+  int[] arr4 = {2,4,5,7,9};
+  int[] arr4 = new int[]{2,4,5,7,9};
+  //两个写法完全等价,new int[]中不能写长度
+
+b.通过下标来给元素一一赋值
+c.通过循环来给数组元素赋值
+d.通过Arrays.fill()方法来赋值
+  java.util.Arrays,数组操作工具类,提供操作数组的基本方法
+
+  Arrays.fill(数组名,值);
+  Arrays.fill(数组名,起始下标,结束下标,值);//结束下标不包含
+  //如果存入不匹配的数据类型,会抛出异常:
+    java.lang.ArrayStoreException
+
+
+3.数组的遍历(迭代)
+1.普通for循环
+  只能遍历有序的
+
+2.增强for循环
+  语法:
+  for(数组元素的类型 变量名 : 数组名){
+	System.out.println(变量名);
+  }
+  注:
+  JDK1.5之后提供的遍历操作,它可以实现遍历无序的集合
+  增强for循环是只读型,不能写入
+
+3.Arrays.toString(数组名);
+  可以按照一种规范格式来打印数组元素
+  [元素1, 元素2, .....元素N]
+
+4.通过下标,一一把元素打印出来
+
+5.自定义方法来输出数组元素
+---------------------------------------------------------
+
+数组的拷贝方法
+1.Arrays.copyOf(原数组名字,新长度)
+  注意:内部就是调用System.arraycopy()
+
+2.public static void arraycopy(
+  Object src,int srcPos,Object dest,int destPos,int length)
+
+此方法可以用来做数组之间元素的拷贝,各参数意义如下:
+Object src	指原数组名
+int srcPos	从原数组的第几个下标位置开始拷贝
+Object dest	指目标数组(新数组)
+int destPos	拷贝到目标数组的第几个下标位置
+int length	拷贝的长度
+
+注:
+srcPos + length 决不能超过src数组的长度
+destPos + length 决不能超过dest数组的长度
+否则出现数组下标越界异常
+---------------------------------------------------------
+
+数组的排序
+插入排序
+冒泡排序
+选择排序
+快速排序
+希尔排序
+void Arrays.sort(数组名);
+---------------------------------------------------------
+
+数组的应用:
+数组作为一种容器,常见的业务有(增,删,改,查)
+获取某一个元素的下标位置,求最值,排序,插入元素,删除元素
+---------------------------------------------------------
+
+二维数组
+定义:
+一维数组的数组,也就是说二维数组中的每一个元素都是一维数组
+
+语法:
+类型[][] 数组名 = new 类型[rows][cols];
+或者
+类型 数组名[][] = new 类型[rows][cols];
+
+注:rows必须要有,cols可以省略
+
+如:定义一个3行3列的二维整型数组
+   int[][] arr = new int[3][3];
+
+初始化:
+   arr[0] = new int[]{1,2,3};
+   arr[1] = new int[]{2,4,6};
+   arr[2] = new int[]{10,20,30};
+或者
+   int[][] arr = {{1,2,3},{2,4,6},{10,20,30}};
+
+采用循环来初始化(把二维数组arr的每一个元素赋值为1)
+for(int i = 0;i < arr.length;i++){
+	for(int j = 0;j < arr[i].length;j++){
+		arr[i][j] = 1;
+	}
+}
+
+不规则的二维数组
+int[][] arr = new int[3][];
+arr[0] = new int[]{1};
+arr[1] = new int[]{1,2,1};
+arr[2] = new int[]{1,2,3,2,1};
+
+注:
+如果在定义二维数组的时候,没有指定列的长度,则下面初始化
+数组元素的时候,不能直接用{}来赋值,而应该通过new int[]{}
+来赋值
+
+二维数组通常的业务
+坐标计算
+所有规则方格的游戏
+如:扫雷,五子棋,象棋...

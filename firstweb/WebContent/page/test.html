@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>测试表单</title>
+    </head>
+    <body>
+    	<!-- 如果请求是由客户端发起的并且这个请求是在本主机内部的,书写路径的时候
+    	需要带上web应用的名字 -->
+    	<!-- 如果不指明提提交的方式, 则默认采用get方式 -->
+        <form action="/firstweb/MyThirdServlet" method="post">
+        	username:<input type="text" name="uname" /><br/>
+        	pwd:<input type="password" name="pwd" /><br/>
+        	hobbies:reading:<input type="checkbox" value="1" name="hobby" />
+        	running:<input type="checkbox" value="2" name="hobby" /><br/>
+        	gender:male<input type="radio" name="gender" value="male">
+        	female<input type="radio" name="gender" value="female"><br/>
+        	<input type="submit" value="提交">
+        </form>
+        <a href="/firstweb/MyThirdServlet?uname=testname&pwd=123">点击我</a>
+    </body>
+</html>

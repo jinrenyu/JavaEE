@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration 
+PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd" >
+<hibernate-configuration>
+    <session-factory>
+        <!-- 配置连接的基本信息 -->
+        <!-- 驱动类的具体实现类,hibernate前缀可以省略 -->
+        <property name="hibernate.connection.driver_class">
+            oracle.jdbc.driver.OracleDriver
+        </property>
+        <!-- 数据库连接对应的url -->
+        <property name="hibernate.connection.url">
+            jdbc:oracle:thin:@localhost:1521:XE
+        </property>
+        <!-- 数据库用户名 -->
+        <property name="hibernate.connection.username">
+            jsd1612
+        </property>
+        <!-- 数据库密码 -->
+        <property name="hibernate.connection.password">
+            jsd1612
+        </property>
+        <!-- 配置数据库对应的方言(详细的版本信息) -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.Oracle10gDialect
+        </property>
+        <!-- 使用新的ID生成策略,建议新的项目使用该配置,不保证对老的数据库的兼容 -->
+        <property name="hibernate.id.new_generator_mappings">true</property>
+        
+        <!-- 定义连接池实现类的具体路径(该配置在高版本的Hibernate中可以省略) -->
+        <property name="hibernate.connection.provider_clss">
+            org.hibernate.c3p0.internal.C3P0ConnectionProvider
+        </property>
+        <!-- 连接池最大连接数  -->
+        <property name="hibernate.c3p0.max_size">20</property>
+        <!-- 连接池最小连接数 -->
+        <property name="hibernate.c3p0.min_size">5</property>
+        <!-- 每个连接超时时间 -->
+        <property name="hibernate.c3p0.timeout">4000</property>
+        <!-- 连接池最多可以存放多少个语句对象 -->
+        <property name="hibernate.c3p0.max_statements">200</property>
+        <!-- 检验空闲连接的时间间隔 -->
+        <property name="hibernate.c3p0.idle_test_period">3000</property>
+        <!-- 表示当连接数目超过最大连接数自增长的连接数量 -->
+        <property name="hibernate.c3p0.acquire_increment">2</property>
+        <!-- 表示建立连接前是否检测连接的有效性 -->
+        <property name="hibernate.c3p0.validate">false</property>
+
+        <!-- 代表批量执行的语句数量 -->
+        <property name="hibernate.jdbc.batch_size">100</property>
+        <!-- 额外附加配置 -->
+        <!-- update代表如果实体对应的表格不存在则创建表格, 否则进行更新 -->
+        <!-- update在进行表结构和数据更新的时候只会增加列的数量 -->
+        <!-- create代表在创建会话工厂的时候, 对包括表以及表中的数据全部进行初始化 -->
+        <!-- 如果src目录下存在名为import.sql的脚本文件, 运行该脚本文件 -->
+        <!-- create-drop跟create的区别在于当会话工厂类关闭时, 会删除'配置'创建的所有表格 -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!-- 指定特定的初始化脚本运行可以指定名称跟路径, 该配置必须配合create或者create-drop使用 -->
+<!--         <property name="hibernate.hbm2ddl.import_files">init_worker.sql</property> -->
+        <!-- 是否打印执行的SQL语句 -->
+        <property name="hibernate.show_sql">true</property>
+        <!-- 是否格式化所输出打印的SQL语句 -->
+        <property name="hibernate.format_sql">true</property>
+    </session-factory>
+</hibernate-configuration>

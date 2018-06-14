@@ -1,0 +1,10 @@
+#p1 {
+	/*不要在属性值与单位之间留有空格（如："margin-left: 20 px" ），正确的写法是 "margin-left: 20px" */
+	font-size:200%;
+	color:red;
+	font-family:"微软雅黑";
+}
+
+.p2{
+	text-align:right;
+}

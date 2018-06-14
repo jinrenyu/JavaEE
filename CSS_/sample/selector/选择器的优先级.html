@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>选择器的优先级问题</title>
+        <!-- 
+        	权值大的会进行表现
+        	选择器的优先级权重值:
+        	继承的属性权重最低;
+        	结合符号(+/~)对权重没有贡献;
+        	通配符*对权重没有贡献;
+        	元素选择器/伪对象选择符的权重: 1;
+        	类选择/属性选择器/伪类选择器的权重: 10;
+        	id选择器的权重: 100;     	       
+        	行内式的权重: 1000;
+        	!important: 无穷大(这种级别的CSS属性会专门划分出一组);
+         -->
+        <style type="text/css">
+        	* {
+        		color: black !important;
+        	}
+        	/* 10+10+10=30 */
+        	.p1.p2.p3 {
+        		color: red;
+        	}
+        	/* 权值10+1=11 */
+        	p.p1 {
+        		color: blue;
+        	}
+        	/* 权值100 */
+        	#d1 {
+        		color: yellow;
+        	}
+        </style>
+    </head>
+    <body>
+        <!-- class属性不同的元素可以进行重复出现 -->
+        <p style="color: green;" id="d1" class="p1">段落1</p>
+        <!-- 元素的class属性的值可以存在多个,属性之间使用空格进行分割 -->
+        <p class="p1 p2 p3">段落2</p>
+        <address class="p1">一个地址</address>
+        <p class="p1">段落3</p>
+        <p>段落4</p>
+    </body>
+</html>

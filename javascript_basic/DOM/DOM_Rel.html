@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM节点关系的访问</title>
+        <!-- 节点分成12类型: 常用3种(element(1)/text(3)/注释(8)) -->
+    </head>
+    <body>
+        <ul>
+        	<li>无序列表1</li>
+        	<li>无序列表2</li>
+        	<!-- 无序列表中的注释 -->
+        	<li id="li3">无序列表3</li>
+        	<li>无序列表4</li>
+        </ul>
+        <script type="text/javascript">
+        	var ulTag = document.getElementsByTagName("ul")[0];
+        	// 获取ul节点对象的所有子节点
+        	// (区别)childNodes/children(指的元素节点的子节点组成的数组)
+        	var chileNodes = ulTag.childNodes;
+        	var children = ulTag.children;
+        	document.write("ul的子节点数量为" + chileNodes.length + "<br/>");
+        	document.write("ul的元素子节点数量为" + children.length + "<br/>");
+        	// 所有的节点都具有以下属性:nodeType(节点类型)/nodeName(节点名称)/nodeValue(节点的值)
+        	// 以上三个值不同的节点类型其取值不同(对于text节点,它的nodeValue和data属性相同(语义不同))
+        	// 对于元素节点:nodeName和tagName相同
+        	document.write("注释节点的内容:" + chileNodes[5].nodeValue 
+        			+ "节点类型:" + chileNodes[5].nodeType 
+        			+ "节点名称:" + chileNodes[5].nodeName + "<br/>");
+        	// 快捷访问方式: 第一个节点/最后一个节点
+        	document.write("ul的第一个子节点:" + ulTag.firstChild.nodeType + "<br/>");
+        	document.write("ul的第一个元素子节点:" + ulTag.firstElementChild.innerText + "<br/>");
+        	document.write("ul的最后一个子节点:" + ulTag.lastChild.nodeType + "<br/>");
+        	document.write("ul的最后一个元素子节点:" + ulTag.lastElementChild.innerText + "<br/>");
+        	
+        	var li3 = document.getElementById("li3");
+        	// 同级节点(同胞)/父级节点的访问
+        	document.write("li的上一个同胞节点:" + li3.previousSibling.nodeType + "<br/>");
+        	document.write("li的下一个同胞节点:" + li3.nextSibling.nodeType + "<br/>");
+        	document.write("li的上一个同胞元素节点:" + li3.previousElementSibling.innerText + "<br/>");
+        	document.write("li的下一个同胞元素节点:" + li3.nextElementSibling.innerText + "<br/>");
+        	// 父级节点, 下面两个值大部分情况下都是相同的
+        	document.write("li的父级节点:" + li3.parentNode.nodeName + "<br/>");
+        	document.write("li的父级元素节点:" + li3.parentElement.nodeName + "<br/>");
+        	
+        	// 判断一个节点是否拥有子节点的快速方式
+        	document.write("ul节点是否拥有子节点:" + ulTag.hasChildNodes() + "<br/>");
+        	
+        	// 获取文档上三个特殊的节点html/head/body
+        	document.write("html节点:" + document.documentElement.nodeName + "<br/>");
+        	document.write("head节点:" + document.head.nodeName + "<br/>");
+        	document.write("body节点:" + document.body.nodeName + "<br/>");
+        	
+        	// 元素节点的增/删/替换
+        	// 添加节点需要经历2个步骤: 1.创建元素节点, 2.把元素节点添加到文档对象中
+        	var tempLi = document.createElement("li"); // <li></li>
+        	tempLi.innerText = "无序列表333333";
+        	document.write("ul的最后一个节点:" + ulTag.lastElementChild.innerText + "<br/>");
+        	// appendChild(), 一个参数, 即要添加的节点对象, 
+        	// 该方法会把节点对象添加到所有子节点的末尾
+        	// ulTag.appendChild(tempLi);
+        	// children和childNodes是会动态更新的
+        	document.write("ul的最后一个节点:" + ulTag.lastElementChild.innerText + "<br/>");
+        	
+        	// 两个参数: 参数1(被添加的节点) 参数2(参照元素节点)
+        	// ulTag.insertBefore(tempLi, ulTag.firstChild);
+        	// 替换子节点: replaceChild(替换的节点, 被替换的节点)
+        	ulTag.replaceChild(tempLi, ulTag.firstElementChild);
+        	// 删除子节点: removeChild(被删除的节点)
+        	ulTag.removeChild(ulTag.children[2]);
+        	
+        	// clone节点(拷贝节点)默认浅拷贝(只拷贝第一层的节点内容)
+        	var tempUl = ulTag.cloneNode(true); // 表示深拷贝
+        	document.body.appendChild(tempUl);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>被打开的测试窗口</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        	// 使打开当前窗口的窗口对象的地址栏指向百度
+        	window.opener.location="http://www.baidu.com";
+        	// 下面4中方法都是用于指定窗口的地址栏到某个连接地址
+        	// location对象代表了窗口中地址栏
+        	// window.location="链接地址";
+        	// location.href="链接地址";
+        	// location.assign("链接地址");
+        	// replace的目的是不在历史记录中记录打开的链接地址
+        	// location.replace("链接地址");
+        	// reload(), 用于重新加载当前页面窗口
+        	// 参数: true/false, 
+        	// true表示强制从远程服务器加载(默认)
+        	// false表示先从本地缓存中查找内容, 查找不到再去远程加载
+        </script>
+    </body>
+</html>

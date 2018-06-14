@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>间隔执行器应用</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        	// 因为js是单线程的语言, 当一个任务执行的
+        	// 时间超过你设定的间隔时间, 
+        	// 比如一个函数需要3秒执行时间, 而设置的间隔时间为2秒
+        	// 会造成2~3中间的任务得不到执行
+        	var num = 0;
+        	var max = 10;
+        	var sid = null;
+        	function printInfo() {
+        		console.log("信息" + (num++));
+        		// 当到达指定的次数后, 移除间隔执行器
+        		if (num == max) {
+        			clearInterval(sid);
+        		}
+        	}
+        	var sid = setInterval(printInfo, 1000);
+        </script>
+    </body>
+</html>

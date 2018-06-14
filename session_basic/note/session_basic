@@ -1,0 +1,116 @@
+1. session的用途.
+a.) 它可以实现不同页面之间信息的共享. 比如淘宝网, 不论用户跳转了
+多少次页面, 页面右上角总可以显示当前登录人的信息.
+b.) 可以实现购物车的功能
+c.) 可以实现对于一些非法登录行为的拦截(配合拦截器)
+
+2. session的原理.
+服务器会为每一个访问web应用的客户端在服务器端开辟一块内存空间, 单独
+存储对应于各自客户端的信息. 且该信息存储在服务器端, 当会话结束的时候, 
+清除客户端和服务器端内存之间的联系.(原理图)
+
+3. getSession(true)和getSession(false)的区别
+前者等价于"request.getSession()"表示
+它会尝试获取当前客户端所对应的session对象
+如果当前客户端在web服务器内部没有对应的session对象, 则创建一个session对象
+即为当前的客户端进程单独在服务器开辟一块内存区域供其存储信息
+
+后者只会尝试获取当前客户端所对应的session对象. 如果找不到, 
+不为当前的用户开辟新的session空间, 并返回一个null对象.
+
+4. Session中数据的操作(添加/替换/删除/查询/遍历session参数)
+a.) 添加: 如果调用"session.setAttribute(string, object)"
+方法并且参数的key值没有和session区域内其他的参数key重复, 
+则会把这个session参数添加进session对应的空间中
+
+b.) 查询: 通过"session.getAttribute("参数的key")"方法
+可以获取session值指定key的value, 并且取出的值是一个Object类型的
+对象, 一般都需要进行强制转换.
+
+c.) 替换: 如果调用"session.setAttribute(string, object)"
+方法并且参数的key值和session区域内其他的参数key重复, 则后设置的session
+参数值会替代先前的参数值, 即进行覆盖操作(后赢)
+
+d.) 删除: removeAttribute("参数的key值")可以移除session区域中
+指定参数key所对应的session参数
+
+e.) 遍历: 通过类似如下的代码片段来遍历session中所有存储的参数
+if (enums != null) {
+	while(enums.hasMoreElements()) {
+		String name = enums.nextElement();
+		System.out.println("参数名称为: " + name + "参数的值为: " + session.getAttribute(name));
+	}
+}
+
+5. session生命周期
+因为session是创建于服务器端的, 所以它存在于服务器的内存空间里面, 其默认的
+生命周期为30分钟(类似于DB连接里空闲时间的概念).
+比如A用户在第15分钟的时候访问该Session, 那么该Session至少要在
+第45分钟的时候才会被服务器清除.
+
+修改其过期时间有三种方法: 
+i. 修改tomcat配置文件web.xml中的代码片段:
+<session-config>
+    <session-timeout>30</session-timeout>
+</session-config>
+其中30的单位是"分钟", 它会影响所有部署在这个web服务器下的所有web应用 
+ii. 修改制定的web应用的web.xml文件, 只会影响当前的web应用
+iii. 通过代码修改: session.setMaxInactiveInterval(30);
+此处30的单位是"秒", 它只影响当前被设置的这个session
+
+优先级: iii > ii > i
+
+6. session被销毁的时间
+a.) 在其空闲时间内没有用户返回该session, 超过时间被销毁
+b.) web应用重新部署或者关闭/服务器关闭/重启也会导致session被销毁.
+
+练习: 实现session在用户关闭浏览器之后, 重新打开浏览器进程
+一样可以返回到之前的session, 并取出之前存储的内容.
+
+因为session是在服务器的, 而存储JSESSIONID的cookie的声明周期
+默认为会话结束. 所以当会话关闭的时候, cookie就消失了. 而此时, session
+还是存在于服务器端. 
+a.) 取得当前session所对应的JSESSIONID
+b.) 把这个JSESSIONID存储在一个新的Cookie里面
+c.) 设置这个cookie的生命周期并返回给浏览器端
+
+7. session中常用的方法
+
+a.) session.invalidate(), 用于解绑当前session所有关联的参数, 多用于"安全退出"
+
+b.) 假设有的用户禁用了cookie, 那么session将会失效
+1.) 检测用户是否禁用了cookie功能, 给出
+提示"你禁用cookie可能会影响你接下来的浏览体验, 建议开启, 附上教程"
+2.) session的URL重写技术
+进行重写前必须调用一下request.getSession();
+a.) 针对普通的链接地址,使用方法: response.encodeURL("需要重写的地址");
+然后把重写后的地址当成新的链接, 如:
+http://localhost:8085/session_basic/GetSessionValue;jsessionid=0DB21F738BEB9F2FFA0C6F773983CF1C
+b.) 针对重定向的地址: 使用
+response.encodeRedirectURL("需要重写的地址");进行重写
+3.) 针对表单(form), 可以使用隐藏域
+<input type="hidden" name="JSESSIONID" value="JSESSIONID的值">
+
+8. 练习: 使用session实现对于一些非法登录行为的拦截(配合拦截器)
+思路:
+1. 在用户登录成功之后, 把用户的username和password存储一份到session中
+2. 使用拦截器, 对于需要校验的页面, 首先检测session中是否含有username和password
+如果没有, 则打回到登录界面
+
+9. cookie和session的区别?
+1. 存储位置: cookie是存放在浏览器的客户端, 而session存在于服务器的内存当中
+2. 安全性: cookie是以明文的方式存放用户信息并且可以直接打开访问, 而session
+里的信息存储在服务器端的内存中, 安全性session要好于cookie
+3. 生命周期: cookie的如果设置了存活时间为30秒, 则其一定会在30秒后过期, 而
+session如果也设置为30秒, 但用户在19秒的时候对其进行了一次访问, 则至少要在
+49秒的时候才会过期, 所以session的生命周期是类似于一个空闲时间的概念.
+如果服务器关闭, session就会消失, 而对cookie没有影响
+4. 占用网络的资源: cookie需要通过网络进行发送, 而session中数据的访问是在
+服务器内部进行, 所以session的访问不会占用网络的带宽
+5. 共享性. cookie可以被多个用户共享, 而session是专属于某个浏览器进程的.
+6. cookie技术是session技术的基础, 如果禁用了cookie则session的使用会受到
+一定的影响, 必须通过URL重写技术才能启用.
+
+10. 实现登录界面的"验证码"功能
+
+

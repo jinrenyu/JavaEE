@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>父子关系选择符</title>
+        <style type="text/css">
+        	/* 表示选择ul元素直接关联子元素标签 */
+        	ul > em {
+        		color: red;
+        	}
+        	/* 表示选择ul元素的子元素以及子元素的子元素.... */
+        	ul em {
+        		color: blue;
+        	}
+        </style>
+    </head>
+    <body>
+    	<ul>
+    		<li>子选项1</li>
+    		<li>子选项2
+    			<ol>
+    				<li>有序选项1</li>
+    				<li>有序<em>强调内容1</em>选项1</li>
+    				<li>有序选项1</li>
+    			</ol>
+    		</li>
+    		<li>子选
+    			<em>强调内容1</em>
+    		项3</li>
+    	</ul>
+    </body>
+</html>

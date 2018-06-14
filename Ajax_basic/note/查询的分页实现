@@ -1,0 +1,94 @@
+1. 为什么需要分页?
+如果数据中一次性查询返回的数据过多(百万级别/千万级别), 然后全部在
+内存中进行分页, 会造成占用内存过多, 当数据量超过一定的级别的时候
+内存就会崩溃. 一次性展现数据的缺点:
+	1. 效率低下 2. 内存容易崩溃 3. 用户体验不佳
+
+2. 数据库中如何才能实现分页?
+以Oracle为例(分页的SQL语句):
+-- 分页查询公式推导
+-- rownum的特点: 只能从1开始并且中间不能出现间隔
+-- 所以书写的时候只能使用<=符号, 保证其连续
+-- Java的常量: private final int NUM = 5;
+-- int num1 = NUM;
+-- num1 = 6;
+-- 类似, 如果要实现oracle的rownum能够大于某一个值, 我们需要给rownumn设置一个别名
+
+select * from 
+(
+select inner_.*, rownum row_ from 
+(
+select * from province
+) inner_ 
+where rownum <= 10
+) outter_ 
+where outter_.row_ > 5;
+
+3. 实现分页所需要的变量?
+a.) 当前页(currentPage) 
+来源: 初始值一般从1开始, 后面值由前台页面传递给后台
+b.) 每页显示的数据条数(rCount)
+来源: 一般由程序员预设, 如果需要可以提供一些值供用户选择.
+
+如果假设每页需要显示5条, 当前页是第2页, 就相当于显示第6到第10条数据
+select * from 
+(
+select inner_.*, rownum row_ from 
+(
+select * from province
+) inner_ 
+where rownum <= currentPage * rCount 
+) outter_ 
+where outter_.row_ > (currentPage - 1) * rCount;
+
+c.) 总的页数(pageCount)
+来源: 需要计算, 需要总的记录条数, 还要需要每页显示多少条
+问: 假设现在有16(15)条记录, 每页显示5条, 问需要多少页才能存放?
+1.) 
+if (totalCount % rCount == 0) {
+	pageCount = totalCount / rCount;
+} else {
+	pageCount = totalCount / rCount + 1;
+}
+2.) 三目运算符
+pageCount = totalCount % rCount == 0 ? totalCount / rCount : totalCount / rCount + 1;
+3.) 一些优化的算法(比较难理解)
+pageCounet = (totalCount - 1) / rCount + 1;
+
+d.) 总的记录数(totalCount)
+来源: 通过数据库查询得到
+
+
+如何实现显示固定的页数: 
+当前页(currentPage 3) 固定显示的页数是5页
+规定了一个常量fixedNum(2)
+总页数totalPage(7)
+
+a.)
+当currentPage - fixedNum > 0 并且 currentPage + fixedNum <= totalPage
+begin: currentPage - fixedNum
+end: currentPage + fixedNum
+
+4 - 2 = 2
+4 + 2 = 6
+
+b.) currentPage - fixedNum <= 0 (当用户点击第一页的时候)
+并且currentPage + fixedNum <= totalPage
+begin: 1
+end:　2　* fixedNum + 1(2　* fixedNum + 1 <= 总页数)
+否则, end = 总页数
+
+1 - 2 = -1 (currentPage - fixedNum)
+1 + 2 = 3 (currentPage + fixedNum)
+
+c.) currentPage - fiexedNum > 0 并且
+currentPage + fixedNum > totalPage
+begin: totalPage - 2 * fixedNum
+end: totalPage
+
+6 - 2 = 4  
+6 + 2 = 8 (7)  currentPage + fixedNum - totalPage = 1
+
+d.) currentPage - fiexedNum <= 0 并且
+currentPage + fixedNum > totalPage(不讨论)
+

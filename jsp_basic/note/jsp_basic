@@ -1,0 +1,164 @@
+1. 为什么需要JSP(JSP诞生的原因).
+JSP(JAVA SERVER PAGE), java服务器端页面. 它是一种WEB动态
+页面资源, 不能通过浏览器直接可以打开. 如果强制打开, 它被当成普通的
+纯文本文件(如:txt)来解析. 它的出现是为了弥补servlet编写动态页面
+的缺点.
+
+servlet的特点: 它可以用于编写动态页面, 进行业务逻辑的控制, 但是
+使用servlet编写视图页面非常繁琐, 而且不易进行分层(MVC/现代架构分层).
+书写业务控制逻辑非常的方便(Servlet就是Java的类)
+
+JSP: 它书写页面表现代码(HTML/CSS/JS)非常的方便, 但是在JSP页面中
+书写控制逻辑则比较复杂.
+
+主流的J2EE开发模式(不考虑框架), 基本采用如下的架构方式:
+JSP(专门负责表现的代码)+SERVLET(业务逻辑处理)+HTML+CSS+JS	
+
+2. JSP的原理
+JSP文件其实本质上就是一个普通的文件, 只不过以.jsp结尾后当用户访问该文件时
+会经过web服务器的jsp引擎, JSP引擎接收到后根据其预先的解析规则,生成一个类
+Servlet源文件, 经过编译和解释加载进内存当中, 并且JSP采用的class文件常
+驻内存的运行方式, 所以它所占的内存会稍微多一点, 但性能也会提高. 因为采用的
+.class文件的方式, 所以JSP可以跨平台.
+
+3.JSP语法:
+a.) <% %>, 这两个标签中间可以嵌入普通的JAVA代码, 并且jsp页面默认
+会导入4个包, 
+java.lang.*;
+javax.servlet.*;
+javax.servlet.http.*;
+javax.servlet.jsp.*;
+
+b.) JSP的注释
+<!-- -->(普通的html注释)和<%-- --%>(JSP页面专有的注释语法)
+嵌入的java代码块内可以直接使用java的注释(//和/**/)
+
+<!-- -->注释会被当成普通的html文本代码, 解析后返回给用户, 所以
+前台页面可以看到这种注释的内容
+<%-- --%>注释, 它会告诉JSP引擎不要解析该标签内的内容, 所以生成的
+类Servlet源文件里不会包含被嵌套的代码, 前端不能够看到
+
+c.) JSP表达式
+<%= %>
+被这两个标签所包裹的代码, 会被JSP引擎翻译成"out.print(嵌入的表达式);"
+所以表达中的代码不可以使用';'结尾.
+
+d.) JSP声明
+<%!  %>
+被该标签包裹的代码会被当成生成的类Servlet文件的成员而不是
+_jspservice()方法的局部变量
+
+4. JSP指令: 
+a> 编译指令(page/include/taglib)
+i. page指令
+语法: <%@ page page的属性=属性值  %>
+多个属性之间以空格分开
+
+language属性: 标识当前页面所使用的变成语言, 目前只有一个值"java"
+
+contentType属性: 
+相当于Servlet中"response.setContentType();"
+告知浏览器解析返回数据的方式和编码
+
+pageEncoding属性:
+官方说明, 表示仅仅使用response.setEncodingCharater();
+表示对当前页面的字符所使用的编码, 
+
+import属性: 
+所有属性中唯一一个多次出现且有意义的属性. 等同于Java中包导入, 
+导入多个包两种写法: 
+1. 包跟包使用逗号进行分隔, 例如:
+<%@ page import="java.util.Date, java.text.SimpleDateFormat" %>
+2. 使用多次编译指令<%@ page import="" %>, 例如:
+<%@ page import="java.util.Date" %>
+<%@ page import="com.jsp.entity.User" %>
+方式1和方式2也可以结合使用
+
+autoFlash和buffer属性:
+这两个属性一般成对出现, autoFlash默认为true, buffer默认为8K
+如果检测到了使用buffer并且设置了一个缓冲区, out在创建的时候会使用BuffedPrintWrite
+如果不使用缓冲区, 则使用PrintWriter.如果设置buffer为none或者false
+去掉缓冲可以提高页面内容的展现速度, 但必须严格遵守JSP页面中代码的出现顺序, 即编译指令
+必须出现在第一行, 否则有时候造成编译指令上面部分的代码出现问题, 而下面的内容没有问题.
+
+autoFlash, 如果设置成false, 会造成响应对象中的内容只能通过, 手动刷新到客户端
+即手动调用: response.flushBuffer();
+
+errorPage和isErrorPage(默认false)属性:
+errorPage表示当JSP出现异常的时候, 所要跳转到的页面.使用的"转发"机制
+跳转到页面如果需要捕获异常, 则需要把isErrorPage的属性值
+设置成true, 同时JSP引擎会创建内置对象exception, 这个对象
+即代表了抛出的异常对象,
+
+info属性: 
+该属性一般用于描述当前JSP页面的一些说明信息, 可以通过getServletInfo来获取
+
+extends属性:
+标识该servlet类需要继承其他servlet类, 一般开发人员使用不到, 
+提供给JSP厂商人员所使用
+
+isThreadSafe属性:
+当设置为ture的时候, 可以使用servlet的线程安全, 可以解决并发问题.
+该属性在起始版本架构的时候设计的比较糟糕, 所以避免使用, 
+当需要解决并发问题时, 自己手动实现.
+
+isELIgnored属性:
+表示是否忽略EL表达式, 在早期的servlet版本中, 并不支持EL表达式, 
+会造成编译错误(现在的servlet版本至少都是2.5版本), 2.4版本
+开始支持EL表达式.
+
+trimDirectiveWhitespaces属性:
+去除生成的JSP页面在展现时的空格但是对被元素包括的内容无效.
+可以提高页面传输的效率, 但是只有JSP 2.0版本之后才支持
+tomcat6之后都是JSP2.0版本
+
+ii. include指令
+大多数情况用于导入静态的web资源, 类似于
+request.include(); 区别在include编译指令发生于翻译阶段,
+而不是调用阶段, 所以静态引入相当于去"复制"和"粘贴"被引入的代码
+
+静态引入方式的做法是: 把所有需要包含的资源文件里的内容简单的加入到
+_jspservice方法中, 把引入的源文件当成一个类servlet程序进行编译
+并生成.class文件加入到内存中
+
+动作指令中的<jsp:include>大多用于引入动态web资源
+它的做法是: 主体文本和被引入的文件分别进行编译解释, 采用一种类似于
+类和类之间调用的做法, 来保证被引入的资源被调用
+原理和request.include();相同
+
+静态导入和动态导入的区别?
+1. 原理层面, 静态导入不会对被导入的文件进行解析和编译, 只是把要导入的文件简单的加入到
+_jspService方法, 并把他们合并成一个文件, 只生成一个.class文件
+动态导入,会分别把要导入的文件和主体文件进行解析和编译, 分别生成对应的.class, 然后
+采用类似于类于类之间调用的方式进行文件的引入.
+
+2. 当被导入的文件是静态文件的时候, 静态导入一般能够保证其规则的正确性, 而动态导入会把
+静态资源当成纯文本文件进行导入, 可能造成视图的紊乱. 
+当导入动态文件时, 静态导入可能会发生变量重复声明的编译错误, 动态导入则不存在该问题.
+
+3. 用法不同:
+静态导入属于编译指令, 其用法如下
+<%@ include file="资源URI" %>
+其中资源URI不能使用JSP表达式来替代, 不能进行参数传递.
+
+动态导入属于与动作指令, 其用法如下:
+<jsp:include page="<%=str%>">
+	<jsp:param value="test" name="test"/>
+</jsp:include>
+其中page引入的文件路径可以使用JSP表达式, 并且可以通过<jsp:param>来进行参数的传递.
+
+4. 性能角度,
+静态导入只生成一个文件, 所以其占用的内存相对较小, 效率稍微高一些
+动态导入会分别生成各自的.java和.class文件, 占用内存相对较多, 效率较低
+
+iii-> taglib
+该编译指令用于引入第三方的标签库, 语法为:
+<%@ taglib prefix="标签前缀" uri="标签库的URI" %>
+
+5. JSP内置的动作指令(常用)
+1. <jsp:include>
+2. <jsp:param>
+3. <jsp:forward>
+4. <jsp:usebean>
+5. <jsp:getProperty>
+6. <jsp:setProperty>

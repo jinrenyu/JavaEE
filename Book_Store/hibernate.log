@@ -1,0 +1,672 @@
+10:50:12,734 ERROR SchemaExport:426 - HHH000389: Unsuccessful: drop table book_book cascade constraints
+10:50:12,734 ERROR SchemaExport:427 - ORA-00942: 表或视图不存在
+
+10:50:12,734 ERROR SchemaExport:426 - HHH000389: Unsuccessful: drop table book_style cascade constraints
+10:50:12,734 ERROR SchemaExport:427 - ORA-00942: 表或视图不存在
+
+10:50:13,953  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+10:50:13,953  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:30:57,812  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:30:57,828  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:37:38,625  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:37:38,640  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:50:12,531  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:50:12,531  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:00:47,203  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:00:47,203  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:07:23,718  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:07:23,718  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:11:46,859  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:11:46,875  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:13:20,875  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:13:20,890  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:26:19,296  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:26:19,312  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:26:53,375  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:26:53,375  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:29:44,687  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:29:44,687  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:30:45,437  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:30:45,453  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:31:07,906  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:31:07,921  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:32:16,265  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:32:16,265  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:32:29,687  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:32:29,703  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:32:48,078  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:32:48,093  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:33:19,906  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:33:19,921  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:34:14,125  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:34:14,125  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:34:56,031  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:34:56,046  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:38:17,609  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:38:17,609  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:39:22,750  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:39:22,750  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:52:31,890  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:52:31,906  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:52:42,515  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:52:42,515  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:54:56,468  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:54:56,468  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:55:06,859  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:55:06,859  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:58:55,078  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:58:55,078  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:59:04,171  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:59:04,171  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:02:08,859  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:02:08,859  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:02:17,750  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:02:17,765  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:03:24,421  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:03:24,421  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:05:22,453  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:05:22,453  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:05:42,343  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:05:42,343  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:07:28,921  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:07:28,937  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:07:38,656  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:07:38,671  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:09:01,484  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:09:01,484  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:10:25,875  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:10:25,875  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:12:43,843  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:12:43,843  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:13:33,015  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:13:33,031  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:16:11,828  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:16:11,828  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:13:30,796  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:13:30,796  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:55:11,687  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:55:11,703  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:56:42,218  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:56:42,218  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+10:33:44,843  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+10:33:44,843  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:03:01,328  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:03:01,343  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:03:28,046  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:03:28,062  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:03:48,390  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:03:48,406  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:09:53,906  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:09:53,921  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:18:35,046  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:18:35,062  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:19:13,687  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:19:13,703  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:19:46,203  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:19:46,218  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:20:32,781  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:20:32,796  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:21:04,125  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:21:04,140  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:21:23,921  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:21:23,937  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:42:42,421  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:42:42,421  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:44:34,281  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:44:34,281  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:46:16,203  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:46:16,203  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:46:28,625  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:46:28,640  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:48:41,203  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:48:41,218  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:51:22,000  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:51:22,015  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:52:14,796  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:52:14,812  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:57:19,484  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:57:19,484  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:03:30,906  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:03:30,906  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:10:12,734  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:10:12,734  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:18:38,890  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:18:38,906  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:20:01,843  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:20:01,843  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:20:36,968  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:20:36,984  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:21:19,906  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:21:19,921  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:46:11,171  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:46:11,187  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+16:30:24,859  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+16:30:24,890  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+08:43:20,578  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+08:43:20,578  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:54:23,843  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:54:23,859  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:58:36,296  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:58:36,312  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+10:58:40,062 ERROR SchemaExport:426 - HHH000389: Unsuccessful: drop table book_user cascade constraints
+10:58:40,062 ERROR SchemaExport:427 - ORA-00942: 表或视图不存在
+
+10:58:43,234  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+10:58:43,234  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+10:59:08,500  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+10:59:08,515  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:06:47,343  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:06:47,359  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:06:57,375  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:06:57,390  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:12:41,453  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:12:41,468  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+08:43:30,234  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+08:43:30,250  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+10:55:51,843  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+10:55:51,859  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:17:37,968  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:17:37,968  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:21:17,281  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:21:17,281  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:22:14,375  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:22:14,390  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:22:21,937  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:22:21,937  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:31:47,312  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:31:47,312  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:15:32,906  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:15:32,906  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+18:43:42,565  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+18:43:42,577  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:11:41,298 ERROR SchemaExport:426 - HHH000389: Unsuccessful: drop table bsbook cascade constraints
+14:11:41,345 ERROR SchemaExport:427 - ORA-00942: 表或视图不存在
+
+14:50:30,376  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+14:50:39,118 ERROR SchemaExport:426 - HHH000389: Unsuccessful: drop sequence bs_bookId
+14:50:39,119 ERROR SchemaExport:427 - ORA-02289: 序列不存在
+
+15:08:04,722  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+15:08:51,395  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+16:09:17,519  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+16:13:11,550  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+16:13:17,625 ERROR SchemaExport:426 - HHH000389: Unsuccessful: drop table address_book cascade constraints
+16:13:17,626 ERROR SchemaExport:427 - ORA-00942: 表或视图不存在
+
+16:13:20,608 ERROR SchemaExport:426 - HHH000389: Unsuccessful: drop table oitem_book cascade constraints
+16:13:20,609 ERROR SchemaExport:427 - ORA-00942: 表或视图不存在
+
+16:13:20,619 ERROR SchemaExport:426 - HHH000389: Unsuccessful: drop table order_book cascade constraints
+16:13:20,619 ERROR SchemaExport:427 - ORA-00942: 表或视图不存在
+
+16:13:20,657 ERROR SchemaExport:426 - HHH000389: Unsuccessful: drop table user_book cascade constraints
+16:13:20,657 ERROR SchemaExport:427 - ORA-00942: 表或视图不存在
+
+17:49:05,631  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:49:06,189  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:49:06,197  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:50:03,486  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:50:03,811  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:50:03,817  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+21:50:12,412  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+21:58:25,968  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+21:58:26,560  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+21:58:26,568  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+22:04:38,426  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+22:04:38,783  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+22:04:38,789  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+22:05:05,357  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+22:05:05,702  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+22:05:05,708  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+22:52:02,475  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+22:52:02,826  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+22:52:02,832  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+22:53:16,699  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+22:53:17,052  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+22:53:17,062  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+22:55:59,529  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+22:55:59,872  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+22:55:59,878  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:00:02,195  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:00:02,555  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:00:02,561  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:28:02,485  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:28:02,837  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:28:02,844  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:28:50,531  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:28:50,863  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:28:50,869  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:29:25,615  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:29:25,987  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:29:25,993  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:30:22,697  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:30:23,022  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:30:23,028  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:22:17,879  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+09:22:18,329  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:22:18,336  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:22:38,229  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+09:22:38,589  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:22:38,597  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:25:58,409  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+09:25:58,858  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:25:58,866  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:46:55,588  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+09:46:55,962  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:46:55,969  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:47:16,328  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+09:47:16,650  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:47:16,656  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:48:45,384  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+09:48:45,769  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:48:45,776  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:56:22,400  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+09:56:22,769  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:56:22,776  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:56:45,282  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+09:56:45,633  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:56:45,639  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+10:09:54,310  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+10:09:54,677  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+10:09:54,683  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+10:22:26,183  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+10:22:26,519  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+10:22:26,525  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+10:22:41,105  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+10:22:41,466  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+10:22:41,472  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:17:59,526  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+14:17:59,875  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:17:59,881  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:11:09,724  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+15:11:10,172  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:11:10,261  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:38:19,219  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+15:38:19,617  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:38:19,629  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:58:08,153  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+15:58:08,482  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:58:08,527  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+16:10:31,543  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+16:10:31,946  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+16:10:31,956  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:25:03,080  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:25:03,544  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:25:03,552  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+19:48:24,802  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+19:48:25,171  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+19:48:25,180  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+19:51:12,853  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+19:51:13,496  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+19:51:13,507  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+19:57:22,252  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+19:57:22,689  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+19:57:22,698  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+20:20:57,248  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+20:20:57,628  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+20:20:57,638  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+20:52:11,195  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+20:52:11,643  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+20:52:11,652  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+21:19:40,606  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+21:19:41,241  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+21:19:41,252  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+22:47:52,338  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+22:47:52,782  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+22:47:52,799  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:48:35,484  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:48:36,352  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:48:36,360  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:58:51,349  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:58:51,925  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:58:51,932  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+00:20:34,960  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+00:20:35,385  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+00:20:35,394  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+00:27:52,931  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+00:27:53,314  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+00:27:53,322  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+08:49:01,796  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+08:49:02,196  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+08:49:02,205  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+08:51:44,433  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+08:51:44,895  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+08:51:44,903  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:24:39,515  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+09:24:39,824  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:24:39,832  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:38:48,355  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+09:38:48,721  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:38:48,735  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+10:37:29,557  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+10:37:29,947  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+10:37:29,947  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+12:45:32,627  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+12:45:32,972  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+12:45:32,982  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+12:45:48,046  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+12:45:48,391  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+12:45:48,401  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+12:46:15,260  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+12:46:15,596  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+12:46:15,606  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:13:37,491  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+14:13:37,858  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:13:37,858  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:20:52,411  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+14:20:52,800  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:20:52,805  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:24:16,303  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+14:24:16,651  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:24:16,656  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:27:40,334  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+14:27:40,692  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:27:40,697  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:28:35,253  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+14:28:35,576  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:28:35,581  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:29:48,441  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+14:29:48,798  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:29:48,804  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:31:12,437  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+14:31:12,774  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:31:12,783  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:34:09,193  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+14:34:09,538  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:34:09,544  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:36:33,288  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+14:36:33,640  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:36:33,646  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:59:02,583  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+14:59:02,956  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:59:02,963  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+16:38:21,633  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+16:38:22,053  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+16:38:22,059  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+16:38:45,938  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+16:38:46,286  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+16:38:46,292  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+16:56:45,944  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+16:56:46,332  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+16:56:46,338  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:03:01,423  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:03:02,352  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:03:02,362  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:06:24,233  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:06:24,724  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:06:24,734  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:26:46,277  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:26:46,983  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:26:46,993  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:40:21,996  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:40:22,745  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:40:22,753  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+18:49:48,459  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+18:49:49,108  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+18:49:49,122  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+19:32:32,222  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+19:32:32,613  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+19:32:32,620  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+19:58:07,469  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+19:58:07,810  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+19:58:07,810  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+20:09:28,146  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+20:09:28,548  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+20:09:28,554  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+20:15:27,532  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+20:15:27,886  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+20:15:27,886  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+20:18:23,699  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+20:18:24,078  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+20:18:24,088  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+20:19:16,514  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+20:19:16,849  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+20:19:16,849  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+20:19:58,021  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+20:19:58,361  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+20:19:58,371  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+20:20:11,935  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+20:20:12,291  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+20:20:12,301  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+20:25:12,416  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+20:25:12,772  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+20:25:12,782  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+20:27:08,492  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+20:27:08,829  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+20:27:08,829  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+22:39:53,443  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+22:39:53,965  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+22:39:53,975  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+22:42:49,093  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+22:42:49,494  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+22:42:49,505  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+22:53:08,041  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+22:53:08,639  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+22:53:08,649  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:08:56,588  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:08:56,984  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:08:56,992  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:34:40,509  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:34:40,963  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:34:40,971  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:56:55,292  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:56:55,643  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:56:55,655  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+00:01:15,022  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+00:01:15,539  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+00:01:15,547  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+00:11:19,625  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+00:11:20,083  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+00:11:20,092  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+00:51:55,024  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+00:51:55,489  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+00:51:55,497  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+01:01:03,192  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+01:01:03,581  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+01:01:03,592  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+08:37:39,130  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+08:37:39,510  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+08:37:39,517  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+08:43:44,125  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+08:43:44,519  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+08:43:44,529  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:35:17,638  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+09:35:18,036  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:35:18,045  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:44:20,467  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+09:44:20,832  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:44:20,841  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+09:46:46,776  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+09:46:47,094  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+09:46:47,101  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+10:11:38,387  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+10:11:38,719  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+10:11:38,728  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:05:40,451  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+11:05:40,796  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:05:40,805  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:12:11,234  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+11:12:11,555  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:12:11,564  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:26:51,821  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+11:26:52,230  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:26:52,240  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:05:51,278  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+13:05:51,850  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:05:51,864  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:09:21,451  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+13:09:21,850  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:09:21,864  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:15:52,563  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+13:15:53,209  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:15:53,218  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:34:27,181  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+13:34:27,549  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:34:27,560  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:57:33,888  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+13:57:34,287  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:57:34,295  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+16:48:54,823  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+16:48:55,386  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+16:48:55,396  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:24:06,751  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:24:07,141  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:24:07,149  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:28:35,376  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:28:35,802  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:28:35,813  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:37:04,159  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:37:04,644  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:37:04,658  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+21:50:15,222  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+22:04:41,448  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+22:04:42,299  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+22:04:42,308  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+22:51:49,550  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+22:51:49,895  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+22:51:49,905  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:01:21,522  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:01:22,059  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:01:22,071  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:02:14,908  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:02:15,352  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:02:15,359  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:06:15,607  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:06:16,083  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:06:16,093  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:08:56,388  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:08:56,741  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:08:56,758  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:20:16,873  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:20:17,295  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:20:17,309  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:45:05,485  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:45:06,026  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:45:06,037  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:49:19,372  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:49:19,892  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:49:19,901  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:54:07,420  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:54:07,852  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:54:07,868  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:58:28,173  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:58:28,566  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:58:28,577  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+00:03:19,066  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+00:03:19,520  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+00:03:19,531  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+00:05:12,932  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+00:05:13,245  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+00:05:13,256  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+00:12:26,339  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+00:12:26,766  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+00:12:26,777  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+00:30:28,818  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+00:30:29,327  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+00:30:29,337  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+00:31:50,495  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+00:31:51,238  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+00:31:51,247  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+08:47:06,479  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+08:47:07,267  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+08:47:07,280  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+10:29:56,682  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+10:29:57,325  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+10:29:57,337  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+10:33:31,511  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+10:33:31,970  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+10:33:31,983  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+12:47:41,355  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+12:47:41,939  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+12:47:41,948  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:10:19,563  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+13:10:20,040  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:10:20,048  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:31:34,288  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+13:31:34,710  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:31:34,757  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:37:01,035  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+13:37:01,411  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:37:01,429  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:47:25,378  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+13:47:25,730  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:47:25,739  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:55:37,744  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+13:55:38,122  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:55:38,184  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:39:58,642  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+11:39:59,070  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:39:59,078  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:48:23,794  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+11:48:24,150  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:48:24,157  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:52:13,542  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+11:52:14,114  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:52:14,121  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+11:56:32,524  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+11:56:33,036  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+11:56:33,075  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+12:18:56,352  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+12:18:56,682  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+12:18:56,696  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+12:29:00,527  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+12:29:00,890  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+12:29:00,900  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+12:34:13,116  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+12:34:13,595  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+12:34:13,628  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+12:39:04,700  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+12:39:05,118  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+12:39:05,125  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+12:52:50,885  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+12:52:51,183  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+12:52:51,191  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+12:56:28,986  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+12:56:29,436  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+12:56:29,450  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:06:01,425  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+13:06:01,747  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:06:01,755  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:18:04,604  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+13:18:04,955  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:18:04,963  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+13:21:28,183  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+13:21:28,517  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+13:21:28,526  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:11:05,258  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+14:11:05,625  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:11:05,634  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:39:49,627  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+14:39:50,022  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:39:50,030  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:43:59,586  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+14:44:00,069  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:44:00,084  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:16:13,429  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:16:13,782  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:16:13,790  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:19:45,785  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:19:46,162  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:19:46,171  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:33:40,767  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:33:41,137  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:33:41,147  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:36:46,430  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:36:46,784  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:36:46,793  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:40:33,432  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:40:33,729  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:40:33,737  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:42:46,151  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:42:46,509  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:42:46,518  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:45:47,594  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+17:45:47,971  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:45:47,989  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+18:01:49,161  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+18:01:49,618  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+18:01:49,628  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+23:18:37,781  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set
+23:18:38,157  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+23:18:38,166  WARN AbstractEhcacheRegionFactory:179 - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+10:52:28,608  WARN AnnotationBinder:539 - HHH000392: Hibernate does not support SequenceGenerator.initialValue() unless 'hibernate.id.new_generator_mappings' set

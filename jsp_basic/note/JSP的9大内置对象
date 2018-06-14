@@ -1,0 +1,54 @@
+1. 9大内置对象
+request       ---> javax.servlet.http.HttpServletRequest(接口) 
+response      ---> javax.servlet.http.HttpServletResponse(接口)
+session       ---> javax.servlet.http.HttpSession(接口)
+application   ---> javax.servlet.ServletContext(接口)
+config        ---> javax.servlet.ServletConfig(接口)
+pageContext   ---> javax.servlet.jsp.PageContext(类)
+out           ---> javax.servlet.jsp.JspWriter(类)
+page          ---> java.lang.Object(类)
+exception     ---> java.lang.Throwable(接口)
+
+因为类Servlet默认引入了以下4个包:
+java.lang.*;
+javax.servlet.*;
+javax.servlet.http.*;
+javax.servlet.jsp.*;
+同时, 其在命名变量的时候, 使用了上面9个变量, 所以上面9个变量可以直接使用
+而不用声明.
+
+2. 用法
+a.) request/response/session/application用法
+和servlet相同
+
+对于访问极大的门户网站, 可以在编译指令page中加入属性session="false"
+来阻止默认session对象的生成, 从而减轻服务器的压力.
+
+b.) page
+该对象不常用, 其中存在一些表示当前页面参数的方法
+
+c.) out
+类似于response.getWriter()得到的PrintWriter对象, 
+只不过在其基础上, 添加了缓存的机制, 在JSP页面中建议使用
+out来进行输出
+
+d.) exception
+代表了用户抛出的异常对象, 可以使用getMessage/printStack等方法
+来打印异常的具体信息
+
+e.) config
+config对象就代表了ServletConfig, 一般用于获取web应用在启动
+时设置的初始化参数
+
+f.) pageContext
+它是JSP新加入的一种域对象, 用于表示存储在这个对象里面的键值对只在
+当前页面生效, 当离开当前页面, 其中存储的键值对就无效了
+JSP里域对象应该如下所示:
+pageContext -> request -> session -> application
+
+pageContext是JSP里功能最强的对象, 通过该对象可以获取requst/session
+/ServletContext对象, 并提供了诸如forward/include等页面跳转的方法
+
+并提供findAttribute()方法, 接受一个参数: 要查找的变量属性的名字
+该方法会依次从pageContext -> request -> session -> application
+只要找到了便返回对应的属性值, 当最后也没有找到则返回一个null.

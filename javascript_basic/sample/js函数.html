@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>js函数</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        	// js函数创建的方法:
+        	// js里面函数是一个对象, 它的创建可以通过类似于Java中构造函数的方式进行创建
+        	// 1. 该构造方法可以有若干个参数, 除最后一个参数外, 其他参数都表示函数的形参
+        	var fn1 = new Function("a", "b", "alert(a + b)");
+        	// fn1(1, 2);
+        	// 2. 使用定义函数变量的方式
+        	// fn2("2", 3);
+        	var fn2 = function(a, b) {
+        		alert("第一个参数的值为:" + a + ", 第二个参数的值为:" + b);	
+        	};
+        	// fn3("1", "2");
+        	// 3. 最常用的一种定义函数的方法
+        	// 采用这种方法定义的函数无论在哪里被调用总是能够找到
+        	function fn3(a, b) {
+        		alert(a + "|" + b);
+        	}
+        	
+        	// fn3(2, 3, 4);
+        	// 其本质上所有的形参都归函数对象内的名为arguments的数组进行管理
+        	
+        	function fn4() {
+        		alert(arguments[0] + "***" + arguments[1]);
+        	}
+        	// fn4("hello", "world");
+        	
+        	// 别名和arguments中的数组会保持同步更新
+        	function fn5(a, b){
+        		a = "a变量";
+        		alert(arguments[0] + "____" + arguments[1]);
+        	}
+        	// alert(fn5);
+        	// fn5(1, "canshu");
+        	
+        	// 初步模拟重载
+        	function fn6() {
+        		if (arguments.length == 1) {
+        			alert("只有一个参数的逻辑");
+        		} else if (arguments.length == 2) {
+        			alert("两个参数执行的业务逻辑");
+        		} else {
+        			alert("另外的情况");
+        		}
+        	}
+        	// fn6(1, 2);
+        	
+        	function add(value1, value2) {
+        		return value1 + value2;
+        	}
+        	function fn7(par1, par2, fn) {
+        		alert(fn(par1, par2));
+        	}
+        	// fn7(1, 2, add);
+        	
+        	var fn8 = function(v1, v2) {
+        		alert(v1 * v2);
+        	}
+        	// fn8(8, 2);
+        	var fn9 = fn8;
+        	fn8 = null;
+        	// fn9(7, 1);
+        	
+        	// 全局变量
+        	var h1 = "9";
+        	function fn10() {
+        		// 局部变量
+        		var h2 = "fn10";
+        		// 如果在方法体里定义一个变量, 并且变量不加
+        		// var该变量会变成一个全局变量(不推荐), 会造成全局变量管理的混论
+        		h3 = '3';
+        		// alert(h1);
+        	}
+        	// 需要调用一下
+        	fn10();
+        	alert(h3);
+        </script>
+    </body>
+</html>

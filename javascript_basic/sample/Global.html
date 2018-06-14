@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Global对象</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        	// Global表示全局域, 只要是方法/变量前面
+        	// 不写任何的前缀, 它们都属于Global域
+        	// 比如Math/isNaN/isFinite...
+        	// 下面两个方法多用于解决中文在网络中传输的乱码问题
+        	var text = "一段中文文字";
+        	// 使用base64编码对文字进行编码
+        	// encodeURI(), 接受一个参数, 即要进行编码的字符串
+        	var rs = encodeURI(text);
+        	document.write(rs + "<br/>");
+        	document.write(decodeURI(rs));
+        </script>
+    </body>
+</html>

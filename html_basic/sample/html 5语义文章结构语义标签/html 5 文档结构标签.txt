@@ -1,0 +1,21 @@
+文档结构标签
+    <article>、<section>、<header>、<footer>、<nav>、<aside>等文档结构元素
+
+    <article>用于代表页面上的独立、完整的一篇文章（帖子、一篇Blog、一篇短文、一条完整的回复）
+    a. 标签内部可以使用<header>、<footer>代表文章的标题和脚注
+    b. 可以使用多个<section>把文章分成几个段落
+    c. 可以嵌套多个<article>把它作为附属文章，比如博客可以有多篇回复
+
+    <section>用于对页面内容进行分块，它通常由标题和内容组成
+    a. 通常建议<section>元素包含一个标题，好h1~h6
+    b. 可以包含多个<article>，表示该分块内部包含多篇文章
+    c. 可以嵌套多个<section>，表示该分块包含多个子分块
+
+    <nav>导航条，HTML 5推荐将导航链接放到相应的<nav>标签中进行管理
+
+    <aside>该元素专门用于定义当前页面或当前文章的附属信息，推荐使用CSS渲染成侧边栏
+
+    <header>用于为<article>元素定义文章的"头部"信息，内部可以包含h1~h6、<hgroup>、<p>、<span>等
+    <footer>定义脚注，包含文章的版权信息、作者授权信息等。
+    <hgroup>当需要用于组织多个标题元素时，可以在<header>元素中使用<hgroup>把它们组成一组
+    注意: 除了<section>元素可指定class属性，上述其余元素只支持id、style、hidden等通用属性

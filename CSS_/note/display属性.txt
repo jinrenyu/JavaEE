@@ -1,0 +1,25 @@
+display属性
+根据CSS规范的规定，每一个网页元素都有一个display属性，用于确定该元素的类型，
+每一个元素都有默认的display属性值， 比如 div 元素， 它的
+默认display属性值为“block” ，称为块元素，而span元素的默认display属性值为“inline”，
+称为“行内”元素。
+块元素与行元素是可以转换的，也就是说display的属性值可以由我们来改变。
+display常见属性值
+1. none： 隐藏对象。
+2. inline： 指定对象为内联元素
+3. block： 指定对象为块元素
+4. inline-block： 指定对象为内联块元素
+5. table-cell： 指定对象作为表格单元格
+使用它通常的作法是，配合vertical-align: middle; text-align: center;
+使大小不一样的图片都可以居中显示(元素也可以居中)。
+图片居中实例
+.cell{display:table-cell; width:300px; height: 300px; border: 1px solid red; vertical-align: middle; text-align: center;}
+<div class="cell">
+<img width="200" src="images/boy.jpg" alt=""/>
+</div>
+<div class="cell">
+<img src="images/icon.png" alt=""/>
+</div>
+<div class="cell">
+<img width="100" src="images/img.gif" alt=""/>
+</div>

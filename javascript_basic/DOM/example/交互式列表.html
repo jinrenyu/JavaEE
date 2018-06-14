@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>交互式列表</title>
+        <style type="text/css">
+        	select {
+        		width: 100px;
+        		height: 150px;
+        	}
+        </style>
+    </head>
+    <body>
+        <select id="s1" multiple="multiple">
+        	<option value="1">1</option>
+        	<option value="2">2</option>
+        	<option value="3">3</option>
+        	<option value="4">4</option>
+        	<option value="5">5</option>
+        </select>
+        <input value="&gt;&gt;" type="button" onclick="moveNode('s1', 's2')" />
+        <input value="&lt;&lt;" type="button" onclick="moveNode('s2', 's1')" />
+        <select id="s2" multiple="multiple">
+        	<option value="A">A</option>
+        	<option value="B">B</option>
+        	<option value="C">C</option>
+        	<option value="D">D</option>
+        	<option value="E">E</option>
+        </select>
+        <script type="text/javascript">
+        	// 把sFrom里面被选择的option获取到之后添加到sTo的最后一个子元素后面
+        	function moveNode(sFrom, sTo) {
+        		var sfrom = document.getElementById(sFrom);
+        		var sto = document.getElementById(sTo);
+        		// 判断用户是否选择了某个option
+        		/* if (sfrom.selectedIndex != -1) {
+        			var opt = sfrom.options[sfrom.selectedIndex];
+        			sto.appendChild(opt);
+        		} */
+        		// 获取所有被用户选择option
+        		var opts = sfrom.selectedOptions;
+        		if (opts.length != 0) {
+        			for (var i = opts.length -1; i >= 0; i--) {
+        				sto.appendChild(opts[i]);
+        			}
+        		}
+        	}
+        </script>
+    </body>
+</html>

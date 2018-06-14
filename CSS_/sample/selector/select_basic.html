@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>简单的选择器</title>
+        <!-- 选择器所要解决的问题:
+        	规定网页中, 哪些部分的html元素需要应用特定的CSS
+         -->
+         <style type="text/css">
+         	/* 通配选择符, 匹配页面里的所有元素, 它的优先级仅仅高于继承的属性 */
+         	* {
+         		color: blue;
+         	}
+         	/* 元素选择符, 当需要同时选择不同的元素进行样式影响的时候, 可以
+         	在不同的选择符中间是用,进行分隔, 使其成为一组 */
+         	p, em, h4 {
+         		/* 为文字添加下划线 */
+         		text-decoration: underline;
+         	}
+         	p {
+         		color: red;
+         	}
+         </style>
+    </head>
+    <body>
+        <p>段落1</p>
+        <em>强调内容</em>
+        <h4>标题内容</h4>
+    </body>
+</html>

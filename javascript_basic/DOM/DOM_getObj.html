@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM(document object model)</title>
+    </head>
+    <body>
+    	<p style="color:blue;">普通的文本1</p>
+    	<!-- 注释节点 -->
+    	<p style="color:red;">
+    		<strong>普通强调内容的文本2</strong>
+    	</p>
+    	<a href="#" id="a1">链接1</a>
+    	<a href="http://www.baidu.com" id="a2">链接2</a>
+    	<form name="myForm">
+    		username: <input class="basic" type="text" name="uname" value="yonghuming" /><br/>
+    		pwd: <input type="password" name="pwd" value="123456" /><br/>
+    		hobbit: swimming<input type="checkbox" name="hobbit" value="1">
+    		riding<input type="checkbox" name="hobbit" value="2">
+    		reading<input type="checkbox" name="hobbit" value="3"><br/>
+    		gender: male<input type="radio" name="gender" value="1">
+    		female<input class="basic" type="radio" name="gender" value="2">
+    	</form>
+    	<hr/>
+        <script type="text/javascript">
+        	// 在DOM的模型中所有的节点和页面文字都会被当成
+        	// 对象来看待, 所有的对象都继承与Node
+        	// 可以通过nodeName,nodeValue,nodeType来获取
+        	// 节点的信息(DOM模型中页面上的所有元素都是对象)
+        	// DOM中获取节点对象的方法:
+        	// 1. 根据标签的名字来获取dom节点对象
+        	// 语法: E.getElementsByTagName("元素名称");
+        	// 返回所有满足条件的Node节点对象
+        	var node1 = document.getElementsByTagName("p")[0];
+        	var node2 = document.getElementsByTagName("p").item(1);
+        	// innerText/innerHTML/outerHTML(区分)
+        	// 获取的节点内部text类型节点的内容, 纯文本
+        	// 对于老的IE浏览器, innerText等价的属性为innerContent
+        	// var text = node.innerText || node.innerContent;
+        	document.write(node2.innerText + "<br/>");
+        	document.write(node2.innerHTML + "<br/>");
+        	// alert(node2.outerHTML);
+        	document.write(node2.outerHTML + "<br/>");
+        	
+        	// 2. E.getElmentById()
+        	// 使用id必须两者严格匹配(大小写敏感)
+        	// 如果文档中存在多个id相同的元素节点, 取第一个
+        	var a2 = document.getElementById("a2");
+        	
+        	// 3. E.getElementsByName()
+        	var cks = document.getElementsByName("hobbit");
+        	// alert(cks[2].value);
+        	
+        	// 4. E.getElementsByClassName()
+        	// 根据class属性的值获取对应的节点对象集合
+        	var cls = document.getElementsByClassName("basic");
+        	// alert(cls[1].value)
+        	
+        	// 5. 类似于jquery中选择元素的方式(新加入的选择符)
+        	// 其选择语法和CSS选择器相同
+        	// 1.) 选择第一个满足选择器条件的元素对象
+        	var pv = document.querySelector("input[value='2']");
+        	// alert(pv.name);
+        	// 2.) 选择所有满足选择器条件的元素
+        	var pvs = document.querySelectorAll("input[value='2']");
+        	// alert(pvs[1].name);
+        	
+        	// 获取元素的快捷方法, 
+        	// 对于具有id属性的元素而言, 可以直接使用id值来获取元素对象
+        	// 会造成全局域的污染(了解, 不推荐)
+        	// alert(a1.href);
+        	// a.) 对于form表单, 可以使用document的forms属性
+        	// alert(document.forms[0].uname.value);
+        	// alert(document.forms[0][0].value);
+        	// alert(document.forms["myForm"].uname.value);
+        	// html文档元素节点才具有的方法
+        	// alert(document.forms.namedItem("myForm").uname.value);
+        	// alert(document.myForm.uname.value);
+        	// b.) a标签也具有两种快捷访问方式anthors(返回具有name属性的a标签的集合)
+        	// links(返回具有href属性的a标签的集合)
+        	// alert(document.links[1].href);
+        	// c.) images(返回具有src属性的img元素结合)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [product-gateway]">
+  <test name="Spu(failed)">
+    <classes>
+      <class name="com.tz.online.service.test.UserServiceImplTest">
+        <methods>
+          <include name="testDelAddress"/>
+          <include name="testUpdAddress"/>
+        </methods>
+      </class> <!-- com.tz.online.service.test.UserServiceImplTest -->
+      <class name="com.tz.online.dao.test.UserDaoImplTest">
+        <methods>
+          <include name="testUpdate"/>
+        </methods>
+      </class> <!-- com.tz.online.dao.test.UserDaoImplTest -->
+    </classes>
+  </test> <!-- Spu(failed) -->
+</suite> <!-- Failed suite [product-gateway] -->

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>div+浮动布局</title>
+        <style type="text/css">
+        	* {
+        		margin: 0px;
+        		padding: 0px;
+        	}
+        	div {
+        		border: 1px solid;
+        	}
+        	#container {
+        		width: 800px;
+        		margin: 0px auto;
+        	}
+        	#header {
+        		text-align: center;
+        		height: 100px;
+        	}
+        	#menu {
+        		height: 600px;
+        		width: 180px;
+        		float: left;
+        		padding-left: 25px;
+        		margin-top: 10px;
+        		margin-bottom: 10px;
+        	}
+        	#content {
+        		height: 600px;
+        		width: 580px;
+        		float: right;
+        		text-align: center;
+        		margin-top: 10px;
+        		margin-bottom: 10px;
+        		
+        	}
+        	#footer {
+        		text-align: center;
+        		clear: both;
+        		height: 30px;
+        	}
+        </style>
+    </head>
+    <body>
+    	<div id="container">
+	        <div id="header">
+	        	网站标题
+	        </div>
+	        <div id="menu">
+	        	<ul>
+	        		<li>菜单1</li>
+	        		<li>菜单2</li>
+	        		<li>菜单3</li>
+	        		<li>菜单4</li>
+	        	</ul>
+	        </div>
+	        <div id="content">主体内容</div>
+	        <div id="footer">版权所有&copy;XXXX</div>
+    	</div>
+    </body>
+</html>

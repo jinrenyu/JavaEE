@@ -1,0 +1,36 @@
+<ehcache>
+	<!-- 默认的名称xxx.dat -->
+	<!-- 可以指明磁盘路径 -->
+    <!-- <diskStore path="java.io.tmpdir"/> -->
+    <diskStore path="d:\\ehcache"/>
+
+
+    <!--Default Cache configuration. These will applied to caches programmatically created through
+        the CacheManager.
+
+        The following attributes are required for defaultCache:
+
+        maxInMemory       - 内存中的最大数量.
+        eternal           - 内存中的对象永不过时.
+        timeToIdleSeconds - 对象的空闲时间(上一次访问时间到最近一次访问时间)
+        timeToLiveSeconds - 对象的存活时间(对象的创建时间-现在)
+                            
+        overflowToDisk    - 当内存中的对象溢出的是否,可以存储到磁盘中去.
+        -->
+    <!-- 默认的 -->
+    <defaultCache
+        maxElementsInMemory="10000"
+        eternal="false"
+        timeToIdleSeconds="120"
+        timeToLiveSeconds="120"
+        overflowToDisk="true"
+        />
+    <!-- 自定义的 -->
+    <cache name="myehcache"
+        maxElementsInMemory="10000"
+        eternal="false"
+        timeToIdleSeconds="300"
+        timeToLiveSeconds="600"
+        overflowToDisk="true"
+    />
+</ehcache>

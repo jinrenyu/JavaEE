@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>对象的声明</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        	// 定义对象的两种方式:
+        	// 1. 使用Object函数
+        	var stu01 = new Object();
+        	stu01.name = "Jack";
+        	stu01.age = 23;
+        	stu01.sayHello = function() {
+        		alert("hi");
+        	}
+        	/* alert(stu01.name);
+        	alert(stu01["age"]);
+        	stu01.sayHello(); */
+        	
+        	// 2. 字面量方式
+        	var stu03 = {}; // 等价于var stu03 = new Object();
+        	var stu02 = {
+        		name: "Rose",
+        		"my age": 32,
+        		sayHi: function() {
+        			alert("second");
+        		}
+        	};
+        	//alert(stu02["my age"]);
+        	//stu02.sayHi();
+        	//alert(stu02.name);
+        	//delete stu02.name;
+        	//alert(stu02.name);
+        	
+        	// 使用函数去模拟Java中的类
+        	function Student(name, age) {
+        		var obj = new Object();
+        		obj.name = name;
+        		obj.age = age;
+        		obj.printInfo = function() {
+        			alert(this.name + "->" + this.age);
+        		}
+        		return obj;
+        	}
+        	var stu04 = Student("Ray", 33);
+        	// alert(stu04.name + "#" + stu04.age);
+			// stu04.printInfo();
+			
+			// 使用this关键字改进模拟的的构造函数
+			function Student03(name, age) {
+				this.name = name;
+				this.age = age;
+				this.outInfo = function() {
+					alert(this.name + "###" + this.age);
+				}
+			}
+			var stu05 = new Student03("Lucy", 12);
+			// stu05.outInfo();
+			
+			
+			// 创建类的时候使用的最多的方式, 使用原型来优化模拟的对象
+			// 类似于Java中的静态函数
+			function Student04(name, age) {
+				this.name = name;
+				this.age = age;
+			}
+			Student04.prototype.sayInfo = function() {
+				alert(this.name + "&&&&" + this.age);
+			}
+			var stu06 = new Student04("Tom", 44);
+			stu06.sayInfo();
+			for (var i in stu06) {
+				alert("成员名为:" + i + "成员值为:" + stu06[i]);
+			}
+        </script>
+    </body>
+</html>

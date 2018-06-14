@@ -1,0 +1,132 @@
+1. 
+    getElementById() 方法
+    getElementById() 方法返回带有指定 ID 的元素
+    getElementsByTagName() 方法
+    getElementsByTagName() 返回带有指定标签名的所有元素
+    getElementsByClassName() 方法
+           如果您希望查找带有相同类名的所有 HTML 元素
+
+    一些常用的 HTML DOM 方法：
+    getElementById(id) - 获取带有指定 id 的节点（元素）
+    appendChild(node) - 插入新的子节点（元素）
+    removeChild(node) - 删除子节点（元素）
+    一些常用的 HTML DOM 属性：
+    innerHTML - 节点（元素）的文本值
+    parentNode - 节点（元素）的父节点
+    childNodes - 节点（元素）的子节点
+    attributes - 节点（元素）的属性节点
+
+方法	                    描述
+getElementById()	        返回带有指定 ID 的元素。
+getElementsByTagName()	    返回包含带有指定标签名称的所有元素的节点列表（集合/节点数组）。
+getElementsByClassName()	返回包含带有指定类名的所有元素的节点列表。
+appendChild()	            把新的子节点添加到指定节点。
+removeChild()	            删除子节点。
+replaceChild()	            替换子节点。
+insertBefore()	            在指定的子节点前面插入新的子节点。
+createAttribute()	        创建属性节点。
+createElement()	            创建元素节点。
+createTextNode()	        创建文本节点。
+getAttribute()	            返回指定的属性值。
+setAttribute()	            把指定属性设置或修改为指定的值。
+
+2.
+    nodeName 属性
+    nodeName 属性规定节点的名称。
+    nodeName 是只读的
+    元素节点的 nodeName 与标签名相同
+    属性节点的 nodeName 与属性名相同
+    文本节点的 nodeName 始终是 #text
+    文档节点的 nodeName 始终是 #document
+    注释：nodeName 始终包含 HTML 元素的大写字母标签名。
+
+3. nodeValue 属性
+    nodeValue 属性规定节点的值。
+    元素节点的 nodeValue 是 undefined 或 null
+    文本节点的 nodeValue 是文本本身
+    属性节点的 nodeValue 是属性值
+
+4. nodeType 属性
+    nodeType 属性返回节点的类型。nodeType 是只读的。
+    比较重要的节点类型有：
+    元素类型	NodeType
+    元素	1
+    属性	2
+    文本	3
+    注释	8
+    文档	9
+
+5. 
+    创建 HTML 内容
+    改变元素内容的最简答的方法是使用 innerHTML 属性。
+    下面的例子改变一个 <p> 元素的 HTML 内容：
+    实例
+    <html>
+    <body>
+
+    <p id="p1">Hello World!</p>
+
+    <script>
+    document.getElementById("p1").innerHTML="New text!";
+    </script>
+
+    </body>
+    </html>
+    提示：我们将在下面的章节为您解释例子中的细节。
+    改变 HTML 样式
+    通过 HTML DOM，您能够访问 HTML 元素的样式对象。
+    下面的例子改变一个段落的 HTML 样式：
+    实例
+    <html>
+
+    <body>
+    <p id="p2">Hello world!</p>
+
+    <script>
+    document.getElementById("p2").style.color="blue";
+    </script>
+
+    </body>
+    </html>
+    创建新的 HTML 元素
+    如需向 HTML DOM 添加新元素，您首先必须创建该元素（元素节点），然后把它追加到已有的元素上。
+    实例
+    <div id="d1">
+    <p id="p1">This is a paragraph.</p>
+    <p id="p2">This is another paragraph.</p>
+    </div>
+
+    <script>
+    var para=document.createElement("p");
+    var node=document.createTextNode("This is new.");
+    para.appendChild(node);
+
+    var element=document.getElementById("d1");
+    element.appendChild(para);
+    </script>
+
+6. 
+上一个例子中的 appendChild() 方法，将新元素作为父元素的最后一个子元素进行添加。
+如果不希望如此，您可以使用 insertBefore() 方法：
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+var para=document.createElement("p");
+var node=document.createTextNode("This is new.");
+para.appendChild(node);
+
+var element=document.getElementById("div1");
+var child=document.getElementById("p1");
+element.insertBefore(para,child);
+</script>
+
+</body>
+</html>

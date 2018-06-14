@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>定时器</title>
+        <style type="text/css">
+        	div {
+        		width: 400px;
+        		margin: 0 auto;
+        		height: 300px;
+        		text-align: center;
+        	}
+        	span {
+        		font-size: 30px;
+        		color: red;
+        	}
+        </style>
+    </head>
+    <body>
+        <div>
+        	<p><b>倒计时</b><span>?</span><b>s</b></p>
+        	<input value="设置数" onclick="count();" type="button" />
+        	<input value="开始计时" onclick="setTimeout(start, 1000);" type="button" disabled="disabled" />
+        	<input value="停止" onclick="stop();" type="button" disabled="disabled" />
+        </div>
+        <script type="text/javascript">
+            var sid = null;
+        	function count() {
+        		// 1. 接受用户的输入
+        		var num = window.prompt("请输入要设置的数字", "10");
+        		if (num.trim().length > 0 && num > 0) {
+        			// 获取到span元素节点, 设置用户的输入
+        			var span = document.getElementsByTagName("span")[0];
+        			span.innerHTML = num;
+        			// 并让两个按钮可用
+        			document.getElementsByTagName("input")[1].disabled = false;
+        			document.getElementsByTagName("input")[2].disabled = false;
+        		} else {
+        			count();
+        		}
+        	}
+        	function start() {
+        		var span = document.getElementsByTagName("span")[0];
+        		// 获取到当前的值
+        		var value = span.innerHTML;
+        		// 判断当前value的值是否大于0, 并作减一的运算
+        		if (value-- > 0) {
+	        		// 最后改变span中数字的值
+	        		span.innerHTML = value;
+        			sid = setTimeout(start, 1000);
+        		}
+        	}
+        	function stop() {
+        		clearTimeout(sid);
+        	}
+        </script>
+    </body>
+</html>

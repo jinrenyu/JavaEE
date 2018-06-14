@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>BOM(browser object model)</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        	// 在BOM里面, 浏览器中所有可见的组件全都被抽象
+        	// 成了一个个的对象, 我们可通过代码来控制这些对象的
+        	// 行为, 从而控制浏览器的动作
+        	// 在浏览器中window对象就相当于Global
+        	var v1 = "全局作用域变量";
+        	alert(v1 === window.v1);
+        	
+        	// open方法, 可以用于新建一个浏览器窗口
+        	// 它具有4个参数:
+        	// 参数1(必须): 要打开的窗口的URL路径
+        	// 参数2: 打开的方式(_self/_blank/_parent/_top/窗口的id)
+        	// 参数3: 打开时的配置
+        	// 参数4: 是否在浏览器的历史记录记录打开的窗口记录(不同的浏览器支持不同),
+        	// false表示不记录
+        	/* var newWindow = window.open("file:///D:/workspace/javascript_basic/BOM/test.html", "_blank",
+        			"width=150,height=150,top=100,left=100,location=no", false); */
+        	// newWindow.close();
+        	
+        	// 和用户进行交互的窗口
+        	// alert(); 弹出一个信息对话框
+        	// confirm() 弹出一个确认框, 
+        	// 根据用户的选择, 返回false或者true
+        	if (window.confirm("你确定删除该条记录?")) {
+        		alert("记录被删除");
+        	} else {
+        		alert("操作被取消");
+        	}
+        	// prompt()方法, 接受用户的输入
+        	var name = window.prompt("请输入名字", "Tom");
+        	alert(name);
+        	// history/navigator/screen
+        	// go()方法表示当前浏览记录前进或者后退的步数
+        	// history.go(-2);
+        	// screen对象用于进行页面的适配
+        	// var scr = window.screen;
+        	// navigator, 代表当前浏览器对象, 其中具有一些
+        	// 浏览器的元数据, 主要用于做代码的兼容
+        	// document.write(navigator.appName);
+        	document.write(navigator.userAgent);
+        </script>
+    </body>
+</html>

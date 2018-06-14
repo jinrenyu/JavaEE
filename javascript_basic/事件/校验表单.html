@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>校验表单</title>
+        <style type="text/css">
+        	span {
+        		color: red;
+        		visibility: hidden;
+        	}
+        </style>
+    </head>
+    <body>
+    	<!-- 当事件的触发函数返回的值为false时候, 事件的默认动作会被阻止 -->
+        <form action="#" onsubmit="return false;">
+        	username:<input type="text" onblur="checkLength(this);" />
+        	<span>*用户名必须超过10个字符</span>
+        	<input type="submit" value="提交">
+        </form>
+        <script type="text/javascript">
+        	function checkLength(obj) {
+        		if (obj.value.length <= 10) {
+        			document.getElementsByTagName("span")[0].style.visibility = "visible";
+        		} else {
+        			document.getElementsByTagName("span")[0].style.visibility = "hidden";
+        		}
+        	}
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+作业一:
+现有如下内容:
+
+StringBuilder builder = new StringBuilder();
+builder.append("This is a log file,it was store at").append("\"d:\\Program File\\temp\" ").append("directory.the format of log file was:\n").append("20130509:Jack:M:1990-08-08");
+
+完成如下要求:
+1.截取此内容中的路径子字符串
+  打印出的结果为:
+  d:\Program File\temp
+
+2.把第一个引号之前的部分中的所有空格替换为#
+  把第二个引号之后的部分中的所有空格替换为*
+
+3.把\n后面的字符串取出打印
+
+4.以:作为切割符,把\n后面截取出来的字符串分段打印
+  20130509
+  Jack
+  M
+  1990-08-08
+
+  注:截取时,尽可能不要取数字符串的下标
+     StringBuilder和String类中找方法
+     
+
+作业二:
+写一个StringUtil类(放在util包中),完成如下方法:
+//反转
+public String reverse(String src) {}
+//判断字符串是否是完整的单词
+public boolean isWord(String src) {}
+//判断是否是数字
+public boolean isDigit(String src) {}
+//判断是否是空白字符
+public boolean isBlank(String src) {}
+//返回重复的字符串
+public String repeat(String src,int count) {}
+//统计target在src中出现的次数.
+public int countMatches(String src, String target) {}

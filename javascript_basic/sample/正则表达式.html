@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>正则表达式(RegExp, regular expression)</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        	// js中创建正则表达式变量的两种方法:
+        	// 1. 字面量方式
+        	// 可以匹配as bs
+        	var pt01 = /[ab]s/g;
+            // test(), 它是属于正则表达式实例的一个方法
+            // 只接受一个参数: 要进行正则匹配的字符串
+            // true: 可以在测试表达式中找到索要匹配的字符串
+            // false: 未找到索要匹配的字符串
+        	// alert(pt01.test("abs"));
+            // 常用的三种模式:
+            // i: 大小写不敏感
+            // g: 全局匹配
+            // m: 多行匹配
+            var pt02 = /as/i;
+            // alert(pt01.test("aBs"));
+            // alert(pt02.test("As"));
+            // exec():一个参数, 即用测试的字符串
+            // var r = pt01.exec("abs");
+            // 返回匹配信息对象, r[0], 表示匹配到的字符串
+            // input属性表示被测试的字符串, index表示匹配的字符串在
+            // 测试字符串中第一次出现的下标位置
+            // document.write(r[0] + "," + r.input + "," + r.index + "<br/>");
+            var testTxt = "absbsbsbsbs";
+            // 如果不加g(全局匹配模式), 在进行匹配查找的时候总是从被测试的
+            // 字符串的第一个字符开始往后查找, 添加了全局匹配符之后会从上一次匹配
+            // 到的字符的下一个位置开始往后查找
+            alert("匹配到的字符串第一次出现的下标:" + pt01.exec(testTxt).index);
+            alert("下一次开始匹配的起始位置:" + pt01.lastIndex);
+            alert("匹配到的字符串第一次出现的下标:" + pt01.exec(testTxt).index);
+            alert("下一次开始匹配的起始位置:" + pt01.lastIndex);
+            // m模式: 跨行模式, 只影响^$
+            // 匹配以a开头并且以b结尾的字符串
+            var pat03 = /^ab$/mi;
+            // hhhh
+            // ab
+            // alert(pat03.test("hhhh\nAb"));
+            // 2. 使用RegExp构造函数
+            // 2个参数, 第一个参数正则表达式的字符串, 第二个参数(可选), 模式
+            var pat04 = new RegExp("[ab]s", "g");
+            // 等价于 /[ab]s/g;
+            // alert(pat04.test("ashhh"));
+            
+            // 如果需要匹配正则表达式中预先定好的元字符, 则需要转义
+            // 14个常用的元字符: ( ) [ ] { } * + ? . \ | ^ $
+            var pt05 = /\[ab\]s/;
+            // alert(pt05.test("as[ab]shhh"));
+            // 如果使用的是构造函数进行正则变量的创建
+            // 需要进行"双重转义"
+            var pt06 = new RegExp("\[ab\]s");
+            // alert(pt06.test("as[ab]shhh"));
+            
+            // 每个正则表达式变量实例会有一些属性
+            // mutiline属性: 表示是否使用了跨行模式(m)
+            // ignoreCase(是否使用了i模式)/ global(是否使用了g模式)
+            // lastIndex属性: 表示下一次开始匹配时开始的下标
+            // source属性: 正则表达式的字面量形式
+            // alert(pt06.source);
+            
+            // 静态全局属性变量RegExp
+            // 正则表达式组
+            // 等价于abcdh
+            // 匹配至少5个字符加上一个h
+            // /\w{5,}h/, 它由/w{5,}/ 和 /h/
+            // 对/w{5,}/另立一组
+            // 等价于\w{2}\w{2}h, -> \w{4}h
+            var pt07 = /(\w{2})(\w{2})h/;
+            // fdffdabcd
+            alert(pt07.test("fdffdabcdhef"));
+            // RegExp静态对象拥有如下属性(每次当有exec()被调用或者test()被调用)
+            // 其属性值就会发生改变
+            // input($_): 表示被测试的字符串
+            // lastMatch($&): 正则表达式匹配到的字符串
+            // leftContext($`): 匹配到的字符串左边的内容
+            // rightContext($'): 匹配到的字符串右边的内容
+            // lastParen($+): 最近一次应用的正则表达式组
+            // $1~$9表示每个正则表达式组所匹配的内容
+            document.write(RegExp.$_ + "," + RegExp["$+"]
+            	+ "," + RegExp["$1"] + "<br/>");
+            pt06.test("fadsfhfasabs");
+            document.write(RegExp.$_ + "," + RegExp["$+"]
+        		+ "," + RegExp["$1"] + "<br/>");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,167 @@
+知识大纲：
+File类和IO流
+
+API:
+java.io包
+
+首先，理解 File 类
+广义上来讲，File是包含文件和文件夹的，或者应该说
+文件夹是一种特殊的文件。
+此处的File就是广义上的概念。
+
+此类型是针对操作系统中文件的抽象，它把操作系统
+中的路径转变成JVM中的"对象".
+
+如：
+路径："c:\\temp\\hehe"
+转换成 File:
+File f = new File("c:\\temp\\hehe");
+可以调用 f对象的方法来决定何去何从
+	createNewFile()
+	mkdir()
+	mkdirs()
+	delete()
+	deleteOnExit()
+	renameTo()
+	exists()
+	isFile()
+	isDirectory()
+	canRead()
+	canWrite()
+	length()
+	lastModified()
+	isHidden();
+	...
+可以看出，File只是针对文件本身进行操作，而不能
+操作文件的内容，要操作文件的内容，必需通过流。
+
+--
+流[stream] 的操作
+按流的基本单位划分，可以分为：
+1. 字节流，以字节为单位的流
+	
+	FileInputStream/FileOutputStream
+	ByteArrayInputStream/ByteArrayOutputStream
+	...
+
+2. 字符流，以字符为单位的流
+	1字符=2字节
+
+流的源头和目的地
+有：文件、网络、内存、扫描仪、打印机、...
+
+源头和目的地是相对的概念。
+
+什么是输入和输出？
+相对JVM而言的，把数据[字符/字节]读入到JVM中，
+叫输入，而把数据从JVM中写入到外面，叫输出。
+
+字节输入流
+java.io.InputStream
+	\- FileInputStream  以文件为源
+	\- ByteArrayInputStream 以内存为源
+	\- ObjectInputStream 提供读取对象的能力
+	\- FilterInputStream  过滤流
+		\- BufferedInputStream 提供缓存功能
+		\- DataInputStream 提供读取基本类型功能
+		...
+字节输入流的共性方法
+int read(); //读取1个字节
+int read(byte[] buf); //最多读取buf.length个字节
+int read(byte[] buf, int off, int length);
+	//同上面
+方法2和方法3的返回值代表实际读到的字节个数。
+
+void close(); //关闭流
+
+
+字节输出流
+java.io.OutputStream
+	\- FileOutputStream	 以文件为目的地
+	\- ByteArrayOutputStream 以内存为目的地
+	\- ObjectOutputStream 提供写对象的能力
+	\- FilterOuputStream 过滤流
+		\- BufferedOutputStream 提供缓存功能
+		\- DataOutputStream 提供写基本类型的能力
+
+字节输出流的共性方法
+void write(int b); //写入单个字节
+void write(byte[] buf); //写入buf.length个字节
+void write(byte[] buf, int off, int len);
+	//写入 len 个字节
+void close();
+
+----------
+像FileInput/OutputStream,
+ByteArrayInput/OutputStream 这样,拥有底层数据
+读写能力的流，叫 节点流。
+
+而像ObjectInput/OutputStream,
+BufferedInput/OutputStream,
+DataInput/OutputStream 这样，本身并没有底层数据
+的读写能力，而是借助于 节点流才能完成读写的
+流，叫 过滤流
+
+这种类只能在 节点流的基础上，增加一些功能。
+比如：缓存能力、对象读写、基本数据类型读写能力
+
+IO流的这种设计思想，采用了装饰设计模式。
+
+利用这样的机制，我们可以构建成功能丰富、强大
+的流，如：
+
+DataInputStream dis = 
+	new DataInputStream(
+		new FileInputStream(file));
+
+//
+BufferedInputStream bis = 
+	new BufferedInputStream(
+		new FileInputStream(file));
+
+//
+ObjectInputStream ois = 
+	new ObjectInputStream(
+		new BufferedInputStream(
+			new FileInputStream(file)));
+
+======================
+在JDK7.0中，所有实现了AutoCloseable接口的资源
+都可以在try catch resources中自动关闭，无需
+手动释放。
+
+语法：
+try(初始化需要释放的资源;...) {
+
+} catch (XXX异常) {
+	//...
+}
+
+如：
+try(FileInputStream fis = 
+	new FileInputStream(file);
+	FileOutputStream fos = 
+		new FileOutputStream(dest);) {
+	//
+	fis....
+	fos....
+} catch (IOException e) {
+	//...
+}
+========================================
+作业：
+1. 实现把一个文件COPY到另一个目录中
+方法申明如下：
+public boolean copy(String file,
+						String dir) {
+	...
+}
+
+2. 实现把一个目录COPY到另一个目录中
+方法的申明如下：
+public boolean copyDir(String srcDir,
+					String destDir) {
+	...
+}
+
+

@@ -1,0 +1,21 @@
+通过position这个属性来定义，position属性是指本体相对于上级的定位，
+position定位又分绝对定位和相对定位。它的默认值是 static，意味着元素
+没有被定位，出现在文档流中应该出现的位置。如果用position来布局页面，
+父级元素的position属性必须为relative或absolute。行元素加了position:absolute
+后可设置宽和高（加了float和fixed以后也可以设置宽和高）
+常见属性值：
+1.static：无特殊定位，对象遵循正常文档流。
+2.relative：对象遵循正常文档流。
+3.absolute：对象脱离正常文档流，使用top，right，bottom，left等属性进行绝对定位。
+使用绝对定位，那父级元素的position属性必须为relative或absolute，
+如果不指定父级定义容器，将以浏览器窗口进行定位。
+4.fixed：对象脱离正常文档流，使用top，right，bottom，left等属性以浏览器窗口为参考点进行定位， 
+当出现滚动条时，对象不会随着滚动。IE6及以下不支持
+static、relative正常文档流  absolute、fixed脱离文档流
+
+z-index
+可以改变元素的叠放顺序，
+只有在使用了position并脱离了文档流（absolute、fixed）的情况下可以使用，
+其它情况下使用z-index不起作用。
+
+行内元素一定脱离了文档流, 其width、height就变得可以设置了.

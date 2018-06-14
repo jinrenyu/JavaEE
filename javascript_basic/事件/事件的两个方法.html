@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>事件的两个方法</title>
+        <style type="text/css">
+        	div {
+        		width: 300px;
+        		height: 300px;
+        		display: none;
+        		margin: 0px auto;
+        	}
+        	#outer {
+        		background-color: blue;
+        		padding: 30px;
+        	}
+        	#inner {
+        		background-color: red;
+        	}
+        </style>
+    </head>
+    <body>
+    	<!-- ondblclick鼠标双击会触发的事件 -->
+        <div id="outer" ondblclick="show01();">
+        	<div id="inner" ondblclick="show02(event);"></div>
+        </div>
+        <script type="text/javascript">
+        	// oncontextmenu表示当鼠标右击会触发的事件
+        	document.oncontextmenu = function(event) {
+        		var e = window.event || event;
+        		document.getElementById("outer").style.display = "block";
+        		document.getElementById("inner").style.display = "block";
+        		e.preventDefault();
+        		// return false;
+        	}
+        	function show01() {
+        		alert("外部div双击事件");
+        	}
+        	function show02(event) {
+        		var e = window.event || event;
+        		alert("内部div双击事件");
+        		e.stopPropagation();
+        	}
+        </script>
+    </body>
+</html>

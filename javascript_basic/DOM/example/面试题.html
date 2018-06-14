@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>面试题, 随机出20道100以内的加减乘除运算</title>
+    </head>
+    <body>
+    	<!-- 并且完成自动审核按钮和显示正确答案的功能 -->
+        <input type="button" value="出题" onclick="question();" />
+        <div id="outter"></div>
+        <input type="button" value="批改" onclick="judge();" style="display: none;" />
+        <input type="button" value="显示正确答案" onclick="show();" style="display: none;" />
+    </body>
+    <script type="text/javascript">
+	    function question() {
+	    	// 获取到要挂靠的div节点
+	    	var outter = document.getElementById("outter");
+	    	// 清空上次生成的题目
+	    	outter.innerHTML = "";
+	    	// 设置运算符号
+	    	var arr = ["+", "-", "*", "/"];
+	    	document.getElementsByTagName("input")[1].style.display = "inline-block";
+	    	// 生成20到题目
+	    	for (var i = 0; i < 20; i++) {
+	    		var div = document.createElement("div");
+	    		// 生成第一个随机题目的input输入框
+	    		var qus = document.createElement("input");
+	    		qus.type = "text";
+	    		// 设置标记, 后面操作方面获取节点
+	    		qus.className = "qus";
+	    		qus.readOnly = "readOnly";
+	    		qus.value = Math.floor(Math.random()*100)
+	    				+ arr[Math.floor(Math.random()*4)]
+	    				+ Math.floor(Math.random()*100 + 1);
+	    		// 生成第二个供用户输入的输入框
+	    		var ans = document.createElement("input");
+	    		ans.type = "text";
+	    		ans.className = "answer";
+	    		
+	    		// 生成用于存放正确/错误结果的span元素
+	    		var s1 = document.createElement("span");
+	    		s1.className="s1";
+	    		// 生成用于存放正确答案的span元素
+	    		var s2 = document.createElement("span");
+	    		s2.className="s2";
+	    		
+	    		// 把生成的所有标签都放入到div节点下
+	    		div.appendChild(qus);
+	    		div.appendChild(ans);
+	    		div.appendChild(s1);
+	    		div.appendChild(s2);
+	    		// 把生成的一个div节点挂靠在大的outer下
+	    		outter.appendChild(div);
+	    	}
+	    	var inputs = document.getElementsByTagName("input");
+	    	inputs[inputs.length -1].style.display = "none";
+	    }
+	    function judge() {
+	    	// 获取到id为outter的div对象的children(20道题的div)
+	    	var divs = document.getElementById("outter").children;
+	    	for (var i = 0; i < divs.length; i++) {
+	    		// 生成的算术题输入框
+	    		var ques = divs[i].firstElementChild;
+	    		// 用户的输入框
+	    		var uInput = ques.nextElementSibling;
+	    		// 存放判断结果的span
+	    		var s1 = uInput.nextElementSibling;
+	    		// 存放正确答案的span
+	    		var s2 = s1.nextElementSibling;
+	    		// 使用执行符eval得到正确的计算结果
+	    		var ansValue = eval(ques.value);
+	    		// 字符串和number类型进行比较的时候会被转化成数字类型, Number进行转化
+	    		if (uInput.value != "" && ansValue == uInput.value) {
+	    			s1.innerHTML = "<font color='green'>正确</font>";
+	    		} else {
+	    			s1.innerHTML = "<font color='red'>错误</font>";
+	    		}
+	    		// 把正确答案放入到s2的span中
+	    		s2.innerHTML = "<font color='red'>*正确答案:" + ansValue + "</font>"
+	    		s2.style.display = "none";
+	    		// 显示要求的'显示正确结果'的按钮
+	    	}
+    		var inputs = document.getElementsByTagName("input");
+    		inputs[inputs.length -1].style.display = "inline-block";
+	    }
+	    // 显示所有的class为s2的span
+	    function show() {
+	    	var spans = document.getElementsByClassName("s2");
+	    	for (var i = 0; i < spans.length; i++) {
+	    		spans[i].style.display = "inline";
+	    	}
+	    }
+    	// 1. 生成类似于下面的节点, 并添加到id为out的div下
+    	/* <div>
+        	<input class="qus" type="text" readonly="readonly" value="" />
+        	<input class="ans" type="text">
+        	<span class="s1"></span>
+        	<span class="s2"></span>
+       	</div> */
+       	// 2. 使批改按钮可用
+       	
+       	// 3. 点击批改按钮时, 使用eval计算出题的值和用户输入值比较
+       	// 相同则设置s1的innerHTML为正确, 不相同则设置为错误
+       	// 4. 同时设置s2的值为正确的计算答案, 并使其隐藏
+       	// 5. 点击显示正确答案按钮, 使隐藏的span显示
+    </script>
+</html>

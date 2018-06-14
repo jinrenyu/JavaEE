@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Math对象</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        	/* var var1 = 3232;
+        	alert(var1); */
+        	var var2 = Math.abs(-323);
+        	document.write("求绝对值之后: " + var2);
+        	var par = 323.123;
+        	// 向上取整
+        	var var3 = Math.ceil(par);
+        	// 向下取整
+        	var var4 = Math.floor(par);
+        	// 四舍五入(取整)
+        	var var5 = Math.round(par);
+        	//alert(var3 + ", " + var4 + ", " + var5);
+        	var var6 = Math.random() * 50 + 50;
+        	// alert(var6.toFixed(2));
+        	// number类型的变量可以使用toFixed();方法保留
+        	// 指定位数小数点后转成字符串
+        	
+        	// eval全局函数, 可以把字符串内的字符当成具体代码来执行
+        	// alert(eval("1+2"));
+        	// 字符串类型和数字型进行比较的时候, 会使用Number方法先把字符串转换成
+        	// 数字在进行比较
+        	alert("32" == 32); // true
+        	// '==='表示完全相等, 内容相等, 并且类型也相等
+        	alert("32" === 32); // false
+		</script>
+    </body>
+</html>

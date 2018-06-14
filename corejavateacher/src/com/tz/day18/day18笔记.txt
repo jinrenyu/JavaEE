@@ -1,0 +1,112 @@
+处理注解的APT程序
+
+注解使用是相关的操作：
+1. 使用注解  [*]
+语法：
+@注解名
+如果这个注解有属性的话
+@注解名(属性名=值,属性名=值)
+
+属性的类型:
+	Class, String, 枚举、注解、基本类型
+	以及上面5种类型的数组
+	
+如：
+@Hello(value="jack",
+	name=@另一个注解(属性=值))
+
+2.开发注解 [**]
+语法
+public @interface  注解名 {
+	//属性定义
+}
+
+要使用元注解来修饰
+@Retention
+@Target
+
+3.注解处理程序APT  [***]
+使用反射 API 来处理
+
+开发流程：
+1.通过 class 来获取这个类、方法、构造、包等中的注解
+UseHello obj = new UseHello();
+//
+Class<UseHello> c = obj.getClass();
+//
+Method m = c.getDeclaredMethod("sayHi",String.class);
+//
+Hello h = m.getAnnotation(Hello.class);
+//
+2.取出这个注解中我们需要的值
+String value = h.value();
+
+3.根据你的要求来使用 注解中配置的信息
+//此例子中，直接调用 sayHi方法，以value为参
+m.invoke(obj,value);
+//
+
+
+例：
+step1: 开发注解
+@Retention(RUNTIME)
+@Target({TYPE,METHOD})
+public @interface Hello{
+	String value();
+}
+
+step2: 使用注解
+public class UseHello {
+
+	@Hello(value="jack");
+	@otherXXX
+	public void sayHi(String name) {
+		//
+		System.out.println("你好,"+name);
+	}
+}
+
+step3:开发APT
+
+======================
+有关配置文件
+
+除了代码本身外，有些数据需要写在配置文件中，
+而配置文件可以采用如下格式编写
+
+1. 属性文件，以 .properties 结束
+这种文件的格式是：
+key=value
+注：
+key不能重复
+
+如：
+xxx.properties
+
+内容如下：
+type=1
+# 表达注释
+rows_for_page=15
+
+在java中，提供了专门用来操作 .properties文件
+的类型，这个类叫：java.util.Properties
+
+这个类师出Map, 它也是由键-值对组成的，只不过
+与HashMap不同的是，它的键-值的类型只能是String
+
+这样一来，Properties就是处理 .properties文件
+最好的类。
+
+方法：
+	void load(InputStream in);
+	String getProperty(String key);
+	void setProperty(String key,value);
+	store(OutputStream out, String comment);
+	store(Writer out,String comment);
+	...
+
+-------------
+2. XML文件，以 .xml 结尾
+这种文件的格式较为复杂，但是，表达的能力比
+属性文件强大，比如：可以定义层次、结构、类型
+

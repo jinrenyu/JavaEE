@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>隐藏元素的常用的三种方式</title>
+        <style type="text/css">
+        	div {
+				width: 100px;
+				height: 100px;
+			}
+			.d1 {
+				background-color: red;
+				/* 隐藏元素并使元素脱离文档流 */
+				/* display: none; */
+				/* 隐藏元素但不该变元素的占位 */
+				/* 默认为visible:可见 */
+				/* visibility: hidden; */
+			}        
+			.d2 {
+				background-color: blue;
+			}
+        </style>
+    </head>
+    <body>
+    	<!-- 设置元素的公共属性hidden, 它的效果和display:none相同  -->
+        <div class="d1" hidden="hidden"></div>
+        <div class="d2"></div>
+    </body>
+</html>

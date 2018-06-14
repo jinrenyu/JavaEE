@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>块级元素和行内元素</title>
+        <style type="text/css">
+        	p {
+        		background-color: red;
+        		/* width: 150px;
+        		height: 150px; */
+        		/* 如果设置line-height和height的值相同, 可以对当行文本进行垂直居中 */
+        		line-height: 200px;
+        		height: 200px;
+        		width: 200px;
+        	}
+        	span {
+        		/* width: 150px;
+        		height: 150px; */
+        		border: 1px solid;
+        		line-height: 2;
+        		font-size: 30px;
+        		background-color: blue;
+        	}
+        	div {
+        		width: 130px;
+        		height: 130px;
+        		border: 1px solid;
+        	}
+        </style>
+    </head>
+    <body>
+        <p>块级<span>内联元素</span>元素p</p>
+        <p>块级元素p02</p>
+        <span>行内<div>块级div</div>元素</span>
+        <span>行内元素02</span>
+    </body>
+</html>

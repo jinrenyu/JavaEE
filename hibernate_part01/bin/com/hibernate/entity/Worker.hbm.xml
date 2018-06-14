@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping 
+PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<!-- 规定映射类所在的包 -->
+<hibernate-mapping package="com.hibernate.entity">
+    <!-- 规定要进行映射类以及其映射表 -->
+    <class name="Worker" table="tbl_worker" lazy="false">
+    <cache usage="read-only" region="sampleCache1" />
+        <!-- 默认表中的列名与类中的成员名称一样 -->
+        <id name="id">
+            <!-- 表示使用序列生成id的值 -->
+            <generator class="sequence">
+                <!-- 自定义序列的名字, 默认是hibernate_sequence -->
+                <param name="sequence">seq_worker_id</param>
+                <param name="parameters">start with 3</param>
+            </generator>
+        </id>
+        <!-- 定义类中成员name对应表中的列名为wName并且添加非空约束, 生成列的类型为varchar2(20 char) -->
+        <property name="name" length="20" column="w_Name" not-null="true" />
+        <!-- 定义类成员中age成员对应的列名为age且大于0 -->
+        <property name="age">
+            <!-- 定义自定义约束要求age>0 -->
+            <column name="age" check="age > 0 and age &lt; 160" />
+        </property>
+        <!-- precision代表对应数组类型的有效长度, scale代表精确的位数 -->
+        <property name="salary" precision="10" scale="2"></property>
+        <!-- 明确java成员对应的日期类型只需要保存'年月日' -->
+        <property name="birth" type="date">
+            <!-- 明确指定生成列对应的日期类型为date -->
+            <column name="birthday"></column>
+        </property>
+    </class>
+</hibernate-mapping>

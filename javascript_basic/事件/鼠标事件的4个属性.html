@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>鼠标事件的4个属性</title>
+    </head>
+    <body>
+        <p id="content"></p>
+        <img alt="加载失败" src="images/huaji.jpg">
+        <script type="text/javascript">
+        	document.onclick = function(event) {
+        		var e = window.event || event;
+        		var cx = e.clientX;
+        		var cy = e.clientY;
+        		var sx = e.screenX;
+        		var sy = e.screenY;
+        		var p = document.getElementsByTagName("p")[0];
+        		p.innerHTML = cx + "," + cy + "," + sx + "," + sy;
+        	}
+        	// 表示当鼠标滑动的时候会触发的事件
+        	document.onmousemove = function(event) {
+        		// 获取鼠标事件的坐标轴
+        		var e = window.event || event;
+        		var cx = e.clientX;
+        		var cy = e.clientY;
+        		var img = document.images[0];
+        		// 使图片浮动且能够定位
+        		img.style.position = "absolute";
+        		// 不断的位移图片
+        		img.style.left = cx + "px";
+        		img.style.top = cy + "px";
+        	}
+        </script>
+    </body>
+</html>

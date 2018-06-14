@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+
+<title>菜鸟教程(runoob.com)</title> 
+<!-- 引入外部样式 -->
+<link rel="stylesheet" type="text/css" href="../style/mystyle.css">
+<style>
+/*id 选择器  以#开头 
+	ID属性不要以数字开头
+*/
+#para1
+{
+	text-align:center;
+	color:red;
+} 
+
+/*class选择器 以. 开头*/
+.para2
+{
+	text-align:left;
+	color:green;
+} 
+</style>
+</head>
+
+<body>
+<p id="para1" class="para2">Hello World!</p>
+	<p class="para2">Hello World!</p>
+	<!-- 样式也遵循"就近原则" -->
+	<p class="para2" style="text-align:right;color:yellow">Hello World!</p>
+	<p id="p1">这是p1 Hello World!</p>
+	<p class="p2" name="name2">p2 Hello World!</p>
+	<input type="text" name="username" value="jack"/>
+<p>这个段落不受该样式的影响。</p>
+</body>
+</html>

@@ -1,0 +1,196 @@
+反射[Reflection] 和 注解
+
+反射是JDK5中推出的特性，它使得JAVA语言拥有了
+“半动态”的能力。
+
+开发语言的分类可以分为
+静态语言
+	也叫强类型语言，变量的类型是不可以动态变化的
+	像 java, c, c++, c# 
+动态语言
+	有一个指标就是可以在运行时改变变量的类型。
+	Ruby, python, perl, javascript, ..
+
+java的反射机制使得我们可以通过代码来窥探类的
+结构，可以通过字节码来获取此类的所有信息。
+
+它的API
+	java.lang.reflect包
+	
+反射可以帮助我们做什么？
+	1.可以帮助我们通过字节码还原出源文件
+	2.可以写出很多通用的算法
+
+反射的入口类：
+	java.lang.Class<T>
+
+它是在JVM中用来描述类型的类型
+
+当JVM加载一个类型后，这个类型在JVM中就是通
+Class来描述的，这个类型在JVM中拥有Class的唯
+一实例。
+
+比如：
+加载了Student, 则 JVM中有 Student.class
+加载了String,则 JVM中有 String.class
+
+而不管你创建了多少个Student对象或String对象
+这些对象都共享同一个 XXX.class 实例。
+
+如何获取Class实例？
+方法有：
+1. 通过类名.class 获取
+如：
+Class<Student> sc1 = Student.class;
+Class<String> sc2 = String.class;
+...
+2. 通过对象来获取
+如：
+Student s = new Student();
+...
+Class<Student> sc1 = s.getClass();
+
+3.通过 Class.forName() 来获取
+如：
+String cname = "com.tz.day11.Student";
+Class<Student> sc1 = Class.forName(cname);
+
+----
+Class中的方法
+	Package getPackage(); 获取包
+	int getModifiers(); 获取修饰符
+	Class<?> getSuperClass();获取父类
+	Class<?>[] getInterfaces();获取接口
+	Field[] getDeclaredFields();获取属性
+	Field getDeclaredField(String 属性名);
+	获取构造方法
+	Constructor[] getDeclaredConstructors();
+	Constructor 
+		getDeclaredConstructor
+			(Class<?>... args);
+	获取方法
+	Method[] getDeclaredMethods();
+	Method 
+		getDeclaredMethod(String mName,
+				Class<?>... args);
+	...
+------------------------
+除了常用的获取信息的方法外，Field类中也有
+用来给属性赋值的方法.
+如：
+void set(Object obj, Object val);
+
+例用:
+//非反射代码给属性赋值
+Student s = new Student();
+s.setName("张三"); //
+
+//使用反射代码
+Class<Student> c = Student.class;
+//通过反射创建对象
+Student s = c.newInstance();
+//获取 name 属性
+Field nameField = c.getDeclaredField("name");
+//如果有私有属性，则需要调用
+nameField.setAccessible(true);//
+//给属性赋值
+nameField.set(s,"张三");
+------------------------------------
+Method中也有用来调用方法的方法.
+如：
+Object invoke(Object obj,
+		Object... args);
+//案例: 调用学员对象的setName方法
+
+//正常代码
+Student s = new Student(...);
+s.setName("jack"); //
+---------------------
+//反射代码
+Class<Student> c = Student.class;
+//通过反射创建对象
+Student s = c.newInstance();
+//获取 setName方法对象
+Method m = c.getDeclaredMethod
+				("setName",String.class);
+//调用方法
+m.invoke(s,"jack");
+
+------------------
+利用反射写一个通用的toString方法
+//
+public class StringUtil {
+	
+	public static String toString(Object o){
+		//...
+
+	}
+}
+
+---------------------------
+注解[Annotation]
+	是一种特殊的java类型。
+
+作用：
+	采用代码配置的一种方式。
+
+定义语法：
+public @interface 注解名{
+	//属性语法
+	返回类型 属性名() [default 默认值];
+}
+
+特点：
+1. 自动实现 java.lang.annotation.Annotation
+2. 注解的返回类型只能是以下几种
+	基本类型
+	枚举
+	String
+	Class
+	注解
+	以上5种类型的数组
+
+如：
+public @interface Hello {
+
+	String value() default "张三";
+}
+
+--
+为了更好地开发注解，API中提供了四个元注解。
+何谓元注解,用来注解其它注解的注解。
+java.lang.annotation
+		\- @Retention  指定保留策略
+		\- @Target   指定目标策略
+		\- @Documented  
+		\- @Inherited
+注：
+元注解只能用在注解上面，不能修饰其它的元素
+
+则，上面的例子可以改为：
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.METHOD,
+			ElementType.CLASS})
+public @interface Hello {
+
+	String value() default "张三";
+}
+
+--
+如果一个注解中没有任何的属性，则这个注解称
+为 标记注解。
+如：
+@Override
+...
+
+--
+开发好注解只是第一步，想要注解产生作用，
+还需要对注解开发处理程序，这个处理程序
+叫 APT [Annotation Process Tool]
+
+开发APT，需要使用反射知识
+
+相关的API
+	AnnotatedElement
+
+--------------------------

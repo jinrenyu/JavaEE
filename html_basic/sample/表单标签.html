@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>表单标签</title>
+    </head>
+    <body>
+    	<!-- 用于和后台以及其他页面进行交互的标签 -->
+    	<!-- action表示提交的地址 -->
+        <form id="testform" action="test.html" method="get">
+        	<!-- 表示一个文本输入框 -->
+        	<!-- name属性代表了提交时数据的key(键值) -->
+        	用户名:<input type="text" name="username" required="required" autofocus="autofocus" 
+        		pattern="[a-zA-Z]+" placeholder="本文本框只接受大小写的英文字母" /><br/>
+            密&nbsp;码<input type="password" name="pwd" /><br/>
+            <!-- disabled和readonly的表单输入项都不可进行修改, 但是disabled的输入项在提交的时候不会进行提交 -->
+            只读的文本框: <input type="text" name="test" value="123" readonly="readonly" /><br/>
+        	<!-- submit会生成一个用于提交表单内内容的按钮 -->
+        	性别: 男<input type="radio" name="gender" value="1"> 
+        	女<input type="radio" checked="checked" name="gender" value="2"><br/>
+        	爱好: 游泳<input type="checkbox" name="hobbit" value="a">
+        	唱歌<input type="checkbox" name="hobbit" value="b">
+        	跳舞<input type="checkbox" name="hobbit" value="c"><br/>
+        	省份: <select name="province">
+        		<option value="">-请选择-</option>
+        		<option value="2">浙江</option>
+        		<option value="3">江苏</option>
+        		<option value="4">黑龙江</option>
+        	</select>
+        	省份: <select name="province" multiple="multiple" size="5">
+        		<optgroup label="区域1">
+	        		<option value="2">浙江</option>
+	        		<option value="3">江苏</option>
+	        		<option value="4">黑龙江</option>
+        		</optgroup>
+        		<optgroup label="区域2">
+	        		<option value="2">浙江</option>
+	        		<option value="3">江苏</option>
+	        		<option value="4">黑龙江</option>
+        		</optgroup>
+        	</select><br/>
+        	文本域: <textarea rows="40" cols="40" maxlength="100">默认文本值</textarea><br/>
+        	数字输入框:<input type="number" max="20" min="10" step="2"><br/>
+        	日期:<input type="date" name="startDate"><br/>
+        	<input type="submit" value="提交">
+        	<input type="submit" value="注册" formaction="vedio.html" 
+        		formnovalidate="formnovalidate">
+        	<input type="image" src="../assets/images/gif-0024.gif">
+        	<input type="button" value="普通按钮">
+        	<button type="button">古老的按钮</button>
+        </form>
+        <input type="text" name="outer" form="testform">
+    </body>
+</html>

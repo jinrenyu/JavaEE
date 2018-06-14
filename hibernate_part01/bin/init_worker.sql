@@ -1,0 +1,1 @@
+create table tbl_worker03(id number(3),name varchar2(20));

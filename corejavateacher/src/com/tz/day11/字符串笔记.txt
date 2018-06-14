@@ -1,0 +1,188 @@
+Java字符串处理
+
+java.lang.String
+
+java.lang.StringBuilder
+java.lang.StringBuffer
+
+注意:以上三个类都是final的
+    String不光是final的,而且还是不变类(immutable)
+
+
+String类
+
+字符串的本质:字符数组
+
+构建方式
+1.通过构造方法来创建字符串对象
+  String s = new String("你好");
+
+2.通过串池来构建字符串对象
+  //会申请串池来存放
+  String s = "你好";
+  String s1 = "你好";
+
+
+区别
+方式一:使用new会开辟新空间来存放创建的对象,会申请堆空间来存放
+方式二:采用串池方式,此方式可以简化创建过程,而且效率高,第二次
+              创建字符串的时候会优先去串池搜索是否已经存在该字符串,如果
+              存在,直接把字符串的地址赋值给引用
+ 
+
+字符串拼接
+1.使用+拼接字符串:性能低下,每次都会保存临时对象
+  String s = "好好学习";
+  s += ",天天向上";//会产生临时对象
+
+2.如何优化字符串的拼接:
+  java.lang.StringBuilder	轻量级字符串处理类,线程非安全,效率高
+  java.lang.StringBuffer	重量级字符串处理类,线程安全,效率低
+
+  方法:append(),此方法拼接字符串效率非常高
+
+  注意:
+  这两个字符串类的功能是一模一样的,但是在安全和性能上有差别,
+  StringBuilder是线程非安全的,效率高,StringBuffer是线程安全的,
+  效率相对较低,因为它的安全性比StringBuilder高.
+----------------------------------------------------------------------
+
+字符串常用方法
+
+String:定长不变类
+
+1.根据下标获取字符串中的字符
+  char c = s.charAt(int index);
+
+2.将指定字符串连接到此字符串的结尾
+  String newString = s.concat(String str);
+
+3.判断字符串是否以指定字符开头或者结尾
+  boolean b = s.startsWith("我"));
+  boolean b = s.endsWith("C"));
+
+4.字符串比较相等
+  boolean b = s.equals("我是abc");
+		
+  忽略大小写比较相等
+  boolean b = s.equalsIgnoreCase("我是abc");
+
+5.通过字符/字符串获取第一次出现的下标
+  int index = s.indexOf(char c);
+  int index = s.indexOf(String s)
+
+6.判断字符串是否为空
+  boolean b = s.isEmpty();
+
+7.通过字符/字符串获取最后一次出现的下标
+  int index = s.lastIndexOf(char c);
+  String index = s.lastIndexOf(String s)
+
+8.返回此字符串的长度
+  int length = s.length();
+
+9.替换指定字符串的指定内容
+  String s = s.replace(char oldChar, char newChar);
+ 
+10.字符串切割方法(按照指定的模式字符去切割)
+   String[] arr = s.split(String s);
+
+11.截取字符串
+   String s = s.substring(int beginIndex); 
+
+   //截取指定位置间的子字符串,[start,end)
+   String s = s.substring(int start,int end); 
+
+12.转换字符串大小写
+   String s = s.toUpperCase();
+   String s = s.toLowerCase();
+
+13.把字符串转换成字符数组
+   char[] arr = s.toCharArray();
+
+14.把任意类型转换成字符串
+   String s = String.valueOf(Object obj)
+
+15.去除字符串前后空白
+   String s = s.trim();
+-------------------------------------------------------------
+
+StringBuilder/StringBuffer:动态字符串类
+
+构造方法:
+public StringBuilder()			//初始容量为 16 个字符
+public StringBuilder(String s)  //把字符串转换成StringBuilder
+
+常用方法:
+1.字符串拼接方法
+  StringBuilder append()
+
+2.返回当前容量
+  int capacity()	
+
+3.返回长度(字符数)
+  int length()
+
+4.返回此序列中指定索引处的 char 值
+  char charAt(int index)
+
+5.删除指定位置字符序列(end不包含)
+  StringBuilder delete(int start, int end)
+  
+  移除此序列指定位置上的 char
+  StringBuilder deleteCharAt(int index) 
+
+6.返回第一次出现的指定子字符串在该字符串中的索引
+  int indexOf(String str) 
+  indexOf(String str, int fromIndex)
+
+  返回最右边出现的指定子字符串在此字符串中的索引
+  int lastIndexOf(String str) 
+  int lastIndexOf(String str, int fromIndex) 
+
+7.将字符串插入此字符序列中
+  StringBuilder insert(int offset, String str) 
+ 
+8.替换方法
+  StringBuilder replace(int start, int end, String str) 
+ 
+9.反转当前字符串
+  StringBuilder reverse()
+
+10.将给定索引处的字符设置为 ch
+   void setCharAt(int index, char ch) 
+    
+11.设置字符序列的长度 
+   void setLength(int newLength)
+
+12.截取方法
+   CharSequence subSequence(int start, int end) 
+   String substring(int start) 
+   String substring(int start, int end) 
+ 
+13.把StringBuilder转换成String
+   String toString() 
+ 
+14.尝试减少用于字符序列的存储空间
+   void trimToSize() 
+--------------------------------------------------------------------------
+
+结论:字符串做拼接效率低下,请尽量使用StringBuilder中的append()方法来拼接字符串,这样效率很高.
+	
+          今后我们的重写toString()方法全部采用StringBuilder来做
+--------------------------------------------------------------------------
+
+字符,字符串,字符数组之间的相互转换操作
+
+String str = "JACK";
+//通过字符串得到字符数组
+char[] arr = str.toCharArray();
+
+//把字符数组转换成字符串
+String s = new String(arr);
+
+//通过字符串得到字符
+char c = str.charAt(0);//得到字符 J
+
+//把字符转换成字符串
+String s = Character.toString(c);

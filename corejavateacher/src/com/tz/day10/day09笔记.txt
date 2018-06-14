@@ -1,0 +1,254 @@
+正则表达式
+
+JDK1.4过后,Java对正则表达式完全支持
+
+API:java.util.regex包
+
+类:
+Pattern
+
+常用方法:
+public static Pattern compile(String regex)
+//将给定的正则表达式编译到模板中
+
+public Matcher matcher(String source)
+//得到Matcher匹配器
+
+
+public static boolean matches(String regex,String source)
+//编译给定正则表达式并且尝试匹配给定的输入字符串
+
+
+Matcher
+常用方法:
+public boolean matches()
+//做一次精确匹配,如果成功返回true,否则false
+
+public boolean find()
+//尝试去全部匹配目标正则
+
+public int start()
+//返回匹配成功的字符在整个序列中的起始位置
+
+public int end()
+//返回匹配成功的字符在整个序列中的结束位置
+
+public String group()
+//得到匹配成功的字符序列
+
+
+正则表达式例子
+
+匹配QQ号码:
+[1-9][0-9]{4,}
+
+匹配邮编
+[0-9]{6}  -->  \d{6}
+
+匹配ip地址
+\d+\.\d+\.\d+\.\d+
+
++     表示一次或者多次
+*     表示零次或者多次
+?     表示零次或者一次
+
+\d    表示数字
+\w    表示任意字符
+
+{n}   表示重复n次
+{n,}  表示最少重复n次
+{n,m} 表示重复最少n次,最多m次(m包含)
+------------------------------------------------
+
+JAVA的异常处理机制
+
+异常的定义:
+异常是一种对象,既然是对象,就有数据类型.
+
+异常的顶级类型是:
+java.lang.Throwable
+
+异常的分类:
+在Java中,JVM按照异常的严重程度,把Throwable分为
+两大类:
+一:错误(error),是比较严重的问题,一般不建议处理
+   如:
+   StackOverflowError		堆栈溢出
+   OutOfMemoryError			内存溢出		
+
+
+二:异常(Exception),是指程序在运行过程中所遇到的
+   一些不正常的情况,有些是可以恢复的,有些是不能恢复的
+
+异常(Exception)本身又分为两种:
+
+a.运行时异常,也叫做未检测异常,都是RuntimeException
+  的子类,这类异常不强制要求程序员处理,而是要求程序员编码谨慎
+
+  这类异常有:
+  NullPointerException            空指针异常
+  ArrayIndexOutOfBoundsException  数组下标越界
+  StringIndexOutOfBoundsException 字符串下标越界
+  InputMismatchException          输入不匹配异常
+  IllegalArgumentException        非法参数异常
+  ClassCastException              类型转换异常
+  ...
+
+
+b.非运行时异常,也叫做已检测异常,都是Exception的子类
+  这类异常JVM强制要求程序员必须处理,处理的方式:
+  要么积极处理(try catch),要么消极处理(throws)
+
+  这类异常有:
+  InterruptException      中断异常
+  ParseException          解析异常
+  FileNotFoundException   文件不存在异常
+  IOException             IO异常
+  SqlException            数据库操作异常
+  ...
+-----------------------------------------------------
+
+异常处理的方式:
+1.积极处理,采用try...catch来捕获异常
+  
+  它有以下几种写法:
+a.try{
+      //把所有抛出异常的语句写在此处
+  }catch(异常类型1 变量名1){
+      //处理异常的代码1
+  }catch(异常类型2 变量名2){
+      //处理异常的代码2
+  }catch(异常类型3 变量名3){
+      //处理异常的代码3
+  }finally{
+      //一般用来释放资源
+  }
+
+  注:
+  1.finally代码块主要做释放资源的工作,如:
+  缓存的刷新,IO流的关闭,连接的关闭...
+  不管上面代码时候出现异常,finally代码块
+  中的语句始终会执行,除非上面有System.exit(0);
+  //中断虚拟机进程
+
+  2.如果后面catch块中有多个异常并且存在父子类
+    关系的,则要求把父类写在子类的后面
+
+
+b.JDK7.0新特性
+
+  try{
+      //出现异常的代码
+  }catch(异常类型1|异常类型2 变量名){
+  	  ...
+  }
+
+c.不推荐 -- 无法看到捕获的是什么异常,而且不能分别对异常
+            进行提示和处理
+  try{
+      //把所有抛出异常的语句写在此处
+  }catch(总父类异常类型 变量名){
+      //处理异常的代码
+  }
+
+
+2.消极处理
+  定义在方法上面: throws 异常类型
+ 
+  在代码中抛出异常:throw 异常对象
+  
+
+如何选择异常处理方式:
+一般情况下都选择积极处理方式,但是如果,例如
+A方法中调用B方法,而B方法抛出某一个异常,而A
+的代码中同样也抛出此异常,这种情况下,可以考虑
+在B方法中抛异常,然后在A方法中一次性捕获处理.
+
+
+注:如果异常最后抛给了JVM,则JVM会自动终止进程,程序结束
+
+
+自定义异常
+程序员为自己设计异常
+写一个类继承Exception,然后添加所需要的构造方法即可
+----------------------------------------------------
+
+内部类(Inner Class)
+定义:定义在其他类内部的类
+
+一般可以划分为四种:
+1.成员内部类(Member Inner Class)
+  是指把内部类当做外部类的一个"成员"存在
+  特点:
+  a.可以访问外部类的所有成员
+  b.如果成员内部类中有属性与外部类的属性同名,则需要通过
+    外部类.this.同名属性来访问外部类的同名属性.
+  c.如果成员内部类是公开的,则在其他类中,可以通过如下方式
+    来创建成员内部类的对象:
+    外部类.内部类 变量名 = 外部对象.new 内部类名;
+
+
+2.静态内部类(Static Inner Class)
+  是指把内部类当做外部类的"静态成员"存在
+  特点:
+  a.可以直接访问所在外部类的所有静态成员
+  b.创建静态内部类对象的语法:
+    StaticInner staticInner = new 外部类.StaticInner();
+  c.如果是公开的静态内部类,可以"上升"为顶级类
+    StaticInner staticInner = new StaticInner();
+
+
+3.局部内部类(Local Inner Class)
+  是指把内部类定义在外部类的成员方法中
+  特点:
+  a.可以访问外部类的所有成员
+  b.也可以访问所在方法中的final变量
+  c.这个类只能在定义它的方法中使用
+
+
+4.匿名内部类(Anonymous Inner Class)
+  就是一种没有名字的局部内部类
+  特点:同上
+	
+---------------------------------------------------------
+
+在JAVA中如何实现像C++中的多重继承能力?
+
+要利用接口和内部类来实现多重继承能力
+
+如下:
+
+public abstract class Person{
+	private String name;
+	public abstract void run();//抽象方法
+}
+
+public interface Machine{
+	void run();
+}
+
+写一个类,继承Person,并且实现Machine
+public class Robot extends Person{
+	private Machine machine;
+
+	public Robot(String name){
+		super(name);
+		this.machine = new MyMachine();
+	}
+	//请问,你实现的这个方法是Person的还是Machine的
+	public void run(){
+		//只是Person的实现
+		...
+	}
+	public void powerOn(){
+		run();
+		//调用machine的run
+		machine.run();
+	}
+	//定义一个内部类来实现Machine接口
+	private class MyMachine implements Machine{
+		public void run(){
+			//Machine的实现
+		}
+	}
+}

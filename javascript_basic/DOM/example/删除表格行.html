@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>动态删除表格行</title>
+        <style type="text/css">
+        	table, td {
+        		border: 1px solid red;
+        		width: 300px;
+        	}
+        </style>
+    </head>
+    <body>
+       	<table>
+       		<tr>
+       			<td><input type="checkbox" name="c1" onclick="selectAll();" /></td>
+       			<td>姓名</td>
+       			<td>年龄</td>
+       			<td>班级</td>
+       		</tr>
+       		<tr>
+       			<td><input type="checkbox" name="c2" /></td>
+       			<td>A</td>
+       			<td>10</td>
+       			<td>001</td>
+       		</tr>
+       		<tr>
+       			<td><input type="checkbox" name="c2" /></td>
+       			<td>B</td>
+       			<td>12</td>
+       			<td>002</td>
+       		</tr>
+       		<tr>
+       			<td><input type="checkbox" name="c2" /></td>
+       			<td>C</td>
+       			<td>15</td>
+       			<td>003</td>
+       		</tr>
+       	</table>
+       	<input value="删除" onclick="delR();" type="button" />
+       	<script type="text/javascript">
+       		function selectAll() {
+       			// 根据c1节点的checked值来操作name为c2的节点的checked属性
+       			var ck1 = document.getElementsByName("c1")[0];
+       			var ck2 = document.getElementsByName("c2");
+       			// 如果第一行的复选框的值被选中了
+       			if (ck1.checked) {
+       				// 设置下面的所有复选框的checked变为选中
+       				for(var i = 0; i < ck2.length; i++) {
+       					ck2[i].checked = true;
+       				}
+       			} else {
+       				for(var i = 0; i < ck2.length; i++) {
+       					ck2[i].checked = false;
+       				}
+       			}
+       		}
+       		// 删除被选中的行
+       		function delR() {
+       			// 操作的对象: tbody对象, 被选中的节点
+       			// var ck2 = document.querySelectorAll("input[name='c2']");
+       			// nodeList类型的对象都会进行自动的更新
+       			var ck2 = document.getElementsByName("c2");
+       			var tbody = document.getElementsByTagName("tbody")[0];
+       			// 避免动态更新, 使节点往前偏移造成遗漏
+       			for (var i = ck2.length; i > 0; i--) {
+       				if (ck2[i - 1].checked) {
+       					var trTag = ck2[i - 1].parentNode.parentNode;
+       					tbody.removeChild(trTag);
+       				}
+       			}
+       		}
+       	</script>
+    </body>
+</html>

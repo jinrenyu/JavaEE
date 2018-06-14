@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>选择符的关系运算</title>
+        <style type="text/css">
+        	/* 表示选择和p元素相邻的其他同级别的p元素标签(下面) */
+        	p+p {
+        		color: red;
+        	}
+        	/* 表示选择h2下面位置的所有的兄弟级别的p元素 */
+        	h2~p {
+        		/* 添加删除线 */
+        		text-decoration: line-through;
+        	}
+        </style>
+    </head>
+    <body>
+        <p>段落1</p>
+        <p>段落2</p>
+        <p>段落3</p>
+        <h2>标题1</h2>
+        <p>段落4</p>
+        <h2>标题1</h2>
+        <p>段落6</p>
+        <p>段落7</p>
+    </body>
+</html>

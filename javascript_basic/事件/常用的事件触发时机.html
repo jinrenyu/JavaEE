@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>常用的事件触发时机</title>
+    </head>
+    <body>
+    	<!-- 当失去焦点的时候会触发该事件 -->
+    	<!-- 检测用户的输入, 当输入框失去焦点的时候把所有的输入变成大写 -->
+    	<!-- onfocus当输入框获得焦点的时候会触发该事件 -->
+        onblur:<input type="text" onfocus="lightBorder(this);" onblur="toUp(this);" />
+    </body>
+    <script type="text/javascript">
+    	function toUp(obj) {
+    		var value = obj.value.toUpperCase();
+    		obj.value = value;
+    	}
+    	function lightBorder(obj) {
+    		obj.style.borderColor = "red";
+    	}
+    	// 设置事件的另外一种方法, 使用动态设置成员的方法
+    	// E(DOM对象).事件名称 = function() {};
+    	// event对象是内置的对象, 其中包含当前事件的特有成员参数
+    	document.onkeyup = function(event) {
+    		// 兼容老版本浏览器的写法
+    		var e = window.event || event;
+    		alert(e.key);
+    	}
+    </script>
+</html>

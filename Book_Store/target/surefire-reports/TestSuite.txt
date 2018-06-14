@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 19, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.145 sec <<< FAILURE! - in TestSuite
+testUpdate(com.tz.online.dao.test.UserDaoImplTest)  Time elapsed: 0.016 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at com.tz.online.dao.test.UserDaoImplTest.testUpdate(UserDaoImplTest.java:34)
+
+testDelAddress(com.tz.online.service.test.UserServiceImplTest)  Time elapsed: 0.013 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at com.tz.online.dao.impl.AddressDaoImpl$3.execute(AddressDaoImpl.java:59)
+	at com.tz.online.util.HibernateTemplates.execute(HibernateTemplates.java:23)
+	at com.tz.online.dao.impl.AddressDaoImpl.delete(AddressDaoImpl.java:54)
+	at com.tz.online.service.impl.UserServiceImpl.delAddress(UserServiceImpl.java:68)
+	at com.tz.online.service.test.UserServiceImplTest.testDelAddress(UserServiceImplTest.java:46)
+
+testUpdAddress(com.tz.online.service.test.UserServiceImplTest)  Time elapsed: 0.011 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at com.tz.online.service.test.UserServiceImplTest.testUpdAddress(UserServiceImplTest.java:52)
+

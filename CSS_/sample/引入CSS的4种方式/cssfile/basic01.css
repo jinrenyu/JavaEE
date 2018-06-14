@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+p {
+	/* color属性是具有继承性的 */
+    color: rgb(256, 0, 0);
+    /* Ctrl+Shift+/ -> #FF00FF; */
+}

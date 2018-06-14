@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Servlet2.5版本的文件上传方式</title>
+    </head>
+    <body>
+    	<!-- 如果表单内部具有文件选项, 则必须通过改变表单的enctype为
+    	multipart/form-data(告诉浏览器你应该怎么提交我上传的表单), 
+    	并且只能使用post提交方式 -->
+        <form action="/file_test/FileUpload25" enctype="multipart/form-data" method="post">
+        	普通文本域:<input type="text" name="pText"><br/>
+        	文件1:<input type="file" name="file01"><br/>
+        	文件2:<input type="file" name="file02"><br/>
+        	<input type="submit" value="上传文件">
+        </form>
+    </body>
+</html>

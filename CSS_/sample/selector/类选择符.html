@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>类选择符</title>
+        <!-- 
+        	语法: E.class属性的名称 {}
+         -->
+        <style type="text/css">
+        	/* 和id选择器一样, *是可以省略的(大小写敏感) */
+        	/* 表示选择同时具有class的属性为p1/p2/p3的元素 */
+        	.p1.p2.p3 {
+        		color: red;
+        	}
+        	.p1 {
+        		color: blue;
+        	}
+        </style>
+    </head>
+    <body>
+    	<!-- class属性不同的元素可以进行重复出现 -->
+        <p class="p1">段落1</p>
+        <!-- 元素的class属性的值可以存在多个,属性之间使用空格进行分割 -->
+        <p class="p1 p2 p3">段落2</p>
+        <address class="p1">一个地址</address>
+        <p class="p1">段落3</p>
+        <p>段落4</p>
+    </body>
+</html>

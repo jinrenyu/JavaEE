@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>浮动</title>
+        <style type="text/css">
+        	.container {
+        		width: 360px;
+        		background-color: green;
+        	}
+        	.d1, .d2 {
+        		width: 100px;
+        		height: 100px;
+        	}
+        	.d1 {
+        		background-color: red;
+        		/* 使其向左浮动 */
+        		float: left;
+        		/* position: absolute; */
+        		/* z-index: -1; */
+        		
+        	}
+        	.d2 {
+        		background-color: blue;
+        		float: right;
+        		/* z-index: 3; */
+        	}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        	<div class="d1"></div>
+        	<div class="d2"></div>
+        	<div style="clear: both;"></div>
+        </div>
+    </body>
+</html>

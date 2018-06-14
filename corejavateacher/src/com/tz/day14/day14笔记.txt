@@ -1,0 +1,360 @@
+有关List接口中的subList方法
+方法的申明：
+List subList(int startIndex, int endIndex);
+//此方法是从原集合中截取子集合，并返回
+
+如：
+List<Integer> s1 = new ArrayList<>();
+Collections.addAll(s1, 1,5,6,7,89,12);
+
+List<Integer> s2 = s1.subList(1,4);
+//此时，集合s2中的元素是：[5,6,7]
+
+s2.clear(); //清除集合s2中的元素，同时也会把
+	//s1中的 5,6,7也移除出 s1
+
+//
+List<Integer> s3 = 
+	new ArrayList<>(s1.subList(1,4));
+
+-------------------
+所以，通过list的sublist方法得到的"新集合",
+与我们通过 new ArrayList/LinkedList出来的新集合
+不是一回事。
+
+=============================
+整个JCF的结构
+
+
+======
+知识大纲
+1.泛型 [generic type]
+定义：类型参数化
+它与方法的参数不同，是在“类”这个层面上。
+
+语法：
+类型<泛型字母>
+
+泛型字母一般使用单一的大写字母。
+如：T, K, V, E, X,...
+
+一般来说，容器类比较适合使用泛型。比如：JCF
+全部采用泛型的语法改写过。
+
+如：
+List list = new ArrayList(); //jdk5.0之前
+这个集合可以存放任何类型的对象
+
+List<String> list = new ArrayList<String>();
+//这个集合只能放String类型的对象
+或
+List<String> list = new ArrayList<>(); //jdk1.7
+
+当然，除了API中已经使用泛型改写过的类之外，我们
+也可以使用泛型来自定义自己的类型，如：
+
+//自定义泛型类
+public class Entry<K,V> {
+	private K key;
+	private V value;
+	//
+	public K getKey(){ ... }
+
+	public void setValue(V value){... }
+}
+
+泛型使用的注意事项：
+A. 泛型不支持多态
+
+如：
+List x = new ArrayList(); //ok
+Number n = new Integer(5); //ok
+List<Number> xn = new ArrayList<Integer>(); //error
+
+B. 泛型只是编译时的概念，在运行时，JVM会抛弃
+   泛型。
+如：
+List<Number> n1 = new ArrayList<Number>();
+List<Integer> n2 = new ArrayList<Integer>();
+//获取：
+boolean b = n1.getClass() == n2.getClass();//true
+
+所以，
+泛型的作用仅仅是JVM在编译期间对类型的检查机制
+
+--
+泛型的应用：
+A. 自定义泛型类
+语法：
+public class 类名<泛型字母> {
+
+}
+如：
+public class BaseEntity {
+	private Long id;
+	private int version;
+	private Date create_date;
+	priviate Date modify_date;
+	//...
+}
+
+public class CommonDao<T> {
+	T get();
+	void save(T obj);
+}
+
+B. 泛型方法
+类本身没有泛型字母的定义，而方法却需要使用
+泛型字母，此时，就可以定义 泛型方法。
+
+语法：
+修改符 <泛型字母> 返回类型 方法名(参数列表)
+							throws 异常列表 {
+	//...
+}
+
+如：
+public class Hehe {
+	//泛型方法
+	public static <T> void save(T obj) {
+		//这样，方法的参数以及方法体内的
+		//变量都可以使用 T
+	}
+}
+
+--
+泛型的通配和限定
+
+泛型通配符： ?
+
+如：
+List<?> n1 = new ArrayList<>();
+此时，n1中由于泛型示定，它除了null值不能存放任何对象
+n1.add(null); //ok
+n1.add(Integer.valueOf(19)); //error
+n1.add("hehe"); //error
+...
+
+有了通配后，泛型的使用范围大大提升了，同时，
+还支持上、下限的限定。
+super和extends 等关键字来限定下、上限
+
+限定上限：
+<? extends BaseEntity>
+限定下限：
+<? super Person>
+
+还支持多重限定，使用 & 符号来拼接.
+
+--
+集合和泛型
+工具类：Collections的常用方法
+	addAll
+	sort
+	swap
+	shuffle
+	copy
+	fill
+	reverse
+	emptyList
+	emptySet
+	emptyMap
+	//
+	synchronizedList
+	synchronizedSet
+	...
+说到同步，也就是多线程安全的话题。
+ArrayList和Vector的区别就是 多线程安全问题
+ArrayList是轻量级的，
+Vector是重量级的，也就是多线程安全的。
+
+2.枚举 [enumeration]
+java中的定义类型的关键字有：
+	class, interface, enum, @interface
+它们分别代表 类、接口、枚举、注解
+它们本质是一样的，编译完成后都是字节码[.class]
+
+看一下他们各自的语法
+//
+public class 类名 {
+	属性
+	方法
+	构造方法
+	...
+}
+//
+public interface 接口名 {
+	属性 //公开、静态、常量
+	方法 //公开、抽象方法
+	没有构造方法
+	...
+}
+//
+public enum 枚举名 {
+	属性 //公开、静态、常量，
+		//但必需是枚举本身的类型
+	方法 //与类一样
+	构造方法 //必需是私有的
+	...
+}
+
+public @interface 注解名 {}
+
+---
+如：
+public enum Gender {
+	//属性
+	MALE, //枚举常量
+	//相当于：public static final Gender 
+	// MALE = new Gender();
+	FEMALE; //
+	//	public static final Gender 
+	//	FEMALE = new Gender();
+}
+
+枚举是一种类型安全的常量。
+
+如：
+有人说，使用int型来表示性别。
+如：
+public class Student {
+	public static final int MALE = 1;
+	public static final int FEMALE = 0;
+	private int id;
+	private String name;
+	private int gender; //使用整型代表性别
+	// 1代表男， 0代表女
+	...
+	public void setGender(int g) {
+		this.gender = g;
+	}
+	...
+}
+//测试
+...
+Student s1 = new Student();
+s1.setGender(100);
+
+//很显然，使用某种类型来代表一个常量是类型不
+够安全的。
+
+怎么办？
+//定义一个性别类
+public class Gender {
+	public static final MALE = new Gender();
+	public static final FEMALE = new Gender();
+
+	//把构造方法私有化
+	private Gender(){}
+}
+//
+而这个类就是枚举的本质，改成枚举，只需：
+public enum Gender{
+	MALE,
+	FEMALE;
+}
+
+public class Student {
+	public static final int MALE = 1;
+	public static final int FEMALE = 0;
+	private int id;
+	private String name;
+	private Gender gender; 
+	...
+	public void setGender(Gender g) {
+		this.gender = g;
+	}
+	...
+}
+//测试
+...
+Student s1 = new Student();
+s1.setGender(Gender.FEMALE);
+
+--------------
+枚举的特性
+A. 所有的枚举都自动继续于java.lang.Enum类
+	常用方法
+		String name(); //
+		int ordinal();//
+		String toString(); //
+	另外，只要有枚举，都有 values方法来获取
+	此枚举中的所有枚举常量，以数组返回
+如：
+Gender[] gs = Gender.values();
+
+B. 枚举的构造方法是私有的。
+
+--
+有关枚举的集合类型
+java.util.EnumSet
+java.util.EnumMap
+
+作业：
+描述：模拟简易纸牌发牌的程序。
+第一步：
+开发一个纸牌的实体类
+public class Card {
+	//属性
+	花色 [请使用枚举来表达]
+	点数 [请使用枚举来表达]
+	//
+	...
+}
+
+第二步：开发 花色和点数的枚举
+public enum 花色{
+	//四个枚举常量
+}
+
+public enum 点数{
+	//13个枚举常量
+}
+
+第三步：开发扑克牌类
+public class Poker {
+	//属性
+	private String brand; //品牌
+	private List<Card> boxes; //装了卡片的盒子
+	...
+	
+	private static final List<Card> MODEL;
+
+	static {
+		MODEL = new ...();
+		//
+		for(花色 i : 花色.values()){
+			for(... j: ...values()) {
+				Card c = new Card(...);
+				//
+				MODEL.add(c);
+			}
+		}
+	}
+	//
+
+	public List<Card> newPoker() {
+		...
+	}
+	
+	//玩
+	//person 代表人数
+	//cards 每人发多少张
+	public void play(int person, int cards) {
+		//1. 得到新扑克
+
+		//2. 洗牌
+
+		//3. 发牌
+		...
+	}
+}
+
+---------------------
+
+
+
+
+
+
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+
+<title>菜鸟教程(runoob.com)</title> 
+<style>
+/* 类选择器 */
+.p1 {
+	color:red;
+	/* text-align: center; */
+}
+
+/* 
+派生选择器
+紧跟着.p1 后面的div的样式 */
+.p1+div {
+	text-align: center;
+}
+
+/* 标签选择器 */
+a {
+	color: black;
+	/* 删除样式 */
+	text-decoration: none;
+}
+
+.p2 {
+	/* 转换成大写 */
+	text-transform: uppercase;
+}
+
+.p3{
+	/* 首行缩进 */
+	text-indent: 50px;
+}
+
+.p4 {
+	/* 保留空格和缩进 */
+	white-space: pre;
+}
+
+.p5 {
+	/* 字符之间的距离,对中英文都有效 */
+	/* letter-spacing: 120px; */
+	
+	/* 设置单词之间的距离 */
+	/* word-spacing: 120px; */
+	
+	/* 文字方向 */
+	direction: rtl;
+}
+
+h1 {
+	/* 设置文本阴影 */
+	color: white;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.p6 {
+	white-space: pre;
+	/* 设置行间距 */
+	line-height: 300%;
+}
+
+/* id选择器 */
+#last {
+	vertical-align: text-bottom;
+}
+
+/* 组合选择器 */
+#span1,#span2,#span3 {
+	color : red;
+}
+
+/* 属性选择器 */
+span[name=span4] {
+	color: green;
+}
+</style>
+</head>
+
+<body>
+
+	
+	
+	<p class="p1">文本颜色</p>
+	
+	<div style="border: 1px solid;width: 25%;height: 200px;">
+		这是一个div标签
+	</div>
+	
+	<div style="border: 1px solid;width: 25%;height: 200px;">
+		这是第二个div标签
+	</div>
+	
+	<a href="#">这是超链接的下划线</a>
+	
+	<p class="p2">这是一段文字  段落 aaaaa</p>
+
+	<p class="p3">
+		文本缩进属性是用来指定文本第一行的缩进.<br>
+		文本缩进属性是用来指定文本第一行的缩进.<br>
+		文本缩进属性是用来指定文本第一行的缩进.
+	
+	</p>
+	
+	<p class="p4">
+		  XXX
+		绿蚁新醅酒
+		红泥小火炉
+		晚来天欲雪
+		能饮一杯无
+	</p>
+	
+	<p class="p5"> this is Css teaching 学习</p>
+	
+	<h1>
+		<b>这是h1标签内的内容</b>
+	</h1>
+	
+	<p class="p6">
+		白日依山尽
+		黄河入海流
+		欲穷千里目
+		更上一层楼
+	</p>
+	
+	<p>
+		Hello <img id="last" alt="图片加载失败" src="../images/huaji.jpg">
+	</p>
+	
+	<span id="span1">span1</span>
+	<span id="span2">span2</span>
+	<span id="span3" style="color:yellow;">span3</span>
+	<span name="span4">span4</span>
+	<span name="span5">span5</span>
+	<span name="span6">span6</span>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <!-- 配置SessionFacoty -->
+<session-factory>
+	<!-- 配置和数据库相关的信息 -->
+	<property name="connection.driver_class">
+		oracle.jdbc.driver.OracleDriver
+	</property>
+
+	<property name="connection.url">
+		jdbc:oracle:thin:@127.0.0.1:1521:XE
+	</property>
+
+	<property name="connection.username">jsd1702</property>
+
+	<property name="connection.password">jsd1702</property>
+
+	<!-- 配置数据库的方言 -->
+	<property name="dialect">
+		org.hibernate.dialect.Oracle10gDialect
+	</property>
+
+	<!-- 配置c3p0连接池 -->
+	<!-- 声明c3p0连接池的供应商 -->
+	<!-- 可以省略不写 -->
+	<property name="cache.provider_class">
+		org.hibernate.c3p0.internal.C3P0ConnectionProvider
+	</property>
+	<!-- 配置最大连接数量 -->
+	<property name="c3p0.max_size">20</property>
+
+	<!-- 配置最小连接数量 -->
+	<property name="c3p0.min_size">5</property>
+
+	<!-- 最大的可执行的语句数量 -->
+	<property name="c3p0.max_statements">50</property>
+
+	<!-- 等待超时时间 -->
+	<property name="c3p0.timeout">5000</property>
+
+	<!-- 检测超时时间间隔 -->
+	<property name="c3p0.idle_test_period">2000</property>
+
+	<!-- 容量扩容增量 -->
+	<property name="c3p0.acquire_increment">5</property>
+
+	<!-- 指明二级缓存的供应商 -->
+	<property name="cache.region.factory_class">
+		org.hibernate.cache.ehcache.EhCacheRegionFactory
+	</property>
+
+	<!-- 手动开启二级缓存 -->
+	<property name="cache.use_second_level_cache">true</property>
+
+	<!-- 开启查询缓存 -->
+	<property name="cache.use_query_cache">true</property>
+
+	<!-- 其他配置 -->
+	<!-- update代表如果已经有了表,则表示更新,如果没有则表示创建 -->
+	<!-- create代表始终先删表再创建表,表中数据清空 -->
+	<!-- <property name="hbm2ddl.auto">update</property> -->
+
+	<!-- 仅仅是用于产品的测试阶段,产品上线,需要注释掉. -->
+	<!-- 是否在控制台输出sql语句 -->
+	<property name="show_sql">true</property>
+
+	<!-- 是否格式化输出的sql语句 -->
+	<property name="format_sql">true</property>
+
+	<!-- 配置Book实体类,注解 -->
+	 <mapping class="com.tz.online.entity.Book"/>
+	
+	<mapping class="com.tz.online.entity.User"/>
+	<mapping class="com.tz.online.entity.Address"/>
+	<mapping class="com.tz.online.entity.Order"/> 
+	<mapping class="com.tz.online.entity.OrderItem"/>
+	
+</session-factory>
+</hibernate-configuration>

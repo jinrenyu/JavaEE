@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>动态操作表格</title>
+        <style type="text/css">
+        	table, td {
+        		border: 1px solid;
+        	}
+        	table {
+        		width: 300px;
+        	}
+        </style>
+    </head>
+    <body>
+        <input type="button" onclick="addR();" value="添加一行" />
+        <input type="button" onclick="removeR();" value="删除一行" />
+        <br/><br/>
+        <table>
+        	<tr>
+        		<td>&nbsp;</td>
+        		<td>&nbsp;</td>
+        		<td>&nbsp;</td>
+        	</tr>
+        	<tr>
+        		<td>&nbsp;</td>
+        		<td>&nbsp;</td>
+        		<td>&nbsp;</td>
+        	</tr>
+        	<tr>
+        		<td>&nbsp;</td>
+        		<td>&nbsp;</td>
+        		<td>&nbsp;</td>
+        	</tr>
+        </table>
+        <script type="text/javascript">
+        	function addR() {
+        		// 目的: 创建一个tr元素, 并且这个元素里面包含三个td元素
+        		// 把这个tr元素添加到文档对象中
+        		var tbody = document.getElementsByTagName("tbody")[0];
+        		// 1. 使用节点克隆
+        		/* var tempTr = tbody.firstElementChild.cloneNode(true);
+        		tbody.appendChild(tempTr); */
+        		// 2. 手动创建节点
+        		var trTag = document.createElement("tr");
+        		for (var i = 0; i < 3; i++) {
+        			// 创建三个td节点, 并挂靠在td节点下
+        			var tempTd = document.createElement("td");
+        			tempTd.innerHTML = "&nbsp;";
+        			trTag.appendChild(tempTd);
+        		}
+        		tbody.appendChild(trTag);
+        	}
+        	function removeR() {
+        		var tbody = document.getElementsByTagName("tbody")[0];
+        		var lChild = tbody.firstElementChild;
+        		tbody.removeChild(lChild);
+        	}
+        </script>
+    </body>
+</html>

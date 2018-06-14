@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>间隔调用函数</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        	// setInterval(), 它是属于window对象的全局函数
+        	// 每经过设定的间隔时间便去执行一次要执行函数
+        	// 参数1: 表示要执行的方法对象变量
+        	// 参数2: 间隔执行的毫秒
+        	// 创建完毕会返回间隔调用器的id值
+        	// 如果不进行清除, 会一致执行下去
+        	var sid = setInterval(function() {
+        		console.log("日志信息.....");
+        	}, 1000);
+        	// 清除间隔调用器
+        	// 参数: 需要进行清除的延迟调用器的id
+        	// clearTimeout(sid);
+        </script>
+    </body>
+</html>

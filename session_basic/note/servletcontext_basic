@@ -1,0 +1,35 @@
+1. ServletContext的用途?
+a.) 显示网站当前的在线用户
+b.) 告知用户你是第几位访问该网站的人员
+c.) 存储某一个页面的点击量(频率已经降低)
+
+2. 为了实现不同用户会话之间能够共享一些数据, Web应用在启动的
+时候便会创建"一个"ServletContext对象, 这个对象一定程度
+也代表当前的web应用, 它其中的数据是可以被不同的会话所共享
+访问的.(它也会开辟一块内存空间, 这个空间的操作方法和session
+操作独占的空间的方法相同)
+
+3. ServletContext的常用方法和设置
+a.) 对于需要配置全局初始化参数的需求应用, 可以在web.xml中配置如下元素
+<context-param>
+	<param-name>global</param-name>
+	<param-value>global</param-value>
+</context-param>
+接着, 在需要使用配置的初始化参数的位置, 获取到当前的ServletContext, 通过如下代码
+获取预设值的参数:
+getServletContext().getInitParameter("global");
+
+b.) 以WebContent为根路径去读取文件, 并返回这个文件的输入流
+getServletContext().getResourceAsStream("资源路径");
+
+c.) 读取返回文件在服务器中的绝对路径(真实路径)
+例如:
+D:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\session_basic\jdbc.properties
+
+4.) 要求用户在登录成功之后, 可以看到自己是对于主界面访问的第几位访客, 
+要求web服务器重启之后, 一样可以保留之前的一些访问信息的记录
+(在数据库里建立一张表(文件), 然后通过监听器, 在ServletContext被销毁的时候把访问的信息
+备份到数据库中, 在servlet下次启动的时候读取其中的信息)
+
+
+

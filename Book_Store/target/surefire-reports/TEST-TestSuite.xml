@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="3.533" tests="19" errors="0" skipped="0" failures="3">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="E:\Java\jdk1.8.0_73\jre\bin"/>
+    <property name="java.vm.version" value="25.73-b02"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\JSD1611\Book_Store\Book_Story"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\JSD1611\Book_Store\Book_Story"/>
+    <property name="java.runtime.version" value="1.8.0_73-b02"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="E:\Java\jdk1.8.0_73\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\疯人一~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="D:\apache-maven-3.3.9\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="E:\Java\jdk1.8.0_73\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;F:\Oracle10g\app\oracle\product\10.2.0\server\bin;D:\mysql-5.7.11-winx64\bin;E:\Java\jdk1.8.0_73\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Skype\Phone\;D:\apache-maven-3.3.9\bin;D:\gaiden-1.1\bin;F:\apache-tomcat-7.0.73\bin;D:\program Files\VC6.0\Tools\WinNT;D:\program Files\VC6.0\MSDev98\Bin;D:\program Files\VC6.0\Tools;D:\program Files\VC98\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\疯人一样大笑啊"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="user.name" value="疯人一样大笑啊"/>
+    <property name="java.class.path" value="D:\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="E:\Java\jdk1.8.0_73\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_73"/>
+    <property name="java.ext.dirs" value="E:\Java\jdk1.8.0_73\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="E:\Java\jdk1.8.0_73\jre\lib\resources.jar;E:\Java\jdk1.8.0_73\jre\lib\rt.jar;E:\Java\jdk1.8.0_73\jre\lib\sunrsasign.jar;E:\Java\jdk1.8.0_73\jre\lib\jsse.jar;E:\Java\jdk1.8.0_73\jre\lib\jce.jar;E:\Java\jdk1.8.0_73\jre\lib\charsets.jar;E:\Java\jdk1.8.0_73\jre\lib\jfr.jar;E:\Java\jdk1.8.0_73\jre\classes"/>
+    <property name="sun.stderr.encoding" value="ms936"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\apache-maven-3.3.9"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="ms936"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="testDDL" classname="com.tz.online.ddl.TestDDL" time="1.924"/>
+  <testcase name="testFindByCondition" classname="com.tz.online.dao.test.BookDaoImplTest" time="1"/>
+  <testcase name="testFindById" classname="com.tz.online.dao.test.BookDaoImplTest" time="0.018"/>
+  <testcase name="testFingByCategory" classname="com.tz.online.dao.test.BookDaoImplTest" time="0.01"/>
+  <testcase name="testGetRows" classname="com.tz.online.dao.test.BookDaoImplTest" time="0.045"/>
+  <testcase name="testFindByName" classname="com.tz.online.dao.test.UserDaoImplTest" time="0.183"/>
+  <testcase name="testSave" classname="com.tz.online.dao.test.UserDaoImplTest" time="0.035"/>
+  <testcase name="testUpdate" classname="com.tz.online.dao.test.UserDaoImplTest" time="0.016">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at com.tz.online.dao.test.UserDaoImplTest.testUpdate(UserDaoImplTest.java:34)
+</failure>
+    <system-out><![CDATA[Hibernate: 
+    select
+        user0_.userId as userId1_4_,
+        user0_.address as address2_4_,
+        user0_.company as company3_4_,
+        user0_.email as email4_4_,
+        user0_.passWord as passWord5_4_,
+        user0_.phone as phone6_4_,
+        user0_.userName as userName7_4_ 
+    from
+        user_book user0_ 
+    where
+        username=?
+]]></system-out>
+  </testcase>
+  <testcase name="testFindByCategory" classname="com.tz.online.service.test.BookServiceImplTest" time="0.009"/>
+  <testcase name="testFindById" classname="com.tz.online.service.test.BookServiceImplTest" time="0.022"/>
+  <testcase name="testFindByPage" classname="com.tz.online.service.test.BookServiceImplTest" time="0.15"/>
+  <testcase name="testAddAddress" classname="com.tz.online.service.test.UserServiceImplTest" time="0.016"/>
+  <testcase name="testDelAddress" classname="com.tz.online.service.test.UserServiceImplTest" time="0.013">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at com.tz.online.dao.impl.AddressDaoImpl$3.execute(AddressDaoImpl.java:59)
+	at com.tz.online.util.HibernateTemplates.execute(HibernateTemplates.java:23)
+	at com.tz.online.dao.impl.AddressDaoImpl.delete(AddressDaoImpl.java:54)
+	at com.tz.online.service.impl.UserServiceImpl.delAddress(UserServiceImpl.java:68)
+	at com.tz.online.service.test.UserServiceImplTest.testDelAddress(UserServiceImplTest.java:46)
+</failure>
+    <system-out><![CDATA[Hibernate: 
+    select
+        address0_.addressId as addressId1_0_0_,
+        address0_.area as area2_0_0_,
+        address0_.detailAddress as detailAddress3_0_0_,
+        address0_.emailCode as emailCode4_0_0_,
+        address0_.isDefault as isDefault5_0_0_,
+        address0_.reciver as reciver6_0_0_,
+        address0_.tel as tel7_0_0_,
+        address0_.user_id as user_id8_0_0_,
+        user1_.userId as userId1_4_1_,
+        user1_.address as address2_4_1_,
+        user1_.company as company3_4_1_,
+        user1_.email as email4_4_1_,
+        user1_.passWord as passWord5_4_1_,
+        user1_.phone as phone6_4_1_,
+        user1_.userName as userName7_4_1_ 
+    from
+        address_book address0_ 
+    left outer join
+        user_book user1_ 
+            on address0_.user_id=user1_.userId 
+    where
+        address0_.addressId=?
+]]></system-out>
+  </testcase>
+  <testcase name="testGetAddressById" classname="com.tz.online.service.test.UserServiceImplTest" time="0.051"/>
+  <testcase name="testGetAddressByUserId" classname="com.tz.online.service.test.UserServiceImplTest" time="0.011"/>
+  <testcase name="testLogin" classname="com.tz.online.service.test.UserServiceImplTest" time="0.005"/>
+  <testcase name="testRegister" classname="com.tz.online.service.test.UserServiceImplTest" time="0.009"/>
+  <testcase name="testUpdAddress" classname="com.tz.online.service.test.UserServiceImplTest" time="0.011">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at com.tz.online.service.test.UserServiceImplTest.testUpdAddress(UserServiceImplTest.java:52)
+</failure>
+    <system-out><![CDATA[Hibernate: 
+    select
+        address0_.addressId as addressId1_0_0_,
+        address0_.area as area2_0_0_,
+        address0_.detailAddress as detailAddress3_0_0_,
+        address0_.emailCode as emailCode4_0_0_,
+        address0_.isDefault as isDefault5_0_0_,
+        address0_.reciver as reciver6_0_0_,
+        address0_.tel as tel7_0_0_,
+        address0_.user_id as user_id8_0_0_,
+        user1_.userId as userId1_4_1_,
+        user1_.address as address2_4_1_,
+        user1_.company as company3_4_1_,
+        user1_.email as email4_4_1_,
+        user1_.passWord as passWord5_4_1_,
+        user1_.phone as phone6_4_1_,
+        user1_.userName as userName7_4_1_ 
+    from
+        address_book address0_ 
+    left outer join
+        user_book user1_ 
+            on address0_.user_id=user1_.userId 
+    where
+        address0_.addressId=?
+]]></system-out>
+  </testcase>
+  <testcase name="testValidate" classname="com.tz.online.service.test.UserServiceImplTest" time="0.005"/>
+</testsuite>

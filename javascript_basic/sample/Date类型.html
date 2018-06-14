@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>js中的Date内置对象</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        	// 1. 使用Date的无参构造方法
+        	var now = new Date();
+        	// alert(now);
+        	// 2. 使用带6个参数的构造方法创建时间对象
+        	// 月份的值从0开始到11, 此处传入6代表构建7月
+        	var date1 = new Date(2017, 6, 6, 8, 8, 8);
+        	// alert(date1);
+        	// 3. 使用标准的GMT时间格式字符串作为参数构造时间
+        	var date2 = new Date("Feb 2, 2017 8:8:8");
+        	// alert(date2);
+        	// 4. 使用太平洋时间格式字符串 June(6月) July(7月)
+        	var date3 = new Date("2017/06/06 8:8:8");
+        	// alert(date3);
+        	// 5. 传入一个number类型的数值作为参数
+        	// 它返回的距1970年1月1日 0时0分0秒所过的毫秒数时间(还会计算时区差)
+        	var date4 = new Date(1000 * 60 * 60 * 4);
+        	// alert(date4);
+        	
+        	// 作业: 按照中国的日期习惯打印当前时间: XXXX年XX月XX日 XX时XX分XX秒 星期几
+        	// getYear(): 表示1900年到现在所经历的年数
+        	document.write(now.getFullYear() + "年" + now.getMonth()
+        			+ "月" + now.getDate() + "日 " + getDigitalTime(now.getHours()) 
+        			+ "时" + getDigitalTime(now.getMinutes()) + "分" 
+        			+ getDigitalTime(now.getSeconds())
+        			+ "秒 " + getWeek(now.getDay()));
+        	// getDay()返回的当前日期在一个星期中的第几天
+        	// 0表示星期日, ... 6 表示星期六
+        	function getDigitalTime(value) {
+        		/* if (value < 10) {
+        			return "0" + value;
+        		}
+        		return value; */
+        		return value < 10 ? "0" + value : value;
+        	}
+        	function getWeek(day) {
+        		var r = null;
+        		switch(day) {
+        		case 0:
+        			r = "星期日";
+        			break;
+        		case 1:
+        			r = "星期一";
+        			break;
+        		case 2:
+        			r = "星期二";
+        			break;
+        		case 3:
+        			r = "星期三";
+        			break;
+        		case 4:
+        			r = "星期四";
+        			break;
+        		case 5:
+        			r = "星期五";
+        			break;
+        		case 6:
+        			r = "星期六";
+        			break;
+        		default:
+        			r = "未知日期";
+        		}
+        		return r;
+        	}
+        </script>
+    </body>
+</html>

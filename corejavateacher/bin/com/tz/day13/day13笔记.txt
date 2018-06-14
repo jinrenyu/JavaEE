@@ -1,0 +1,132 @@
+Collection[I]
+	List[I]
+		ArrayList
+		LinkedList
+		Vector
+	Set[I]
+		HashSet
+		SortedSet[I]
+			TreeSet
+//Code
+public List<Student> findByAge(
+				List<Student> list,
+				int start,
+				int end) {
+}
+
+--------------------------------
+Map集合
+	\- HashMap
+
+构造方法：
+HashMap();  空参构造
+HashMap(int size);	初始容量
+HashMap(Map map);
+
+如：
+Map<Integer,String> m1 = new HashMap<>();
+m1.put(1,"ONE");
+m1.put(2,"TWO");
+m1.put(3,"THREE");
+//m2与m1共享同一个堆空间的地址，也就是同一个
+//集合对象
+Map<Integer, String> m2 = m1;
+
+//m3是全新的集合对象，但是，它集合中的元素
+//与m1、m2集合中的元素是一样的。
+Map<Integer,String> m3 = new HashMap(m1);
+
+--
+常用方法：
+	void put(Object key, Object value); 
+	Object remove(Object key);
+	Object get(Object key);
+	int size();
+	void clear();
+	boolean isEmpty();
+	boolean containsKey(Object key);
+	
+	Set entrySet();
+	Collection values();
+	Set entrySet();
+	...
+
+---
+练习：
+请写一个方法，使用指定的随机数来填充这个集合，
+随机数的范围是从[1~99]之间
+方法设计如下：
+public List<Integer> getList(int length){
+	
+}
+
+---------
+Map本身的特点是：无序、不可重复，与Set是一样的。
+注：这个是针对Key的，value没有要求。
+
+所以，API中提供了另一个接口：SortedMap
+它的实现类：TreeMap
+
+这个实现类是可排序的，当然同样是不可重复的。
+
+TreeMap是如何实现排序的呢？
+方式一：使用 java.lang.Comparable接口
+我们使用空参的构造来创建TreeMap
+如：
+SortedMap<Integer,String> smap = new TreeMap<>();
+smap.put(1,"ONE");
+smap.put(2,"TWO");
+...
+
+所以，一般我们使用实现了Comparable接口的类型
+做为map的key。
+如：
+Integer
+Long
+String
+
+方式二：使用 java.util.Comparator 接口
+如：
+//事先写一个类来实现 Comparator接口
+public class MyComp implements Comparator{
+	@Override
+	public int compare(Object o1, Object o2){
+		//由程序员自己实现 比较的逻辑
+		...
+	}
+}
+Comparator c = new MyComp();
+//传入一个 比较器对象
+SortedMap map = new SortedMap(c);
+map.put(...);
+...
+
+==
+再来看看 Set 的排序
+使用 SortedSet接口的实现类：TreeSet
+
+注：
+HashSet的实现本质是组合了 HashMap
+同理，TreeSet的实现本质是组合了 TreeMap
+
+如：
+public class HashSet {
+
+	private HashMap map;
+	private static Object VALUE = new Object();
+
+	public HashSet(){
+		this.map = new HashMap();
+	}
+	
+	public void add(Object o) {
+		this.map.put(o,VALUE);
+	}
+	...
+}
+
+.....
+
+=================
+
+

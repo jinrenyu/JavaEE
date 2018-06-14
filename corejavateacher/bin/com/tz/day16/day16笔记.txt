@@ -1,0 +1,135 @@
+对象的序列化
+也就是把java对象固化到文件中。
+这样一来，可以保存对象的状态。
+
+如：
+Student s = new Student();
+//设置属性
+s.setName("张三");
+s.setAge(18);
+s.setHobby("太极拳");
+
+如何把对象的状态固化下来？
+使用JVM的序列化[serialize]机制
+
+要求：
+1. 让要执行序列化的类型实现
+   java.io.Serializable接口
+
+2. 利用 java.io.ObjectInputStream和
+	ObjectOutputStream来读取和写入
+
+===========
+字符流 
+以字符为单位进行读写的流      
+
+A. 字符输入流
+java.io.Reader
+	\- FileReader
+	\- CharArrayReader
+	\- BufferedReader
+	\- InputStreamReader 
+			字节流转换成字符流的桥接
+int read()
+int read(char[] buf)
+int read(char[] buf, int off, int length)
+close()
+
+B. 字符输出流
+java.io.Writer
+	\- FileWriter
+	\- CharArrayWriter
+	\- BufferedWriter
+	\- PrintWriter
+	\- OuputStreamWriter
+//
+write(int c);
+write(char[] buf);
+write(char[] buf, int off, int len);
+//
+close();
+
+-------------
+标准输入流：
+	System.in
+这是一个字节流，如果需要把它转换成字符流，则
+需要桥接器 InputStreamReader
+
+构造：
+public InputStreamReader(InputStream in);
+public InputStreamReader(InputStream in,
+		String charSet); //charSet就是字符集
+
+字符集[charSet]
+
+ASCII码字符集,它采用单字节编码，也就是说
+它可以编 256 个字符。
+
+对于中文来讲，很显然，单字节编码是不够的。
+所以，中文必需要有自己的字符集
+GB2312  -> GBK 
+
+全世界所有国家的字符集都必需无条件向上兼容ASCII
+
+UTF-8
+UNICODE
+-----------------------
+
+//把标准输入流转换成字符流
+BufferedReader br =
+	new BufferedReader(
+		new InputStreamReader(System.in));
+
+为什么要使用 BufferedReader ?
+	因为它有 readLine()方法，一次可以读取一整行。
+
+注：在IO流中，读的方法几乎都是阻塞 的。
+
+--
+为什么使用 PrintWriter?
+	因为它有 println(String text); 方法
+
+-----------------------------------------
+RandomAccessFile 类
+这个流是支持随机存取的流，通过修改文件指针
+的偏移量来达到这个目的。
+
+构造方法
+RandomAccessFile(File name,String mode)
+RandomAccessFile(String name,String mode)
+
+mode是指打开文件的模式，有：
+	r	只读模式
+	rw  读写模式
+	...
+
+常用方法
+long getFilePointer();
+void seek(long pos);
+setLength(long newLength)
+close();
+read()
+...
+write()
+...
+
+----------
+作业：
+1. 假设某个文件中，有如下一首古诗：
+绿蚁新醅酒
+红泥小火炉
+晚来天欲雪
+能饮一杯无
+
+请写一段程序，把这个古诗改成如下格式：
+
+绿红晚能
+蚁泥来饮
+新小天一
+醅火欲杯
+酒炉雪无
+
+[请从右到左]
+
+2. 假设有一个很大很大的日志文件[超过2G]
+请写一段程序读取这个日志文件中的最后一行。

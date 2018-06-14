@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- 每个html文档必须拥有的标签仅且只有一个 -->
+<html>
+	<!-- 规定正常页面的一些页面参数 -->
+	<!-- 比如使用的编码方式, 关键字等 -->
+	<!-- 标签之中的内容不会显示到页面中 -->
+	<!-- 用于告诉浏览器如何解析当前页面 -->
+	<head>
+		<!-- 元数据, 用来描述其他数据的数据 -->
+		<!-- 规定浏览器解析当前页面的方式 -->
+		<!-- 用于规定页面的类型以及使用的编码格式 -->
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<!-- html 5当中上述方式又可简化为 -->
+		<!-- <meta charset="utf-8"> -->
+		<!-- 告诉浏览器当前页面什么时候过期,一旦
+		过期就去服务器上重新下载该页面, 使用GMT的
+		时间格式 -->
+		<!-- 0表示不需要浏览器对当前页面进行缓存 -->
+		<meta http-equiv="expires" content="0" />
+		<!-- 告诉中间缓存服务器, 不需要对该页面进行缓存, 并且该页面脱机情况不允许访问 -->
+		<meta http-equiv="pragma" content="no-cache">
+		<!-- 兼容写法, 针对http1.1.不要在本地以及中间服务器上对本页面进行任何的缓存 -->
+		<meta http-equiv="cache-control" content="no-cache">
+		<!-- 通知浏览器多少秒对页面进行一次刷新 -->
+		<meta http-equiv="refresh" content="5; url=http://www.baidu.com">
+		<!-- 表示该页面的作者信息 -->
+		<meta name="author" content="Hello">
+		<!-- 告诉搜索引擎, 怎么通过关键字查找到该页面,现在只是起到帮助作用 -->
+		<meta name="keywords" content="test">
+	</head>
+	<!-- 用于书写展示给用户的内容代码 -->
+	<body>
+	    <!-- 前端开发工具:hbuilder/dreamwave/webstorm/sublime -->
+	    <!-- color用于设置字体颜色, face设置字体 -->
+	    <font color="#0FF" face="黑体">改变的字体</font>
+	</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="product-gateway" parallel="false" thread-count="2">
+    <test verbose="2" preserve-order="true" name="Spu">  
+        <classes>
+        	 <class name="com.tz.online.ddl.TestDDL" />
+             <class name="com.tz.online.dao.test.BookDaoImplTest" />
+             <class name="com.tz.online.dao.test.UserDaoImplTest" />
+        	 <class name="com.tz.online.service.test.BookServiceImplTest" /> 
+        	 <class name="com.tz.online.service.test.UserServiceImplTest" /> 
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

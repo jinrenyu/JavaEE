@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>数据类型</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        	// js中数据类型被分为两大类:
+        	// 简单数据类型: Undefined/Null/Boolean/Number(int/float/double)/String
+        	// 复杂数据类型: Object(Date/Array/Function/Regex....)
+        	// 1. Undefined类型(只有一个成员值undefined)
+        	// 2. Null类型(只有一个成员null)
+        	// js规定undefined和null进行比较的时候必须返回true
+        	var a1 = null;
+        	var a2;
+        	// alert(a1 == a2);
+        	// 3. Boolean类型(两个成员true和false)
+        	// js是一种大小写敏感的语言, True和true是两个不同的概念
+        	var b1 = true;
+        	// js提供了一个操作符typeof可以返回变量的具体类型
+        	/* 
+        		boolean -> Boolean类型
+        		string -> String类型
+        		undefined -> Undefined类型
+        		object -> Object类型或者Null类型
+        		number -> Number类型
+        	*/
+        	// alert(typeof b1);
+        	// 类型之间可以发生转换, 使用Boolean函数可以使其他类型转换成布尔型
+        	// 除了undefined/null/""/false/NaN/0这6个值会转换成false之外其他全部都会转换成true
+        	// alert(Boolean("false")); // 非空字符串转换的时候全部都会转换成true
+        	// 4. Number类型
+        	var c1 = 1;
+        	var c2 = 2.1;
+        	var c3 = 0.1;
+        	var c4 = .2;  // 等价于0.2, 不推荐
+        	var c5 = 3.;  // 等价于3.0
+        	var c6 = 4.12e10; // 4.12 * 10的十次方(e不区分大小写)
+        	var c7 = 3.12e-10;// 3.12 / 10的十次方
+        	var c8 = 012;     // 以0打头表示一个8进值表示数字12, 10进制的值为10
+        	// alert(c8);
+        	var c9 = 0xA;     // 表示16进制的A, 相当于10进制的10
+        	// alert(c9);
+        	var c10 = 1/0;    // 返回正无穷Infinity
+        	// alert(c10);
+        	var c11 = 0/0;    // NaN(not a number)
+        	// alert(c11);
+        	// NaN不等于任何的值
+        	// alert(NaN == NaN); // false
+        	var c12 = Number.MAX_VALUE + Number.MAX_VALUE;
+        	alert(c12); // Infinity
+        	// Number类型2个常用的方法: isNaN, isFinite
+        	// isNaN: 判断一个数是否"不是"一个数
+        	// 如果传入的参数或者值是NaN则返回true, 反之 返回false
+        	// alert(isNaN(1/0));   // false
+        	// isFinite: 判断一个数字是否是在MIN_VALUE和MAX_VALUE之间
+        	// alert(isFinite(c12)); // false
+        	// 对于精度运算不要做这样的尝试:
+        	// 因为是浮点数值,其在内存里的值应该是0.100000....001
+        	var aa = 0.1;
+        	// 0.20000...0003
+        	var bb = 0.2;
+        	alert(aa + bb == 0.3); // false
+        	// 把其他类型的数据转换成Number类型
+        	// 1. Number,通用 2. praseInt 3.praseFloat 第二第三中方法专门针对字符串
+        	var aa01 = "000123fff";
+        	// parseInt转换规则: 读取字符串第一个数, 如果不是一个数字, 直接转换成NaN
+        	// 如果是0, 继续往下判定解析直到遇到非数字的字符
+        	alert(parseInt(aa01)); // 123
+        	alert(parseInt("")); // NaN
+        	// 先解析出123, 把123看成是8进制的表示方法, 再转换成10进制的83
+        	// 1* 8 * 8 + 2 * 8 + 3 * 1
+        	alert(parseInt(aa01, 8)); 
+        	// parseFloat转换规则: 前面规则和parseInt相同, 结束条件是当遇到第一个.的时候继续
+        	// 直到遇到非数字的其他字符
+        	alert(parseFloat("000123.321.321")); // 123.321
+        	// 5. 字符串类型
+        	// js中使用双引号表示字符串和使用单引号表示字符串等价
+        	var d1 = "字符串";  // var d1 = '字符串';
+        	// 把数字类型转换成字符串类型, 通过每个变量变量都有的toStrint()方法
+        	var d2 = 32;
+        	alert(typeof d2); // number
+        	alert(typeof d2.toString(8)); // string
+        	alert(typeof String(32)); // string
+        	// 6. Object
+        	var o = new Object();
+        	alert(o);
+        	// js里面控制流语句和Java相同
+        	// if else while for switch continue break
+        </script>
+    </body>
+</html>

@@ -1,0 +1,281 @@
+﻿什么是软件:
+计算机中一系列按照特定顺序组织的计算机数据
+和指令的集合
+
+软件分类：
+	1.系统软件
+	windows、linux、mac....
+	2.应用软件
+	QQ、IE、扫雷......
+
+Java语言特征
+
+1.跨平台:
+一次编译,到处运行
+write once,run everywhere!
+
+2.Java是一种面向对象的编程语言(OOP)
+面向对象(OO -- oriented object)
+
+3.内置了大量的类库!
+
+
+Java版本:
+JavaSE(Java Standard Edition)	java标准版	专门开发桌面级应用
+	JDK:Java Development Kit	java开发工具包
+	JRE:Java Runtime Environment	java运行环境
+	JVM:Java Virtual Machine	java虚拟机
+
+JavaEE(Java Enterprise Edition)	java企业版
+	它是一个体系,不是一门具体的技术
+	包含EJB,Servlet,JSP...等技术
+
+API(Application Programming Interface)	 应用程序接口
+==> 面向程序员
+
+SPI(Service Provider Interface)          服务供应商接口
+==> 面向服务供应商
+
+JavaME(Java Micro Edition)	java微型版
+==> 安卓
+----------------------------------------------------------
+命令行的使用
+打开命令行:
+a.开始 -> 运行 -> cmd
+b.win + r -> cmd
+
+1.切换到对应盘符	盘符:
+
+2.切换文件夹
+进入文件夹		cd 文件夹名(绝对路径或者相对路径)  
+			绝对路径	D:\temp\images
+			相对路径	temp\images
+
+退出到上一级文件夹	cd .. (cd ../..)
+切换到当前目录		cd .
+
+3.显示当前文件夹或盘符下所有的文件
+  dir
+
+4.清屏	cls
+
+5.上下按键	用来返回之前执行过的所有指令
+
+6.Tab键		自动补齐文件名或文件夹名
+
+7.echo . > test.txt	创建一个文件
+
+8.echo 123 >> test.txt  在test.txt文件中写入123
+
+----------------------------------------------------------
+编写第一个Java程序:
+要点
+1.类名必须与文件名保持一致
+2.编译时使用javac指令,后面跟上.java后缀
+3.运行时使用java指令,后面不要跟上后缀
+
+javac --> 写完一个程序过后,先编译成.class字节码文件
+java  --> 执行.class字节码文件来得到程序结果
+
+.java	源文件
+.class	字节码文件
+
+	      javac		          java
+XXX.java -------> XXX.class -------> 结果
+
+
+环境变量:
+	JAVA_HOME:这个环境变量指向JDK的安装路径
+	PATH:这个环境变量是OS(操作系统)使用的,用来搜索可执行文件的路径
+	classpath:这个环境变量时用来搜索字节码文件的
+		  (classpath可以自己设置成环境变量,但是不推荐)
+
+提问:
+虚拟机是如何找到你要运行的字节码文件的?
+答:JVM是通过(-classpath 路径)来搜索字节码文件的
+
+如:
+java -classpath . First
+表示在当前目录下搜索Fitst.class文件并执行程序
+
+java -classpath D:/bin First
+表示在D:\bin里面搜索First.class文件并执行程序(绝对路径)
+
+java -classpath ../bin First
+表示到当前目录上一层去搜索Fitst.class文件并执行程序(相对路径)
+
+javac命令
+用法:javac <option> 源文件
+常用指令:
+
+-d		指定生成的字节码文件存放的路径
+-classpath      指定JVM搜索字节码文件的路径,可以带过个路径,中间用分号隔开
+
+如:javac -d E:\src -classpath D:\bin1;D:\bin2 First.java
+编译Fitst.java文件到E:\src里去,并且到D盘下的bin1和bin2文件夹里面去搜索可能用到的字节码文件
+
+java指令
+用法:java <option> 全限定名(包名.类名)
+
+常用选项:
+-version	打印出当前JDK的版本号
+-classpath	指定JVM搜索字节码文件的路径,可以带过个路径, 中间用分号隔开
+-----------------------------------------------------------
+
+JAVA类的定义:
+xxx.java
+
+package xxx.xxx.xxx;
+
+import xxx.xxx.xxx;
+
+public class 类名 {
+	//方法
+	public static void main(String[] args){
+		//方法体;
+		//...;
+	}
+}
+
+注意点:
+1.建议采用驼峰法(Camel)命名规范
+2.类名的首字母必须大写
+3.方法名小写,以后每个单词首字母大写
+4.包名全部采用小写字母,中间用.隔开
+
+
+类名
+1.类名必须由数字,字母,_,$,中文汉字所组成,并且不能以数字开头
+2.不能是JAVA关键字
+	public,class,void,package,interface,abstract
+	private,protected,byte,short,int,char,long
+	double,float,boolean,enum,static,final,
+	......
+3.不能是java的保留字:goto,const
+4.不能是以下3个字面量:true,false,null
+5.尽量不要是内置对象类型
+
+----------------------------------------------------------
+
+包的概念
+作用:
+1.做为一种命名空间,保证在不同包下的类可以重名
+2.可以方便管理和维护,因为包就是对于操作系统的文件夹
+
+如何定义:
+使用关键字:package
+
+注意:
+1.package语句必须放在整个类的第一行
+2.包名采用小写字母编辑,并且中间以.隔开
+3.自定义的包名,不能是java或者javax
+4.一般情况下,包名采用公司域名的倒置来命名
+如:
+	com.baidu.xxx;
+	com.tencent.xxx;
+
+有了包过后,类的名字为
+包名.类名 ----> 类的全限定名
+
+我们说的运行一个类,指的是类的全限定名,而非简称
+注意: -classpath 指定的路径不包含包结构
+
+例:
+在D:\src里有如下类 
+HelloWorld.java
+
+package com.corejava.day01;
+
+public class HelloWorld {
+	public static void main(String[] args){
+		System.out.println("HelloWorld!");
+	}
+}
+
+编译到D:\bin
+javac -d ../bin HelloWorld.java
+
+运行
+java -classpath ../bin com.corejava.day01.HelloWorld
+
+----------------------------------------------------------
+
+Scanner:用来获取用户键盘输入
+
+第一步:导入Scanner
+              关键字:import
+     import java.util.Scanner;
+
+第二步:创建Scanner对象
+     Scanner sc = new Scanner(System.in);
+
+第三步:使用创建的对象名去调用Scanner内部的方法
+	. 是用来调用方法或者属性
+	sc.nextLine();//用来获取用户输入的一行信息
+	sc.nextInt();//用来获取用户输入的整数
+
+import
+同包	不需要导入
+跨包	需要导入相应的类
+
+
+注意:
+1.java.lang.*所有类是不需要import的,可以直接引用
+2.如果导入某一个包中相同的几个类,则可以用简写形式:
+  xxx.xxx.*;
+      不推荐,会降低程序性能,因为要去搜索
+3.nextInt()和nextLine()方法不能混用,会导致nextLine()方法出现问题.
+
+
+小练习:
+1.请您输入第一个整数:
+  请您输入第二个整数:
+  计算结果为:
+
+2.请您输入算式: xx + yy
+  计算结果为:
+
+----------------------------------------------------------
+输出语句
+System.out.println("XXX");
+ln表示输出完括号里面的内容过后换行
+
+例如:
+System.out.println("好好学习");
+System.out.print("天天向上");
+
+----------------------------------------------------------
+注释:
+
+单行注释,修饰某一行代码
+//
+
+多行注释,修饰一段代码
+/*
+ *	
+ */ 
+
+文档注释,修饰类和方法
+/**
+ *
+ */
+
+可以通过javadoc指令来生成API文档
+Project -> Generate Javadoc 
+
+ 
+ 常用的标记:
+ @author		作者
+ @since			从以下哪个版本开始
+ @see			另请参见
+ @param			参数
+ @return		返回
+ @deprecated		已过时
+ 
+ ---------------------------------------------------------
+
+如何定义一个方法
+语法:
+修饰符 返回类型 方法名([参数列表]) [可抛出的异常]{
+	//方法体;
+}

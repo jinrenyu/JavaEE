@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>获取元素实例练习</title>
+    </head>
+    <body>
+        <a href="http://www.baidu.com">百度</a><br/>
+        <input type="text" />
+        <!-- onclick事件表示当按钮被单击的时候会调用的js函数 -->
+        <input type="button" onclick="change();"  value="转换地址"/>
+        <div style="text-align: center">
+        	<img alt="加载失败" src="../images/huaji.jpg"><br/>
+        	<a href="javascript:test(1);">1</a>&nbsp;
+        	<a href="javascript:test(2);">2</a>
+        </div>
+        <script type="text/javascript">
+        	function change() {
+        		// 1. 获取input输入的值
+        		var value = document.getElementsByTagName("input")[0].value;
+        		// 2. 把获取到的值设置给a标签的href
+        		document.links[0].href = value;
+        	}
+        	function test(value) {
+        		var arr = ["huaji.jpg", "qq.png"];
+        		document.images[0].src= "../images/" + arr[value -1];
+        	}
+        </script>
+    </body>
+</html>

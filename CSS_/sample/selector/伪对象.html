@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>为对象选择符</title>
+        <style type="text/css">
+        	/* 伪对象选择符必须配合css的content属性进行使用 
+        		表示在所选择的元素之前或者之后插入一些字符或者图片
+        	*/
+        	p:before {
+				content: url("../../images/huaji.jpg");
+			}
+        </style>
+    </head>
+    <body>
+        <p>段落</p>
+        <address>地址</address>
+        <p>1</p>
+    </body>
+</html>

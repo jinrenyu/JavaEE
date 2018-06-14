@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+div {
+
+}
+
+table {
+    border: 1px solid;
+    margin: 0px auto;
+    width: 550px;
+}
+
+td {
+    height: 20px;
+}
+
+table.second {
+    border-top-width: 0px;
+    border-collapse: collapse;
+}
+
+table.second th, table.second td {
+    border: 1px solid;
+}
+
+table.second th {
+   border-top-width: 0px;
+}

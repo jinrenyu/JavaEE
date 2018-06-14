@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>第一个javascript页面</title>
+        <!-- 对于外部引入的js文件, 我们可以指定, 浏览器先读取其内容但是不进行解析, 
+        直到其他内容加载完毕再解析 -->
+        <script type="text/javascript" src="js/hello.js" defer="defer">
+        	// 在引入外部文件之后如果又引入了内嵌的代码块, 内嵌代码块会被忽略
+        	document.write("内嵌的内容.");
+        </script>
+        <!-- 1.使用script标签来引入一段javascript代码 -->
+        <!-- type就相当于language的替代属性 -->
+        <!-- type内容还可能是application/javascript, 
+        	application/ecmascript它们与下面的等价 -->
+       	<!-- script标签可以出现在html中的任意位置 -->
+       	<!-- 早期的时候, js脚本的引入一般都放在head中, 如果脚本的内容过长, 
+       	会造成页面的长时间空白, 当代浏览器的做法是, 把脚本引入放在所有表现代码(html/css)之后 -->
+        <script type="text/javascript">
+        	// 注释方法和java语言相同, 打印内容到页面
+        	document.write("hello world");
+        	// 因为是单线程, 所以当页面和用户发生交互的时候, 只要用户不进行处理, 线程
+        	// 就会等待, 直到获取到对应的处理结果, 再继续执行
+        	// 如果需要需要打印类似于结束标签的字符, 需要使用类似Java语言中的转义符
+        	alert("<\/script>");
+        </script>
+    </head>
+    <body>
+    	<br/>
+    	<!-- javascript的解析是从上到下逐行解析的 -->
+        <script type="text/javascript">
+        	// 注释方法和java语言相同, 打印内容到页面
+        	document.write("第二段hello world字体");
+        	// 开发的时候可以用于程序的调试
+        	console.log("一条日志信息");
+        	console.debug("一条调试信息");
+        	console.info("一条信息信息");
+        	console.warn("一条警告信息");
+        </script>
+    </body>
+</html>

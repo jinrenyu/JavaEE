@@ -1,0 +1,360 @@
+Part1(4) 	Java基础语法
+Part2(5) 	Java面向对象
+Part3(10) 	Java API高级应用
+------------------------------------------------------
+
+java.lang.Object
+
+是所有Java类的基础类,在Java中任何一个类都直接或者间接继承于它
+
+常用方法:
+I.getClass()方法
+
+  public final Class getClass(){}//返回对象的运行时类型
+
+  注意:
+  不管一个类实例化了多少对象,在JVM中Class实例永远只有一个
+
+  Student s1 = new Student();
+  Student s2 = new Student();
+  System.out.println(s1.getClass() == s2.getClass());//true
+
+
+  java.lang.Class<T>
+
+  JVM用来描述类的类,通过这个Class实例,可以获取类的所有信息,它是Java反射技术的基础类
+
+
+  Java获取Class实例的方式:
+  1.对象名.getClass()
+    Student s = new Student();
+    Class<?> c = s.getClass();
+
+  2.类名.class属性
+    Class<?> c = Student.class;
+
+  3.Class.forName("类的全限定名");
+    
+    Class<?> c = Class.forName("com.corejava.day05.Student");
+    //此方法强制要求处理异常
+
+    注意:
+    如果传入不存在的全限定名,会抛出异常:
+    java.lang.ClassNotFoundException
+
+  4.基本类型.class方式获取
+    Class<?> c4 = int.class;
+		
+  5.包装类型.TYPE方式获取
+    Class<?> c5 = Integer.TYPE;
+-------------------------------------------------------------------
+
+II.toString()
+
+   public String toString(){}
+
+作用:把一个对象转换成某种字符串表现形式
+
+   getClass().getName() + '@' + Integer.toHexString(hashCode())
+
+   注意:
+   1.打印任意对象都会自动调用此方法,但是绝大多数情况下,我们都要重写此方法,
+               因为原版方法无法满足我们真正的业务打印要求.
+
+   2.如果打印一个对象不是以上表现形式,那么它里面或者它的父类中 一定已经重写了toString()方法
+-------------------------------------------------------------------
+
+III.equals()和hashCode()
+    
+    A:equals()
+
+    注:
+    1.==永远比较的是内存地址
+    2.equals()方法中,基本类型使用==比较,对象类型使用它本身的
+      equals()方法,默认情况下是比较内存地址,但是可以重写
+    3.String和Date中已经重写了equals()方法
+
+    在真正应用系统中,一般都要重写equals()方法来比较对象中的值,
+    
+    重写时的一般步骤:
+    1.非空判断
+    2.自反性
+    3.对称性
+    4.一致性
+    5.传递性
+
+    重写equals()方法的步骤:
+  public boolean equals(Object obj){
+	//自反性
+	if(this == obj){
+		return true;
+	}
+	//非空判断
+	if(obj == null){
+		return false;
+	}
+	//判断类型是否一致
+	if(obj instanceof 类型){
+		//表示类型是一致
+		//强制类型转换
+		类型 s = (类型)obj;
+		//一一比较属性值
+		...
+	}else{
+		return false;
+	}
+  }
+
+
+   B:hashCode()
+   作用:给采用哈希算法的集合提高性能的,此方法返回类型是int,这个值就是对象的哈希码
+
+   要求:
+   1.相同对象(equals()方法返回true),保证哈希值一定相等
+   2.不同对象(equals()方法返回false),哈希值尽可能保证不同
+
+   注意:
+   a.出现在equals()方法中的属性必须同时出现在hashCode()方法中
+   b.两个方法必须一起重写
+------------------------------------------------------------------
+
+IV.clone()
+   protected Object clone() throws CloneNotSupportedException
+
+   作用:创建对象的一个副本,Object中的克隆方法是一种浅层复制
+
+   浅层复制,也叫做浅拷贝,基本类型复制一份给新对象,而对象类型是两个对象所共享的
+   注:String和Date除外
+
+   深层复制,也叫做深拷贝,把所有的数据类型都复制一份给新对象,不存在共享的属性
+   注:深层复制需要通过写代码自己去实现
+
+
+   要做克隆,必须满足的条件:
+   1.必须实现java.lang.Cloneable接口
+               如果不实现此接口,则会抛出克隆不支持异常:java.lang.CloneNotSupportedException
+
+   2.重写clone()方法,把修饰符从protected改为public
+------------------------------------------------------------------
+
+V.finalize()
+protected void finalize() throws Throwable
+
+作用:当JVM垃圾回收机制要回收一个垃圾对象时,会调用此对象的finalize()方法
+
+特点:
+finalize()方法有可能是对象复活,是它成为可触及状态.
+垃圾回收机制在执行finalize()方法的时候无论是否出现异常,都不会抛出异常,程序可以正常运行.
+  
+注意:
+1.finalize()方法的修饰符是protected
+2.finalize()是由JVM调用而非人为调用的
+3.无论是否有异常,执行finalize()方法时都不会抛出异常且程序正常执行
+-------------------------------------------------------------------
+
+基本类型和各自的包装类(基本类型对应的对象类型),都是final的
+byte	  ->	Byte
+short     ->    Short
+int       ->    Integer
+long      ->    Long
+float     ->    Float
+double    ->    Double
+char      ->    Character
+boolean   ->    Boolean
+
+注意:以上6种数字类型的包装类的共同父类:java.lang.Number
+
+	Number是一个抽象类,把包装类转换成基本类型
+	byte byteValue()		以 byte 形式返回指定的数值
+	double doubleValue()    以 double 形式返回指定的数值
+	float floatValue()      以 float 形式返回指定的数值
+	int intValue()          以 int 形式返回指定的数值
+	long longValue()        以 long 形式返回指定的数值
+	short shortValue()		以 short 形式返回指定的数值
+------------------------------------------------------------------
+
+数字型
+Integer
+
+构造方法:
+public Integer(int i)
+public Integer(String s)
+
+注意:如果传入的字符串不是数字类型,则会抛出异常:java.lang.NumberFormatException
+      
+JDK5.0开始,基本类型和包装类型可以相互自动的转换
+-- 自动解封箱(Auto Boxing/UnBoxing)
+
+如:
+Integer i1 = 3;//自动封箱
+int i2 = i1;//自动解箱
+
+
+常量:
+static int MAX_VALUE //int范围最大值
+         
+static int MIN_VALUE //int范围最小值
+
+
+常用方法:
+static  Integer valueOf(int i)//把基本类型转换成包装类
+
+String toString()//把对象类型转换成字符串表示
+
+int intValue() //把包装类转换成基本类型
+
+static int parseInt(String s)//把字符串解析成int类型
+//不要求处理异常,但是如果传入非法字符串,则抛出:
+  java.lang.NumberFormatException
+
+static String toBinaryString(int i)//转换成二进制字符串
+
+static String toOctalString(int i) //转换成八进制字符串
+         
+static String toHexString(int i) //转换成十六进制字符串
+------------------------------------------------------------------
+
+基本类型	-> 	包装类
+1.new Integer()
+2.自动封箱
+3.static valueOf(int i);
+
+包装类		-> 	基本类型
+1.自动解箱
+2.intValue()
+
+基本类型	-> 	字符串
+1.static toString(int i);
+2.int i = 3;
+  String s = i + "";
+  
+PS:
+   Integer.toString(int);
+   Integer.toBinaryString(int);
+   Integer.toOctalString(int);
+   Integer.toHexString(int);
+
+字符串		-> 	基本类型
+1.static parseInt(String s);
+
+字符串		-> 	包装类
+1.new Integer(String s);
+2.static decode(String s);
+3.static valueOf(String s);
+
+包装类		-> 	字符串
+包装类对象.toString();
+
+------------------------------------------------------------------
+
+字符型
+Character
+
+构造方法:
+public Character(char c)
+
+常用方法:
+static boolean isLetter(char c)	
+//判断字符是否是字母
+  注:此处只要是一种语言的最基本组成单位都可以认为是字母
+
+static boolean isDigit(char c)
+//判断字符是否是数字
+
+static boolean isUpperCase(char c)
+//判断字符是否是大写字母
+
+static boolean isLowerCase(char c)
+//判断字符是否是小写字母
+
+static boolean isWhiteSpace(char c)
+//判断是否是空白
+
+toString(char c)
+//返回指定的char值的字符串形式
+------------------------------------------------------------------
+
+Boolean
+
+构造方法:
+public Boolean(boolean value) 
+public Boolean(String s) 
+ 
+常用方法:
+static boolean parseBoolean(String s) 
+//将字符串解析成boolean 
+
+static Boolean valueOf(String s)
+static Boolean valueOf(boolean b) 
+//把指定的字符串/boolean类型转换成Boolean
+------------------------------------------------------------------
+
+大数字类型
+
+java.math.BigInteger	大整数
+java.math.BigDecimal	大浮点数
+
+构造方法:
+public BigInteger(byte[] btye){}
+public BigInteger(String s){}
+
+public BigDecimal(char[] cal){}
+public BigDecimal(String s){}
+
+静态常量:
+static BigInteger ONE		1 
+static BigInteger ZERO		0
+static BigInteger TEN		10
+
+常用方法:
+BigInteger add(BigInteger val)		//加法
+BigInteger subtract(BigInteger val)	//减法
+BigInteger multiply(BigInteger val)	//乘法
+BigInteger divide(BigInteger val)	//除法
+------------------------------------------------------------------
+
+格式化数字:
+java.text.NumberFormat
+
+常用方法:
+public static NumberFormat getInstance()
+返回当前默认语言环境下的通用数值格式
+
+public static NumberFormat getInstance(Locale inLocale) 
+返回指定语言环境下的通用数值格式
+
+public static NumberFormat getCurrencyInstance() 
+返回当前默认语言环境的货币格式
+
+public static NumberFormat getCurrencyInstance(Locale inLocale)
+返回指定语言环境的货币格式
+
+public int getMinimumIntegerDigits() 
+返回数的整数部分所允许的最小位数
+
+public int getMaximumIntegerDigits() 
+返回数的整数部分所允许的最大位数
+
+public void setMaximumIntegerDigits(int newValue)
+设置整数部分所允许的最大位数
+
+public void setMinimumIntegerDigits(int newValue)
+设置整数部分所允许的最小位数
+
+public int getMaximumFractionDigits()
+获取小数部分所允许的最大位数
+
+public int getMinimumFractionDigits()
+获取小数部分所允许的最小位数
+
+public void setMaximumFractionDigits(int newValue)
+设置小数部分所允许的最大位数
+
+public void setMinimumFractionDigits(int newValue)
+设置小数部分所允许的最小位数
+
+
+//格式化规范
+public String format(double d)
+public String format(long l)
+   

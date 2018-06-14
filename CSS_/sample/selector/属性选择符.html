@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>属性选择符</title>
+        <style type="text/css">
+        	/* 选择具有属性title的元素p进行样式应用 */
+        	/* 选择具有title属性且属性的值为p3 */
+        	/* 选择具有title属性且值为p1并且具有lang属性的元素 */
+        	p[title="p1"][lang] {
+        		 color: red;
+        	}
+        </style>
+    </head>
+    <body>
+        <p title="p1">这是一个普通的段落1</p>
+        <p>这是一个普通的段落2</p>
+        <p title="p3">这是一个普通的段落3</p>
+        <p title="p1" lang="">这是一个普通的段落4</p>
+    </body>
+</html>
